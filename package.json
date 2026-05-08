@@ -18,6 +18,7 @@
       "import": "./dist/esfeatures.js",
       "require": "./dist/esfeatures.umd.cjs"
     },
+    "./polyfills": "./dist/polyfills.iife.js",
     "./src": "./src/index.js"
   },
   "files": [
@@ -26,13 +27,16 @@
   ],
   "scripts": {
     "build": "vite build",
-    "polyfill": "vite build --config vite.polyfill.config.js"
+    "polyfill": "vite build --config vite.polyfill.config.js",
+    "validate": "vite --config vite.validate.config.js",
+    "validate:build": "vite build --config vite.validate.config.js"
   },
   "devDependencies": {
     "@babel/core": "~7.29.0",
     "@babel/preset-env": "~7.29.3",
     "@rollup/plugin-babel": "~7.0.0",
     "core-js": "~3.49.0",
+    "regenerator-runtime": "~0.14.1",
     "terser": "~5.46.2",
     "vite": "~4.5.14"
   }

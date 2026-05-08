@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kn-es-features npm 包校验</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ── 顶部标题栏 ─────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__logo">ES</span>
+      <h1 class="header__title">npm 包校验 · kn-es-features</h1>
+    </div>
+    <button class="btn-run" id="btn-run">
+      <span class="btn-run__icon">▶</span>
+      <span class="btn-run__label">运行全部</span>
+    </button>
+  </header>
+
+  <!-- ── 汇总统计 ────────────────────────────────────────────────── -->
+  <div class="summary">
+    <div class="summary__group">
+      <span class="summary__label">ES2015</span>
+      <span class="summary__value" id="val-2015">—</span>
+    </div>
+    <span class="summary__divider"></span>
+    <div class="summary__group">
+      <span class="summary__label">ES2022</span>
+      <span class="summary__value" id="val-2022">—</span>
+    </div>
+    <span class="summary__divider"></span>
+    <div class="summary__group">
+      <span class="summary__label">ES2025</span>
+      <span class="summary__value" id="val-2025">—</span>
+    </div>
+    <span class="summary__divider"></span>
+    <div class="summary__group">
+      <span class="summary__label">ES2026</span>
+      <span class="summary__value" id="val-2026">—</span>
+    </div>
+    <span class="summary__divider"></span>
+    <div class="summary__group">
+      <span class="summary__label">总计</span>
+      <span class="summary__value" id="val-total">—</span>
+    </div>
+  </div>
+
+  <!-- ── Tab 导航 ────────────────────────────────────────────────── -->
+  <nav class="tabs" role="tablist">
+    <button class="tab tab--active" role="tab" data-panel="panel-2015">
+      ES2015
+      <span class="tab__badge" id="badge-2015"></span>
+    </button>
+    <button class="tab" role="tab" data-panel="panel-2022">
+      ES2022
+      <span class="tab__badge" id="badge-2022"></span>
+    </button>
+    <button class="tab" role="tab" data-panel="panel-2025">
+      ES2025
+      <span class="tab__badge" id="badge-2025"></span>
+    </button>
+    <button class="tab" role="tab" data-panel="panel-2026">
+      ES2026
+      <span class="tab__badge" id="badge-2026"></span>
+    </button>
+  </nav>
+
+  <!-- ── 内容面板 ────────────────────────────────────────────────── -->
+  <main>
+    <section class="panel panel--active" id="panel-2015">
+      <div class="placeholder">
+        <span class="placeholder__icon">🧪</span>
+        <p class="placeholder__text">点击「运行全部」开始校验</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-2022">
+      <div class="placeholder">
+        <span class="placeholder__icon">🧪</span>
+        <p class="placeholder__text">点击「运行全部」开始校验</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-2025">
+      <div class="placeholder">
+        <span class="placeholder__icon">🧪</span>
+        <p class="placeholder__text">点击「运行全部」开始校验</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-2026">
+      <div class="placeholder">
+        <span class="placeholder__icon">🧪</span>
+        <p class="placeholder__text">点击「运行全部」开始校验</p>
+      </div>
+    </section>
+  </main>
+
+</div>
+
+<!-- ESM 模块导入，校验 kn-es-features 的命名导出接口 -->
+<script type="module" src="./src/validate-main.js"></script>
+
+</body>
+</html>

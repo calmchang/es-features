@@ -31,9 +31,12 @@ export async function testImportAttributes() {
     // 使用 data: URL + type: javascript 测试动态导入属性
     let result = null
     try {
-      const mod = await import('data:text/javascript,export default "hello"', {
-        with: { type: 'javascript' }
-      })
+      // 用 new Function 包裹，使 Rollup 静态分析看不到 import()，
+      // 避免将 data: URL 打包成本地 chunk 导致构建产物引用缺失文件。
+      const doImport = new Function(
+        'return import("data:text/javascript,export default \\"hello\\"", { with: { type: "javascript" } })'
+      )
+      const mod = await doImport()
       result = mod.default
     } catch {
       // 某些环境允许语法但不允许 data: URL，也视为语法支持

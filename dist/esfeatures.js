@@ -3435,27 +3435,27 @@ function _testImportAttributes() {
                 return !1;
               }
             }(), e("动态 import() 支持 with 选项对象", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c;
-              return _regenerator().w(function(l) {
+              var u, c, l;
+              return _regenerator().w(function(f) {
                 for (; ; )
-                  switch (l.p = l.n) {
+                  switch (f.p = f.n) {
                     case 0:
                       if (t) {
-                        l.n = 1;
+                        f.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过：环境不支持 import with 语法)"), l.a(2);
+                      return i(!0, "(跳过：环境不支持 import with 语法)"), f.a(2);
                     case 1:
-                      return u = null, l.p = 2, l.n = 3, import("./javascript_export default _hello_-1f405a03.js");
+                      return u = null, f.p = 2, c = new Function('return import("data:text/javascript,export default \\"hello\\"", { with: { type: "javascript" } })'), f.n = 3, c();
                     case 3:
-                      c = l.v, u = c.default, l.n = 5;
+                      l = f.v, u = l.default, f.n = 5;
                       break;
                     case 4:
-                      l.p = 4, l.v, u = "syntax-ok";
+                      f.p = 4, f.v, u = "syntax-ok";
                     case 5:
                       i(u === "hello" || u === "syntax-ok", "import with 语法应被环境支持");
                     case 6:
-                      return l.a(2);
+                      return f.a(2);
                   }
               }, s, null, [[2, 4]]);
             }))), e("import with 选项中 type 属性为字符串", function() {
