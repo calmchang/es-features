@@ -1,0 +1,39 @@
+{
+  "name": "kn-es-features",
+  "version": "1.0.0",
+  "description": "ES2015/2022/2025/2026所有特性的测试案例集合",
+  "keywords": [
+    "es2015",
+    "es6",
+    "javascript",
+    "features",
+    "test"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/esfeatures.umd.cjs",
+  "module": "./dist/esfeatures.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esfeatures.js",
+      "require": "./dist/esfeatures.umd.cjs"
+    },
+    "./src": "./src/index.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "polyfill": "vite build --config vite.polyfill.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.29.0",
+    "@babel/preset-env": "~7.29.3",
+    "@rollup/plugin-babel": "~7.0.0",
+    "core-js": "~3.49.0",
+    "terser": "~5.46.2",
+    "vite": "~4.5.14"
+  }
+}
