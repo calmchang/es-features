@@ -20,10 +20,6 @@ export async function testExplicitResourceManagement() {
   const supported = (() => {
     try {
       using cx='cx';
-      new Function('Symbol', `
-        const r = { [Symbol.dispose]() {} }
-        { using x = r }
-      `)(Symbol)
       return true
     } catch { return false }
   })()
