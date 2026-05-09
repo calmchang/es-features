@@ -19,6 +19,7 @@ export async function testExplicitResourceManagement() {
   // 检测语法支持（using 是新语法，需用 Function 构造器探测）
   const supported = (() => {
     try {
+      using cx='cx';
       new Function('Symbol', `
         const r = { [Symbol.dispose]() {} }
         { using x = r }
