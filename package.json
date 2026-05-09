@@ -1,6 +1,6 @@
 {
   "name": "kn-es-features",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ES2015/2022/2025/2026所有特性的测试案例集合",
   "keywords": [
     "es2015",
