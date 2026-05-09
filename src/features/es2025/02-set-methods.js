@@ -12,6 +12,10 @@ export function testSetMethods() {
 
   const supported = typeof Set.prototype.union === 'function'
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 Set 新方法（union/intersection 等）')
+  })
+
   test('union() —— 并集', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Set.prototype.union)'); return }
     const a = new Set([1, 2, 3])
@@ -84,7 +88,7 @@ export function testSetMethods() {
     if (!supported) { assert(true, '(跳过)'); return }
     const a = new Set([1, 2, 3])
     // 传入数组
-    const result = a.intersection([2, 3, 4])
+    const result = a.intersection(new Set([2, 3, 4]))
     assert(result.size === 2 && result.has(2) && result.has(3), '应支持传入普通数组')
   })
 

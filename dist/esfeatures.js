@@ -1,225 +1,225 @@
-function _arrayLikeToArray(o, n) {
-  (n == null || n > o.length) && (n = o.length);
-  for (var e = 0, i = Array(n); e < n; e++)
-    i[e] = o[e];
-  return i;
-}
-function _arrayWithHoles(o) {
-  if (Array.isArray(o))
-    return o;
-}
-function _arrayWithoutHoles(o) {
-  if (Array.isArray(o))
-    return _arrayLikeToArray(o);
-}
-function _assertClassBrand(o, n, e) {
-  if (typeof o == "function" ? o === n : o.has(n))
-    return arguments.length < 3 ? n : e;
-  throw new TypeError("Private element is not present on this object");
-}
-function _assertThisInitialized(o) {
-  if (o === void 0)
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+function _arrayLikeToArray(a, t) {
+  (t == null || t > a.length) && (t = a.length);
+  for (var e = 0, o = Array(t); e < t; e++)
+    o[e] = a[e];
   return o;
 }
-function asyncGeneratorStep(o, n, e, i, t, r, a) {
+function _arrayWithHoles(a) {
+  if (Array.isArray(a))
+    return a;
+}
+function _arrayWithoutHoles(a) {
+  if (Array.isArray(a))
+    return _arrayLikeToArray(a);
+}
+function _assertClassBrand(a, t, e) {
+  if (typeof a == "function" ? a === t : a.has(t))
+    return arguments.length < 3 ? t : e;
+  throw new TypeError("Private element is not present on this object");
+}
+function _assertThisInitialized(a) {
+  if (a === void 0)
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  return a;
+}
+function asyncGeneratorStep(a, t, e, o, n, r, s) {
   try {
-    var s = o[r](a), u = s.value;
+    var u = a[r](s), i = u.value;
   } catch (c) {
     return void e(c);
   }
-  s.done ? n(u) : Promise.resolve(u).then(i, t);
+  u.done ? t(i) : Promise.resolve(i).then(o, n);
 }
-function _asyncToGenerator(o) {
+function _asyncToGenerator(a) {
   return function() {
-    var n = this, e = arguments;
-    return new Promise(function(i, t) {
-      var r = o.apply(n, e);
-      function a(u) {
-        asyncGeneratorStep(r, i, t, a, s, "next", u);
+    var t = this, e = arguments;
+    return new Promise(function(o, n) {
+      var r = a.apply(t, e);
+      function s(i) {
+        asyncGeneratorStep(r, o, n, s, u, "next", i);
       }
-      function s(u) {
-        asyncGeneratorStep(r, i, t, a, s, "throw", u);
+      function u(i) {
+        asyncGeneratorStep(r, o, n, s, u, "throw", i);
       }
-      a(void 0);
+      s(void 0);
     });
   };
 }
-function _callSuper(o, n, e) {
-  return n = _getPrototypeOf(n), _possibleConstructorReturn(o, _isNativeReflectConstruct() ? Reflect.construct(n, e || [], _getPrototypeOf(o).constructor) : n.apply(o, e));
+function _callSuper(a, t, e) {
+  return t = _getPrototypeOf(t), _possibleConstructorReturn(a, _isNativeReflectConstruct() ? Reflect.construct(t, e || [], _getPrototypeOf(a).constructor) : t.apply(a, e));
 }
-function _checkInRHS(o) {
-  if (Object(o) !== o)
-    throw TypeError("right-hand side of 'in' should be an object, got " + (o !== null ? typeof o : "null"));
-  return o;
+function _checkInRHS(a) {
+  if (Object(a) !== a)
+    throw TypeError("right-hand side of 'in' should be an object, got " + (a !== null ? typeof a : "null"));
+  return a;
 }
-function _checkPrivateRedeclaration(o, n) {
-  if (n.has(o))
+function _checkPrivateRedeclaration(a, t) {
+  if (t.has(a))
     throw new TypeError("Cannot initialize the same private elements twice on an object");
 }
-function _classCallCheck(o, n) {
-  if (!(o instanceof n))
+function _classCallCheck(a, t) {
+  if (!(a instanceof t))
     throw new TypeError("Cannot call a class as a function");
 }
-function _classPrivateFieldGet2(o, n) {
-  return o.get(_assertClassBrand(o, n));
+function _classPrivateFieldGet2(a, t) {
+  return a.get(_assertClassBrand(a, t));
 }
-function _classPrivateFieldInitSpec(o, n, e) {
-  _checkPrivateRedeclaration(o, n), n.set(o, e);
+function _classPrivateFieldInitSpec(a, t, e) {
+  _checkPrivateRedeclaration(a, t), t.set(a, e);
 }
-function _classPrivateFieldSet2(o, n, e) {
-  return o.set(_assertClassBrand(o, n), e), e;
+function _classPrivateFieldSet2(a, t, e) {
+  return a.set(_assertClassBrand(a, t), e), e;
 }
-function _classPrivateMethodInitSpec(o, n) {
-  _checkPrivateRedeclaration(o, n), n.add(o);
+function _classPrivateMethodInitSpec(a, t) {
+  _checkPrivateRedeclaration(a, t), t.add(a);
 }
-function _construct(o, n, e) {
+function _construct(a, t, e) {
   if (_isNativeReflectConstruct())
     return Reflect.construct.apply(null, arguments);
-  var i = [null];
-  i.push.apply(i, n);
-  var t = new (o.bind.apply(o, i))();
-  return e && _setPrototypeOf(t, e.prototype), t;
+  var o = [null];
+  o.push.apply(o, t);
+  var n = new (a.bind.apply(a, o))();
+  return e && _setPrototypeOf(n, e.prototype), n;
 }
-function _defineProperties(o, n) {
-  for (var e = 0; e < n.length; e++) {
-    var i = n[e];
-    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(o, _toPropertyKey(i.key), i);
+function _defineProperties(a, t) {
+  for (var e = 0; e < t.length; e++) {
+    var o = t[e];
+    o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(a, _toPropertyKey(o.key), o);
   }
 }
-function _createClass(o, n, e) {
-  return n && _defineProperties(o.prototype, n), e && _defineProperties(o, e), Object.defineProperty(o, "prototype", {
+function _createClass(a, t, e) {
+  return t && _defineProperties(a.prototype, t), e && _defineProperties(a, e), Object.defineProperty(a, "prototype", {
     writable: !1
-  }), o;
+  }), a;
 }
-function _createForOfIteratorHelper(o, n) {
-  var e = typeof Symbol < "u" && o[Symbol.iterator] || o["@@iterator"];
+function _createForOfIteratorHelper(a, t) {
+  var e = typeof Symbol < "u" && a[Symbol.iterator] || a["@@iterator"];
   if (!e) {
-    if (Array.isArray(o) || (e = _unsupportedIterableToArray(o)) || n && o && typeof o.length == "number") {
-      e && (o = e);
-      var i = 0, t = function() {
+    if (Array.isArray(a) || (e = _unsupportedIterableToArray(a)) || t && a && typeof a.length == "number") {
+      e && (a = e);
+      var o = 0, n = function() {
       };
       return {
-        s: t,
+        s: n,
         n: function() {
-          return i >= o.length ? {
+          return o >= a.length ? {
             done: !0
           } : {
             done: !1,
-            value: o[i++]
+            value: a[o++]
           };
         },
-        e: function(u) {
-          throw u;
+        e: function(i) {
+          throw i;
         },
-        f: t
+        f: n
       };
     }
     throw new TypeError(`Invalid attempt to iterate non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
   }
-  var r, a = !0, s = !1;
+  var r, s = !0, u = !1;
   return {
     s: function() {
-      e = e.call(o);
+      e = e.call(a);
     },
     n: function() {
-      var u = e.next();
-      return a = u.done, u;
+      var i = e.next();
+      return s = i.done, i;
     },
-    e: function(u) {
-      s = !0, r = u;
+    e: function(i) {
+      u = !0, r = i;
     },
     f: function() {
       try {
-        a || e.return == null || e.return();
+        s || e.return == null || e.return();
       } finally {
-        if (s)
+        if (u)
           throw r;
       }
     }
   };
 }
-function _defineProperty(o, n, e) {
-  return (n = _toPropertyKey(n)) in o ? Object.defineProperty(o, n, {
+function _defineProperty(a, t, e) {
+  return (t = _toPropertyKey(t)) in a ? Object.defineProperty(a, t, {
     value: e,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : o[n] = e, o;
+  }) : a[t] = e, a;
 }
 function _get() {
-  return _get = typeof Reflect < "u" && Reflect.get ? Reflect.get.bind() : function(o, n, e) {
-    var i = _superPropBase(o, n);
-    if (i) {
-      var t = Object.getOwnPropertyDescriptor(i, n);
-      return t.get ? t.get.call(arguments.length < 3 ? o : e) : t.value;
+  return _get = typeof Reflect < "u" && Reflect.get ? Reflect.get.bind() : function(a, t, e) {
+    var o = _superPropBase(a, t);
+    if (o) {
+      var n = Object.getOwnPropertyDescriptor(o, t);
+      return n.get ? n.get.call(arguments.length < 3 ? a : e) : n.value;
     }
   }, _get.apply(null, arguments);
 }
-function _getPrototypeOf(o) {
-  return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function(n) {
-    return n.__proto__ || Object.getPrototypeOf(n);
-  }, _getPrototypeOf(o);
+function _getPrototypeOf(a) {
+  return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function(t) {
+    return t.__proto__ || Object.getPrototypeOf(t);
+  }, _getPrototypeOf(a);
 }
-function _inherits(o, n) {
-  if (typeof n != "function" && n !== null)
+function _inherits(a, t) {
+  if (typeof t != "function" && t !== null)
     throw new TypeError("Super expression must either be null or a function");
-  o.prototype = Object.create(n && n.prototype, {
+  a.prototype = Object.create(t && t.prototype, {
     constructor: {
-      value: o,
+      value: a,
       writable: !0,
       configurable: !0
     }
-  }), Object.defineProperty(o, "prototype", {
+  }), Object.defineProperty(a, "prototype", {
     writable: !1
-  }), n && _setPrototypeOf(o, n);
+  }), t && _setPrototypeOf(a, t);
 }
-function _isNativeFunction(o) {
+function _isNativeFunction(a) {
   try {
-    return Function.toString.call(o).indexOf("[native code]") !== -1;
+    return Function.toString.call(a).indexOf("[native code]") !== -1;
   } catch {
-    return typeof o == "function";
+    return typeof a == "function";
   }
 }
 function _isNativeReflectConstruct() {
   try {
-    var o = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
+    var a = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
     }));
   } catch {
   }
   return (_isNativeReflectConstruct = function() {
-    return !!o;
+    return !!a;
   })();
 }
-function _iterableToArray(o) {
-  if (typeof Symbol < "u" && o[Symbol.iterator] != null || o["@@iterator"] != null)
-    return Array.from(o);
+function _iterableToArray(a) {
+  if (typeof Symbol < "u" && a[Symbol.iterator] != null || a["@@iterator"] != null)
+    return Array.from(a);
 }
-function _iterableToArrayLimit(o, n) {
-  var e = o == null ? null : typeof Symbol < "u" && o[Symbol.iterator] || o["@@iterator"];
+function _iterableToArrayLimit(a, t) {
+  var e = a == null ? null : typeof Symbol < "u" && a[Symbol.iterator] || a["@@iterator"];
   if (e != null) {
-    var i, t, r, a, s = [], u = !0, c = !1;
+    var o, n, r, s, u = [], i = !0, c = !1;
     try {
-      if (r = (e = e.call(o)).next, n === 0) {
+      if (r = (e = e.call(a)).next, t === 0) {
         if (Object(e) !== e)
           return;
-        u = !1;
+        i = !1;
       } else
-        for (; !(u = (i = r.call(e)).done) && (s.push(i.value), s.length !== n); u = !0)
+        for (; !(i = (o = r.call(e)).done) && (u.push(o.value), u.length !== t); i = !0)
           ;
-    } catch (l) {
-      c = !0, t = l;
+    } catch (f) {
+      c = !0, n = f;
     } finally {
       try {
-        if (!u && e.return != null && (a = e.return(), Object(a) !== a))
+        if (!i && e.return != null && (s = e.return(), Object(s) !== s))
           return;
       } finally {
         if (c)
-          throw t;
+          throw n;
       }
     }
-    return s;
+    return u;
   }
 }
 function _nonIterableRest() {
@@ -230,681 +230,413 @@ function _nonIterableSpread() {
   throw new TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
 }
-function ownKeys(o, n) {
-  var e = Object.keys(o);
+function ownKeys(a, t) {
+  var e = Object.keys(a);
   if (Object.getOwnPropertySymbols) {
-    var i = Object.getOwnPropertySymbols(o);
-    n && (i = i.filter(function(t) {
-      return Object.getOwnPropertyDescriptor(o, t).enumerable;
-    })), e.push.apply(e, i);
+    var o = Object.getOwnPropertySymbols(a);
+    t && (o = o.filter(function(n) {
+      return Object.getOwnPropertyDescriptor(a, n).enumerable;
+    })), e.push.apply(e, o);
   }
   return e;
 }
-function _objectSpread2(o) {
-  for (var n = 1; n < arguments.length; n++) {
-    var e = arguments[n] != null ? arguments[n] : {};
-    n % 2 ? ownKeys(Object(e), !0).forEach(function(i) {
-      _defineProperty(o, i, e[i]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(e)) : ownKeys(Object(e)).forEach(function(i) {
-      Object.defineProperty(o, i, Object.getOwnPropertyDescriptor(e, i));
+function _objectSpread2(a) {
+  for (var t = 1; t < arguments.length; t++) {
+    var e = arguments[t] != null ? arguments[t] : {};
+    t % 2 ? ownKeys(Object(e), !0).forEach(function(o) {
+      _defineProperty(a, o, e[o]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(e)) : ownKeys(Object(e)).forEach(function(o) {
+      Object.defineProperty(a, o, Object.getOwnPropertyDescriptor(e, o));
     });
   }
-  return o;
+  return a;
 }
-function _objectWithoutProperties(o, n) {
-  if (o == null)
-    return {};
-  var e, i, t = _objectWithoutPropertiesLoose(o, n);
-  if (Object.getOwnPropertySymbols) {
-    var r = Object.getOwnPropertySymbols(o);
-    for (i = 0; i < r.length; i++)
-      e = r[i], n.indexOf(e) === -1 && {}.propertyIsEnumerable.call(o, e) && (t[e] = o[e]);
-  }
-  return t;
-}
-function _objectWithoutPropertiesLoose(o, n) {
-  if (o == null)
-    return {};
-  var e = {};
-  for (var i in o)
-    if ({}.hasOwnProperty.call(o, i)) {
-      if (n.indexOf(i) !== -1)
-        continue;
-      e[i] = o[i];
-    }
-  return e;
-}
-function _possibleConstructorReturn(o, n) {
-  if (n && (typeof n == "object" || typeof n == "function"))
-    return n;
-  if (n !== void 0)
+function _possibleConstructorReturn(a, t) {
+  if (t && (typeof t == "object" || typeof t == "function"))
+    return t;
+  if (t !== void 0)
     throw new TypeError("Derived constructors may only return object or undefined");
-  return _assertThisInitialized(o);
+  return _assertThisInitialized(a);
 }
 function _regenerator() {
   /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */
-  var o, n, e = typeof Symbol == "function" ? Symbol : {}, i = e.iterator || "@@iterator", t = e.toStringTag || "@@toStringTag";
-  function r(y, p, S, M) {
-    var I = p && p.prototype instanceof s ? p : s, R = Object.create(I.prototype);
-    return _regeneratorDefine(R, "_invoke", function(F, T, N) {
-      var _, h, d, P = 0, k = N || [], A = !1, w = {
+  var a, t, e = typeof Symbol == "function" ? Symbol : {}, o = e.iterator || "@@iterator", n = e.toStringTag || "@@toStringTag";
+  function r(h, p, S, M) {
+    var F = p && p.prototype instanceof u ? p : u, k = Object.create(F.prototype);
+    return _regeneratorDefine(k, "_invoke", function(j, N, T) {
+      var b, d, m, P = 0, I = T || [], A = !1, _ = {
         p: 0,
         n: 0,
-        v: o,
-        a: O,
-        f: O.bind(o, 4),
-        d: function(b, m) {
-          return _ = b, h = 0, d = o, w.n = m, a;
+        v: a,
+        a: R,
+        f: R.bind(a, 4),
+        d: function(w, v) {
+          return b = w, d = 0, m = a, _.n = v, s;
         }
       };
-      function O(b, m) {
-        for (h = b, d = m, n = 0; !A && P && !E && n < k.length; n++) {
-          var E, g = k[n], C = w.p, j = g[2];
-          b > 3 ? (E = j === m) && (d = g[(h = g[4]) ? 5 : (h = 3, 3)], g[4] = g[5] = o) : g[0] <= C && ((E = b < 2 && C < g[1]) ? (h = 0, w.v = m, w.n = g[1]) : C < j && (E = b < 3 || g[0] > m || m > j) && (g[4] = b, g[5] = m, w.n = j, h = 0));
+      function R(w, v) {
+        for (d = w, m = v, t = 0; !A && P && !E && t < I.length; t++) {
+          var E, g = I[t], C = _.p, O = g[2];
+          w > 3 ? (E = O === v) && (m = g[(d = g[4]) ? 5 : (d = 3, 3)], g[4] = g[5] = a) : g[0] <= C && ((E = w < 2 && C < g[1]) ? (d = 0, _.v = v, _.n = g[1]) : C < O && (E = w < 3 || g[0] > v || v > O) && (g[4] = w, g[5] = v, _.n = O, d = 0));
         }
-        if (E || b > 1)
-          return a;
-        throw A = !0, m;
+        if (E || w > 1)
+          return s;
+        throw A = !0, v;
       }
-      return function(b, m, E) {
+      return function(w, v, E) {
         if (P > 1)
           throw TypeError("Generator is already running");
-        for (A && m === 1 && O(m, E), h = m, d = E; (n = h < 2 ? o : d) || !A; ) {
-          _ || (h ? h < 3 ? (h > 1 && (w.n = -1), O(h, d)) : w.n = d : w.v = d);
+        for (A && v === 1 && R(v, E), d = v, m = E; (t = d < 2 ? a : m) || !A; ) {
+          b || (d ? d < 3 ? (d > 1 && (_.n = -1), R(d, m)) : _.n = m : _.v = m);
           try {
-            if (P = 2, _) {
-              if (h || (b = "next"), n = _[b]) {
-                if (!(n = n.call(_, d)))
+            if (P = 2, b) {
+              if (d || (w = "next"), t = b[w]) {
+                if (!(t = t.call(b, m)))
                   throw TypeError("iterator result is not an object");
-                if (!n.done)
-                  return n;
-                d = n.value, h < 2 && (h = 0);
+                if (!t.done)
+                  return t;
+                m = t.value, d < 2 && (d = 0);
               } else
-                h === 1 && (n = _.return) && n.call(_), h < 2 && (d = TypeError("The iterator does not provide a '" + b + "' method"), h = 1);
-              _ = o;
-            } else if ((n = (A = w.n < 0) ? d : F.call(T, w)) !== a)
+                d === 1 && (t = b.return) && t.call(b), d < 2 && (m = TypeError("The iterator does not provide a '" + w + "' method"), d = 1);
+              b = a;
+            } else if ((t = (A = _.n < 0) ? m : j.call(N, _)) !== s)
               break;
           } catch (g) {
-            _ = o, h = 1, d = g;
+            b = a, d = 1, m = g;
           } finally {
             P = 1;
           }
         }
         return {
-          value: n,
+          value: t,
           done: A
         };
       };
-    }(y, S, M), !0), R;
+    }(h, S, M), !0), k;
   }
-  var a = {};
-  function s() {
-  }
+  var s = {};
   function u() {
+  }
+  function i() {
   }
   function c() {
   }
-  n = Object.getPrototypeOf;
-  var l = [][i] ? n(n([][i]())) : (_regeneratorDefine(n = {}, i, function() {
+  t = Object.getPrototypeOf;
+  var f = [][o] ? t(t([][o]())) : (_regeneratorDefine(t = {}, o, function() {
     return this;
-  }), n), f = c.prototype = s.prototype = Object.create(l);
-  function v(y) {
-    return Object.setPrototypeOf ? Object.setPrototypeOf(y, c) : (y.__proto__ = c, _regeneratorDefine(y, t, "GeneratorFunction")), y.prototype = Object.create(f), y;
+  }), t), l = c.prototype = u.prototype = Object.create(f);
+  function y(h) {
+    return Object.setPrototypeOf ? Object.setPrototypeOf(h, c) : (h.__proto__ = c, _regeneratorDefine(h, n, "GeneratorFunction")), h.prototype = Object.create(l), h;
   }
-  return u.prototype = c, _regeneratorDefine(f, "constructor", c), _regeneratorDefine(c, "constructor", u), u.displayName = "GeneratorFunction", _regeneratorDefine(c, t, "GeneratorFunction"), _regeneratorDefine(f), _regeneratorDefine(f, t, "Generator"), _regeneratorDefine(f, i, function() {
+  return i.prototype = c, _regeneratorDefine(l, "constructor", c), _regeneratorDefine(c, "constructor", i), i.displayName = "GeneratorFunction", _regeneratorDefine(c, n, "GeneratorFunction"), _regeneratorDefine(l), _regeneratorDefine(l, n, "Generator"), _regeneratorDefine(l, o, function() {
     return this;
-  }), _regeneratorDefine(f, "toString", function() {
+  }), _regeneratorDefine(l, "toString", function() {
     return "[object Generator]";
   }), (_regenerator = function() {
     return {
       w: r,
-      m: v
+      m: y
     };
   })();
 }
-function _regeneratorDefine(o, n, e, i) {
-  var t = Object.defineProperty;
+function _regeneratorDefine(a, t, e, o) {
+  var n = Object.defineProperty;
   try {
-    t({}, "", {});
+    n({}, "", {});
   } catch {
-    t = 0;
+    n = 0;
   }
-  _regeneratorDefine = function(r, a, s, u) {
-    function c(l, f) {
-      _regeneratorDefine(r, l, function(v) {
-        return this._invoke(l, f, v);
+  _regeneratorDefine = function(r, s, u, i) {
+    function c(f, l) {
+      _regeneratorDefine(r, f, function(y) {
+        return this._invoke(f, l, y);
       });
     }
-    a ? t ? t(r, a, {
-      value: s,
-      enumerable: !u,
-      configurable: !u,
-      writable: !u
-    }) : r[a] = s : (c("next", 0), c("throw", 1), c("return", 2));
-  }, _regeneratorDefine(o, n, e, i);
+    s ? n ? n(r, s, {
+      value: u,
+      enumerable: !i,
+      configurable: !i,
+      writable: !i
+    }) : r[s] = u : (c("next", 0), c("throw", 1), c("return", 2));
+  }, _regeneratorDefine(a, t, e, o);
 }
-function _regeneratorValues(o) {
-  if (o != null) {
-    var n = o[typeof Symbol == "function" && Symbol.iterator || "@@iterator"], e = 0;
-    if (n)
-      return n.call(o);
-    if (typeof o.next == "function")
-      return o;
-    if (!isNaN(o.length))
-      return {
-        next: function() {
-          return o && e >= o.length && (o = void 0), {
-            value: o && o[e++],
-            done: !o
-          };
-        }
-      };
-  }
-  throw new TypeError(typeof o + " is not iterable");
+function _setPrototypeOf(a, t) {
+  return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(e, o) {
+    return e.__proto__ = o, e;
+  }, _setPrototypeOf(a, t);
 }
-function _setPrototypeOf(o, n) {
-  return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(e, i) {
-    return e.__proto__ = i, e;
-  }, _setPrototypeOf(o, n);
+function _slicedToArray(a, t) {
+  return _arrayWithHoles(a) || _iterableToArrayLimit(a, t) || _unsupportedIterableToArray(a, t) || _nonIterableRest();
 }
-function _slicedToArray(o, n) {
-  return _arrayWithHoles(o) || _iterableToArrayLimit(o, n) || _unsupportedIterableToArray(o, n) || _nonIterableRest();
-}
-function _superPropBase(o, n) {
-  for (; !{}.hasOwnProperty.call(o, n) && (o = _getPrototypeOf(o)) !== null; )
+function _superPropBase(a, t) {
+  for (; !{}.hasOwnProperty.call(a, t) && (a = _getPrototypeOf(a)) !== null; )
     ;
-  return o;
+  return a;
 }
-function _superPropGet(o, n, e, i) {
-  var t = _get(_getPrototypeOf(1 & i ? o.prototype : o), n, e);
-  return 2 & i && typeof t == "function" ? function(r) {
-    return t.apply(e, r);
-  } : t;
+function _superPropGet(a, t, e, o) {
+  var n = _get(_getPrototypeOf(1 & o ? a.prototype : a), t, e);
+  return 2 & o && typeof n == "function" ? function(r) {
+    return n.apply(e, r);
+  } : n;
 }
-function _taggedTemplateLiteral(o, n) {
-  return n || (n = o.slice(0)), Object.freeze(Object.defineProperties(o, {
-    raw: {
-      value: Object.freeze(n)
-    }
-  }));
+function _toConsumableArray(a) {
+  return _arrayWithoutHoles(a) || _iterableToArray(a) || _unsupportedIterableToArray(a) || _nonIterableSpread();
 }
-function _toConsumableArray(o) {
-  return _arrayWithoutHoles(o) || _iterableToArray(o) || _unsupportedIterableToArray(o) || _nonIterableSpread();
-}
-function _toPrimitive(o, n) {
-  if (typeof o != "object" || !o)
-    return o;
-  var e = o[Symbol.toPrimitive];
+function _toPrimitive(a, t) {
+  if (typeof a != "object" || !a)
+    return a;
+  var e = a[Symbol.toPrimitive];
   if (e !== void 0) {
-    var i = e.call(o, n || "default");
-    if (typeof i != "object")
-      return i;
+    var o = e.call(a, t || "default");
+    if (typeof o != "object")
+      return o;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (n === "string" ? String : Number)(o);
+  return (t === "string" ? String : Number)(a);
 }
-function _toPropertyKey(o) {
-  var n = _toPrimitive(o, "string");
-  return typeof n == "symbol" ? n : n + "";
+function _toPropertyKey(a) {
+  var t = _toPrimitive(a, "string");
+  return typeof t == "symbol" ? t : t + "";
 }
-function _typeof(o) {
+function _typeof(a) {
   "@babel/helpers - typeof";
-  return _typeof = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(n) {
-    return typeof n;
-  } : function(n) {
-    return n && typeof Symbol == "function" && n.constructor === Symbol && n !== Symbol.prototype ? "symbol" : typeof n;
-  }, _typeof(o);
+  return _typeof = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t) {
+    return typeof t;
+  } : function(t) {
+    return t && typeof Symbol == "function" && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
+  }, _typeof(a);
 }
-function _unsupportedIterableToArray(o, n) {
-  if (o) {
-    if (typeof o == "string")
-      return _arrayLikeToArray(o, n);
-    var e = {}.toString.call(o).slice(8, -1);
-    return e === "Object" && o.constructor && (e = o.constructor.name), e === "Map" || e === "Set" ? Array.from(o) : e === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e) ? _arrayLikeToArray(o, n) : void 0;
+function _unsupportedIterableToArray(a, t) {
+  if (a) {
+    if (typeof a == "string")
+      return _arrayLikeToArray(a, t);
+    var e = {}.toString.call(a).slice(8, -1);
+    return e === "Object" && a.constructor && (e = a.constructor.name), e === "Map" || e === "Set" ? Array.from(a) : e === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e) ? _arrayLikeToArray(a, t) : void 0;
   }
 }
-function _wrapNativeSuper(o) {
-  var n = typeof Map == "function" ? /* @__PURE__ */ new Map() : void 0;
+function _wrapNativeSuper(a) {
+  var t = typeof Map == "function" ? /* @__PURE__ */ new Map() : void 0;
   return _wrapNativeSuper = function(e) {
     if (e === null || !_isNativeFunction(e))
       return e;
     if (typeof e != "function")
       throw new TypeError("Super expression must either be null or a function");
-    if (n !== void 0) {
-      if (n.has(e))
-        return n.get(e);
-      n.set(e, i);
+    if (t !== void 0) {
+      if (t.has(e))
+        return t.get(e);
+      t.set(e, o);
     }
-    function i() {
+    function o() {
       return _construct(e, arguments, _getPrototypeOf(this).constructor);
     }
-    return i.prototype = Object.create(e.prototype, {
+    return o.prototype = Object.create(e.prototype, {
       constructor: {
-        value: i,
+        value: o,
         enumerable: !1,
         writable: !0,
         configurable: !0
       }
-    }), _setPrototypeOf(i, e);
-  }, _wrapNativeSuper(o);
+    }), _setPrototypeOf(o, e);
+  }, _wrapNativeSuper(a);
 }
 function _wrapRegExp() {
-  _wrapRegExp = function(t, r) {
-    return new e(t, void 0, r);
+  _wrapRegExp = function(n, r) {
+    return new e(n, void 0, r);
   };
-  var o = RegExp.prototype, n = /* @__PURE__ */ new WeakMap();
-  function e(t, r, a) {
-    var s = RegExp(t, r);
-    return n.set(s, a || n.get(t)), _setPrototypeOf(s, e.prototype);
+  var a = RegExp.prototype, t = /* @__PURE__ */ new WeakMap();
+  function e(n, r, s) {
+    var u = RegExp(n, r);
+    return t.set(u, s || t.get(n)), _setPrototypeOf(u, e.prototype);
   }
-  function i(t, r) {
-    var a = n.get(r);
-    return Object.keys(a).reduce(function(s, u) {
-      var c = a[u];
+  function o(n, r) {
+    var s = t.get(r);
+    return Object.keys(s).reduce(function(u, i) {
+      var c = s[i];
       if (typeof c == "number")
-        s[u] = t[c];
+        u[i] = n[c];
       else {
-        for (var l = 0; t[c[l]] === void 0 && l + 1 < c.length; )
-          l++;
-        s[u] = t[c[l]];
+        for (var f = 0; n[c[f]] === void 0 && f + 1 < c.length; )
+          f++;
+        u[i] = n[c[f]];
       }
-      return s;
+      return u;
     }, /* @__PURE__ */ Object.create(null));
   }
-  return _inherits(e, RegExp), e.prototype.exec = function(t) {
-    var r = o.exec.call(this, t);
+  return _inherits(e, RegExp), e.prototype.exec = function(n) {
+    var r = a.exec.call(this, n);
     if (r) {
-      r.groups = i(r, this);
-      var a = r.indices;
-      a && (a.groups = i(a, this));
+      r.groups = o(r, this);
+      var s = r.indices;
+      s && (s.groups = o(s, this));
     }
     return r;
-  }, e.prototype[Symbol.replace] = function(t, r) {
+  }, e.prototype[Symbol.replace] = function(n, r) {
     if (typeof r == "string") {
-      var a = n.get(this);
-      return o[Symbol.replace].call(this, t, r.replace(/\$<([^>]+)(>|$)/g, function(u, c, l) {
-        if (l === "")
-          return u;
-        var f = a[c];
-        return Array.isArray(f) ? "$" + f.join("$") : typeof f == "number" ? "$" + f : "";
+      var s = t.get(this);
+      return a[Symbol.replace].call(this, n, r.replace(/\$<([^>]+)(>|$)/g, function(i, c, f) {
+        if (f === "")
+          return i;
+        var l = s[c];
+        return Array.isArray(l) ? "$" + l.join("$") : typeof l == "number" ? "$" + l : "";
       }));
     }
     if (typeof r == "function") {
-      var s = this;
-      return o[Symbol.replace].call(this, t, function() {
-        var u = arguments;
-        return typeof u[u.length - 1] != "object" && (u = [].slice.call(u)).push(i(u, s)), r.apply(this, u);
+      var u = this;
+      return a[Symbol.replace].call(this, n, function() {
+        var i = arguments;
+        return typeof i[i.length - 1] != "object" && (i = [].slice.call(i)).push(o(i, u)), r.apply(this, i);
       });
     }
-    return o[Symbol.replace].call(this, t, r);
+    return a[Symbol.replace].call(this, n, r);
   }, _wrapRegExp.apply(this, arguments);
 }
-function createSuite(o) {
-  var n = [];
-  function e(r, a) {
+function createSuite(a) {
+  var t = [];
+  function e(r, s) {
     try {
-      var s = a();
-      if (s instanceof Promise)
-        return s.then(function() {
-          n.push({
-            suite: o,
+      var u = s();
+      if (u instanceof Promise)
+        return u.then(function() {
+          t.push({
+            suite: a,
             case: r,
             status: "pass"
           });
-        }).catch(function(u) {
-          n.push({
-            suite: o,
+        }).catch(function(i) {
+          t.push({
+            suite: a,
             case: r,
             status: "fail",
-            error: u.message
+            error: i.message
           });
         });
-      n.push({
-        suite: o,
+      t.push({
+        suite: a,
         case: r,
         status: "pass"
       });
-    } catch (u) {
-      n.push({
-        suite: o,
+    } catch (i) {
+      t.push({
+        suite: a,
         case: r,
         status: "fail",
-        error: u.message
+        error: i.message
       });
     }
   }
-  function i(r, a) {
+  function o(r, s) {
     if (!r)
-      throw new Error(a || "断言失败");
+      throw new Error(s || "断言失败");
   }
-  function t() {
-    return n;
+  function n() {
+    return t;
   }
   return {
     test: e,
-    assert: i,
-    getResults: t
+    assert: o,
+    getResults: n
   };
 }
-function printResults(o) {
-  var n = 0, e = 0;
-  o.forEach(function(i) {
-    i.status === "pass" ? (n++, console.log("  ✓ [".concat(i.suite, "] ").concat(i.case))) : (e++, console.error("  ✗ [".concat(i.suite, "] ").concat(i.case, " — ").concat(i.error)));
+function printResults(a) {
+  var t = 0, e = 0;
+  a.forEach(function(o) {
+    o.status === "pass" ? (t++, console.log("  ✓ [".concat(o.suite, "] ").concat(o.case))) : (e++, console.error("  ✗ [".concat(o.suite, "] ").concat(o.case, " — ").concat(o.error)));
   }), console.log(`
-共 `.concat(o.length, " 项，通过 ").concat(n, "，失败 ").concat(e));
+共 `.concat(a.length, " 项，通过 ").concat(t, "，失败 ").concat(e));
 }
 function testLetConst() {
-  var o = createSuite("let & const"), n = o.test, e = o.assert, i = o.getResults;
-  return n("let 块级作用域", function() {
-    for (var t = [], r = 0; r < 3; r++)
-      t.push(r);
-    e(t[0] === 0 && t[2] === 2, "let 循环变量应为独立值");
-  }), n("let 不可重复声明", function() {
-    try {
-      new Function('"use strict"; let x = 1; let x = 2;')(), e(!1, "应抛出 SyntaxError");
-    } catch (t) {
-      e(t instanceof SyntaxError || t instanceof TypeError, "应为语法错误");
-    }
-  }), n("let 暂时性死区(TDZ)", function() {
-    try {
-      new Function('"use strict"; console.log(y); let y = 1;')(), e(!1, "应抛出 ReferenceError");
-    } catch {
-      e(!0);
-    }
-  }), n("const 声明常量", function() {
-    var t = 3.14159;
-    e(t === 3.14159, "const 值应保持不变");
-  }), n("const 不可重新赋值", function() {
-    try {
-      new Function('"use strict"; const x = 1; x = 2;')(), e(!1, "应抛出 TypeError");
-    } catch (t) {
-      e(t instanceof TypeError, "应为 TypeError");
-    }
-  }), n("const 对象属性可修改", function() {
-    var t = {
-      a: 1
-    };
-    t.a = 2, e(t.a === 2, "const 对象的属性可以修改");
-  }), i();
+  var a = createSuite("let & const"), t = a.test, e = a.assert, o = a.getResults;
+  return t("let 块级作用域", function() {
+    for (var n = [], r = 0; r < 3; r++)
+      n.push(r);
+    e(n[0] === 0 && n[2] === 2, "let 循环变量应为独立值");
+  }), t("const 声明常量", function() {
+    var n = 3.14159;
+    e(n === 3.14159, "const 值应保持不变");
+  }), o();
 }
 function testArrowFunctions() {
-  var o = createSuite("箭头函数"), n = o.test, e = o.assert, i = o.getResults;
-  return n("基本语法", function() {
-    var t = function(a, s) {
-      return a + s;
+  var a = createSuite("箭头函数"), t = a.test, e = a.assert, o = a.getResults;
+  return t("基本语法", function() {
+    var n = function(s, u) {
+      return s + u;
     };
-    e(t(2, 3) === 5, "箭头函数返回值应为 5");
-  }), n("单参数省略括号", function() {
-    var t = function(a) {
-      return a * 2;
-    };
-    e(t(4) === 8, "单参数箭头函数应正常工作");
-  }), n("无参数需要括号", function() {
-    var t = function() {
-      return "hello";
-    };
-    e(t() === "hello", "无参数箭头函数应正常工作");
-  }), n("多行函数体需要花括号和 return", function() {
-    var t = function(a, s) {
-      var u = a + s;
-      return u * 2;
-    };
-    e(t(2, 3) === 10, "多行箭头函数应正确计算");
-  }), n("返回对象字面量需要括号", function() {
-    var t = function(s) {
-      return {
-        value: s
-      };
-    }, r = t(42);
-    e(r.value === 42, "箭头函数返回对象应正确包裹");
-  }), n("this 词法绑定", function() {
-    function t() {
-      var a = this;
-      this.count = 0;
-      var s = function() {
-        a.count++;
-      };
-      s(), s();
-    }
-    var r = new t();
-    e(r.count === 2, "箭头函数 this 应绑定外层作用域");
-  }), n("没有 arguments 对象", function() {
-    e(!0, "箭头函数无独立 arguments");
-  }), n("不能用作构造函数（原生环境）", function() {
-    var t = function() {
-    }, r = t.prototype === void 0;
-    if (r)
-      try {
-        new t(), e(!1, "应抛出 TypeError");
-      } catch (a) {
-        e(a instanceof TypeError, "箭头函数不能 new");
-      }
-  }), i();
+    e(n(2, 3) === 5, "箭头函数返回值应为 5");
+  }), o();
 }
-var _templateObject, _templateObject2;
 function testTemplateLiterals() {
-  var o = createSuite("模板字符串"), n = o.test, e = o.assert, i = o.getResults;
-  return n("基本插值", function() {
-    var t = "ES2015", r = "Hello, ".concat(t, "!");
+  var a = createSuite("模板字符串"), t = a.test, e = a.assert, o = a.getResults;
+  return t("基本插值", function() {
+    var n = "ES2015", r = "Hello, ".concat(n, "!");
     e(r === "Hello, ES2015!", "模板字符串插值应正确");
-  }), n("表达式插值", function() {
-    var t = 3, r = 4, a = "".concat(t, " + ").concat(r, " = ").concat(t + r);
-    e(a === "3 + 4 = 7", "模板字符串支持表达式");
-  }), n("多行字符串", function() {
-    var t = `第一行
-第二行`;
-    e(t.includes(`
-`), "模板字符串支持多行");
-  }), n("嵌套模板", function() {
-    var t = ["a", "b", "c"], r = "items: ".concat(t.map(function(a) {
-      return "[".concat(a, "]");
-    }).join(", "));
-    e(r === "items: [a], [b], [c]", "模板字符串可以嵌套");
-  }), n("标签模板 - 基本用法", function() {
-    function t(s) {
-      for (var u = arguments.length, c = new Array(u > 1 ? u - 1 : 0), l = 1; l < u; l++)
-        c[l - 1] = arguments[l];
-      return s.raw[0] + c[0].toUpperCase();
-    }
-    var r = "world", a = t(_templateObject || (_templateObject = _taggedTemplateLiteral(["hello ", ""])), r);
-    e(a === "hello WORLD", "标签模板应正确处理");
-  }), n("标签模板 - String.raw", function() {
-    var t = String.raw(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([`C:Users	est
-`], ["C:\\Users\\test\\n"])));
-    e(t.includes("\\n"), "String.raw 应保留原始反斜杠");
-  }), n("模板字符串中调用函数", function() {
-    var t = function(s) {
-      return s.toUpperCase();
-    }, r = "result: ".concat(t("hello"));
-    e(r === "result: HELLO", "模板字符串中可调用函数");
-  }), i();
+  }), o();
 }
-var _excluded = ["x"];
 function testDestructuring() {
-  var o = createSuite("解构赋值"), n = o.test, e = o.assert, i = o.getResults;
-  return n("数组解构 - 基本", function() {
-    var t = 3;
-    e(t === 3, "数组解构基本用法");
-  }), n("数组解构 - 跳过元素", function() {
-    var t = [1, 2, 3, 4], r = t[3];
+  var a = createSuite("解构赋值"), t = a.test, e = a.assert, o = a.getResults;
+  return t("数组解构 - 基本", function() {
+    var n = 3;
+    e(n === 3, "数组解构基本用法");
+  }), t("数组解构 - 跳过元素", function() {
+    var n = [1, 2, 3, 4], r = n[3];
     e(r === 4, "数组解构可跳过元素");
-  }), n("数组解构 - 默认值", function() {
-    var t = 20;
-    e(t === 20, "数组解构默认值");
-  }), n("数组解构 - rest 元素", function() {
-    var t = [2, 3, 4];
-    e(t.length === 3, "数组解构 rest 元素");
-  }), n("数组解构 - 交换变量", function() {
-    var t = 1, r = 2, a = [r, t];
-    t = a[0], r = a[1], e(t === 2 && r === 1, "解构交换变量");
-  }), n("对象解构 - 基本", function() {
-    var t = {
-      name: "Alice",
-      age: 25
-    }, r = t.age;
-    e(r === 25, "对象解构基本用法");
-  }), n("对象解构 - 重命名", function() {
-    var t = {
-      name: "Bob",
-      age: 30
-    }, r = t.age;
-    e(r === 30, "对象解构重命名");
-  }), n("对象解构 - 默认值", function() {
-    var t = {
-      a: 10
-    }, r = t.b, a = r === void 0 ? 2 : r;
-    e(a === 2, "对象解构默认值");
-  }), n("对象解构 - rest 属性", function() {
-    var t = {
-      x: 1,
-      y: 2,
-      z: 3
-    }, r = t.x, a = _objectWithoutProperties(t, _excluded);
-    e(r === 1 && a.y === 2 && a.z === 3, "对象解构 rest 属性");
-  }), n("嵌套解构", function() {
-    var t = {
-      a: {
-        b: {
-          c: 42
-        }
-      }
-    }, r = t.a.b.c;
-    e(r === 42, "嵌套解构");
-  }), n("函数参数解构", function() {
-    var t = function(a) {
-      var s = a.name, u = a.age, c = u === void 0 ? 18 : u;
-      return "".concat(s, ":").concat(c);
-    };
-    e(t({
-      name: "Alice"
-    }) === "Alice:18", "函数参数解构");
-  }), n("字符串解构", function() {
-    var t = "abc", r = _slicedToArray(t, 3), a = r[0], s = r[1], u = r[2];
-    e(a === "a" && s === "b" && u === "c", "字符串解构");
-  }), i();
+  }), o();
 }
 function testDefaultRestSpread() {
-  var o = createSuite("默认参数/Rest/Spread"), n = o.test, e = o.assert, i = o.getResults;
-  return n("默认参数 - 基本", function() {
-    var t = function() {
-      var a = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : "World";
-      return "Hello, ".concat(a, "!");
-    };
-    e(t() === "Hello, World!", "默认参数应生效"), e(t("Alice") === "Hello, Alice!", "传参时默认参数应被覆盖");
-  }), n("默认参数 - undefined 触发默认值", function() {
-    var t = function() {
-      var a = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 1;
-      return a;
-    };
-    e(t(void 0) === 1, "undefined 触发默认参数"), e(t(null) === null, "null 不触发默认参数");
-  }), n("默认参数 - 使用前面的参数", function() {
-    var t = function(a) {
-      var s = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : a * 2;
-      return s;
-    };
-    e(t(5) === 10, "默认参数可引用前面的参数");
-  }), n("默认参数 - 表达式", function() {
-    var t = function() {
-      var s = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : Math.random();
-      return s;
-    }, r = t();
-    e(typeof r == "number", "默认参数可以是表达式");
-  }), n("rest 参数 - 收集剩余参数", function() {
-    var t = function(a) {
-      for (var s = arguments.length, u = new Array(s > 1 ? s - 1 : 0), c = 1; c < s; c++)
-        u[c - 1] = arguments[c];
-      return u.reduce(function(l, f) {
-        return l + f;
-      }, a);
-    };
-    e(t(1, 2, 3, 4) === 10, "rest 参数应收集剩余参数");
-  }), n("rest 参数 - 是真正的数组", function() {
-    var t = function() {
-      for (var a = arguments.length, s = new Array(a), u = 0; u < a; u++)
-        s[u] = arguments[u];
-      return Array.isArray(s);
-    };
-    e(t(1, 2, 3) === !0, "rest 参数是真正的数组");
-  }), n("rest 参数只能在最后", function() {
-    try {
-      new Function("function f(...a, b){}")(), e(!1, "应抛出 SyntaxError");
-    } catch {
-      e(!0, "rest 参数只能在最后");
-    }
-  }), n("spread 展开数组", function() {
-    var t = [1, 2, 3], r = [0].concat(t, [4]);
-    e(r.join(",") === "0,1,2,3,4", "spread 展开数组");
-  }), n("spread 复制数组", function() {
-    var t = [1, 2, 3], r = [].concat(t);
-    r.push(4), e(t.length === 3 && r.length === 4, "spread 复制数组为浅拷贝");
-  }), n("spread 合并数组", function() {
-    var t = [1, 2].concat([3, 4], [5]);
-    e(t.join(",") === "1,2,3,4,5", "spread 合并数组");
-  }), n("spread 传入函数参数", function() {
-    var t = [1, 2, 3];
-    e(Math.max.apply(Math, t) === 3, "spread 传入函数参数");
-  }), n("spread 展开对象", function() {
-    var t = {
+  var a = createSuite("默认参数/Rest/Spread"), t = a.test, e = a.assert, o = a.getResults;
+  return t("spread 对象覆盖属性", function() {
+    var n = {
       a: 1,
       b: 2
-    }, r = _objectSpread2(_objectSpread2({}, t), {}, {
-      c: 3
-    });
-    e(r.a === 1 && r.b === 2 && r.c === 3, "spread 展开对象");
-  }), n("spread 对象覆盖属性", function() {
-    var t = {
-      a: 1,
-      b: 2
-    }, r = _objectSpread2(_objectSpread2({}, t), {}, {
+    }, r = _objectSpread2(_objectSpread2({}, n), {}, {
       b: 99
     });
     e(r.b === 99, "spread 后面属性覆盖前面");
-  }), i();
+  }), o();
 }
 function testClasses() {
-  var o = createSuite("类(Class)"), n = o.test, e = o.assert, i = o.getResults;
-  return n("基本类定义", function() {
-    var t = /* @__PURE__ */ function() {
-      function a(s) {
-        _classCallCheck(this, a), this.name = s;
-      }
-      return _createClass(a, [{
-        key: "speak",
-        value: function() {
-          return "".concat(this.name, " makes a sound.");
-        }
-      }]);
-    }(), r = new t("Cat");
-    e(r.name === "Cat", "构造函数应正确赋值"), e(r.speak() === "Cat makes a sound.", "实例方法应正常工作");
-  }), n("类继承", function() {
-    var t = /* @__PURE__ */ function() {
+  var a = createSuite("类(Class)"), t = a.test, e = a.assert, o = a.getResults;
+  return t("基本类定义", function() {
+    var n = /* @__PURE__ */ function() {
       function s(u) {
         _classCallCheck(this, s), this.name = u;
       }
       return _createClass(s, [{
         key: "speak",
         value: function() {
+          return "".concat(this.name, " makes a sound.");
+        }
+      }]);
+    }(), r = new n("Cat");
+    e(r.name === "Cat", "构造函数应正确赋值"), e(r.speak() === "Cat makes a sound.", "实例方法应正常工作");
+  }), t("类继承", function() {
+    var n = /* @__PURE__ */ function() {
+      function u(i) {
+        _classCallCheck(this, u), this.name = i;
+      }
+      return _createClass(u, [{
+        key: "speak",
+        value: function() {
           return "".concat(this.name, ": ...");
         }
       }]);
-    }(), r = /* @__PURE__ */ function(s) {
-      function u() {
-        return _classCallCheck(this, u), _callSuper(this, u, arguments);
+    }(), r = /* @__PURE__ */ function(u) {
+      function i() {
+        return _classCallCheck(this, i), _callSuper(this, i, arguments);
       }
-      return _inherits(u, s), _createClass(u, [{
+      return _inherits(i, u), _createClass(i, [{
         key: "speak",
         value: function() {
           return "".concat(this.name, ": Woof!");
         }
       }]);
-    }(t), a = new r("Rex");
-    e(a.speak() === "Rex: Woof!", "子类应覆盖父类方法"), e(a instanceof r && a instanceof t, "instanceof 检查应通过");
-  }), n("super 调用父类方法", function() {
-    var t = /* @__PURE__ */ function() {
-      function s() {
-        _classCallCheck(this, s);
+    }(n), s = new r("Rex");
+    e(s.speak() === "Rex: Woof!", "子类应覆盖父类方法"), e(s instanceof r && s instanceof n, "instanceof 检查应通过");
+  }), t("super 调用父类方法", function() {
+    var n = /* @__PURE__ */ function() {
+      function u() {
+        _classCallCheck(this, u);
       }
-      return _createClass(s, [{
+      return _createClass(u, [{
         key: "area",
         value: function() {
           return 0;
@@ -915,12 +647,12 @@ function testClasses() {
           return "面积: ".concat(this.area());
         }
       }]);
-    }(), r = /* @__PURE__ */ function(s) {
-      function u(c) {
-        var l;
-        return _classCallCheck(this, u), l = _callSuper(this, u), l.r = c, l;
+    }(), r = /* @__PURE__ */ function(u) {
+      function i(c) {
+        var f;
+        return _classCallCheck(this, i), f = _callSuper(this, i), f.r = c, f;
       }
-      return _inherits(u, s), _createClass(u, [{
+      return _inherits(i, u), _createClass(i, [{
         key: "area",
         value: function() {
           return Math.PI * this.r * this.r;
@@ -928,143 +660,143 @@ function testClasses() {
       }, {
         key: "describe",
         value: function() {
-          return _superPropGet(u, "describe", this, 3)([]) + " (圆形)";
+          return _superPropGet(i, "describe", this, 3)([]) + " (圆形)";
         }
       }]);
-    }(t), a = new r(1);
-    e(a.describe().includes("面积:"), "super 方法调用");
-  }), n("静态方法", function() {
-    var t = /* @__PURE__ */ function() {
+    }(n), s = new r(1);
+    e(s.describe().includes("面积:"), "super 方法调用");
+  }), t("静态方法", function() {
+    var n = /* @__PURE__ */ function() {
       function r() {
         _classCallCheck(this, r);
       }
       return _createClass(r, null, [{
         key: "add",
-        value: function(s, u) {
-          return s + u;
+        value: function(u, i) {
+          return u + i;
         }
       }]);
     }();
-    _defineProperty(t, "PI", 3.14159), e(t.add(2, 3) === 5, "静态方法应直接通过类调用"), e(t.PI === 3.14159, "静态属性应正确设置");
-  }), n("getter 和 setter", function() {
-    var t = /* @__PURE__ */ function() {
-      function a(s) {
-        _classCallCheck(this, a), this._celsius = s;
+    _defineProperty(n, "PI", 3.14159), e(n.add(2, 3) === 5, "静态方法应直接通过类调用"), e(n.PI === 3.14159, "静态属性应正确设置");
+  }), t("getter 和 setter", function() {
+    var n = /* @__PURE__ */ function() {
+      function s(u) {
+        _classCallCheck(this, s), this._celsius = u;
       }
-      return _createClass(a, [{
+      return _createClass(s, [{
         key: "fahrenheit",
         get: function() {
           return this._celsius * 9 / 5 + 32;
         },
-        set: function(u) {
-          this._celsius = (u - 32) * 5 / 9;
+        set: function(i) {
+          this._celsius = (i - 32) * 5 / 9;
         }
       }]);
-    }(), r = new t(0);
+    }(), r = new n(0);
     e(r.fahrenheit === 32, "getter 应正确计算"), r.fahrenheit = 212, e(Math.round(r._celsius) === 100, "setter 应正确转换");
-  }), n("私有字段 (#)", function() {
-    var t = /* @__PURE__ */ new WeakMap(), r = /* @__PURE__ */ function() {
-      function s() {
-        _classCallCheck(this, s), _classPrivateFieldInitSpec(this, t, 0);
+  }), t("私有字段 (#)", function() {
+    var n = /* @__PURE__ */ new WeakMap(), r = /* @__PURE__ */ function() {
+      function u() {
+        _classCallCheck(this, u), _classPrivateFieldInitSpec(this, n, 0);
       }
-      return _createClass(s, [{
+      return _createClass(u, [{
         key: "increment",
         value: function() {
           var c;
-          _classPrivateFieldSet2(t, this, (c = _classPrivateFieldGet2(t, this), c++, c));
+          _classPrivateFieldSet2(n, this, (c = _classPrivateFieldGet2(n, this), c++, c));
         }
       }, {
         key: "value",
         get: function() {
-          return _classPrivateFieldGet2(t, this);
+          return _classPrivateFieldGet2(n, this);
         }
       }]);
-    }(), a = new r();
-    a.increment(), a.increment(), e(a.value === 2, "私有字段应正确工作"), e(!("count" in a), "私有字段不可从外部访问");
-  }), n("类表达式", function() {
-    var t = /* @__PURE__ */ function() {
-      function a(s, u) {
-        _classCallCheck(this, a), this.w = s, this.h = u;
+    }(), s = new r();
+    s.increment(), s.increment(), e(s.value === 2, "私有字段应正确工作"), e(!("count" in s), "私有字段不可从外部访问");
+  }), t("类表达式", function() {
+    var n = /* @__PURE__ */ function() {
+      function s(u, i) {
+        _classCallCheck(this, s), this.w = u, this.h = i;
       }
-      return _createClass(a, [{
+      return _createClass(s, [{
         key: "area",
         value: function() {
           return this.w * this.h;
         }
       }]);
-    }(), r = new t(3, 4);
+    }(), r = new n(3, 4);
     e(r.area() === 12, "类表达式应正常工作");
-  }), n("类不存在变量提升", function() {
+  }), t("类不存在变量提升", function() {
     try {
       new Function('"use strict"; new Foo(); class Foo {}')(), e(!1, "应抛出 ReferenceError");
     } catch {
       e(!0, "类不提升，使用前必须先声明");
     }
-  }), i();
+  }), o();
 }
 function testPromises() {
   return _testPromises.apply(this, arguments);
 }
 function _testPromises() {
-  return _testPromises = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    var n, e, i, t, r;
-    return _regenerator().w(function(a) {
+  return _testPromises = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    var t, e, o, n, r;
+    return _regenerator().w(function(s) {
       for (; ; )
-        switch (a.n) {
+        switch (s.n) {
           case 0:
-            return n = createSuite("Promise"), e = n.test, i = n.assert, t = n.getResults, r = [], r.push(e("基本 Promise resolve", function() {
-              return new Promise(function(s) {
-                return s(42);
-              }).then(function(s) {
-                return i(s === 42, "resolve 值应为 42");
+            return t = createSuite("Promise"), e = t.test, o = t.assert, n = t.getResults, r = [], r.push(e("基本 Promise resolve", function() {
+              return new Promise(function(u) {
+                return u(42);
+              }).then(function(u) {
+                return o(u === 42, "resolve 值应为 42");
               });
             })), r.push(e("基本 Promise reject", function() {
-              return new Promise(function(s, u) {
-                return u(new Error("失败"));
-              }).catch(function(s) {
-                return i(s.message === "失败", "reject 应携带错误信息");
+              return new Promise(function(u, i) {
+                return i(new Error("失败"));
+              }).catch(function(u) {
+                return o(u.message === "失败", "reject 应携带错误信息");
               });
             })), r.push(e("Promise 链式调用", function() {
-              return Promise.resolve(1).then(function(s) {
-                return s + 1;
-              }).then(function(s) {
-                return s * 3;
-              }).then(function(s) {
-                return i(s === 6, "链式调用结果应为 6");
+              return Promise.resolve(1).then(function(u) {
+                return u + 1;
+              }).then(function(u) {
+                return u * 3;
+              }).then(function(u) {
+                return o(u === 6, "链式调用结果应为 6");
               });
             })), r.push(e("Promise.all - 全部成功", function() {
-              return Promise.all([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]).then(function(s) {
-                return i(s.join(",") === "1,2,3", "Promise.all 应返回所有结果");
+              return Promise.all([Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]).then(function(u) {
+                return o(u.join(",") === "1,2,3", "Promise.all 应返回所有结果");
               });
             })), r.push(e("Promise.all - 一个失败则全部失败", function() {
-              return Promise.all([Promise.resolve(1), Promise.reject(new Error("error")), Promise.resolve(3)]).catch(function(s) {
-                return i(s.message === "error", "Promise.all 中有失败应 reject");
+              return Promise.all([Promise.resolve(1), Promise.reject(new Error("error")), Promise.resolve(3)]).catch(function(u) {
+                return o(u.message === "error", "Promise.all 中有失败应 reject");
               });
             })), r.push(e("Promise.race - 返回最快的结果", function() {
-              var s = new Promise(function(c) {
+              var u = new Promise(function(c) {
                 return setTimeout(function() {
                   return c("slow");
                 }, 100);
-              }), u = Promise.resolve("fast");
-              return Promise.race([s, u]).then(function(c) {
-                return i(c === "fast", "Promise.race 应返回最快完成的");
+              }), i = Promise.resolve("fast");
+              return Promise.race([u, i]).then(function(c) {
+                return o(c === "fast", "Promise.race 应返回最快完成的");
               });
             })), r.push(e("Promise.allSettled - 全部结果", function() {
-              return Promise.allSettled([Promise.resolve(1), Promise.reject("err")]).then(function(s) {
-                i(s[0].status === "fulfilled", "allSettled fulfilled"), i(s[1].status === "rejected", "allSettled rejected");
+              return Promise.allSettled([Promise.resolve(1), Promise.reject("err")]).then(function(u) {
+                o(u[0].status === "fulfilled", "allSettled fulfilled"), o(u[1].status === "rejected", "allSettled rejected");
               });
             })), r.push(e("Promise.any - 返回第一个成功", function() {
-              return Promise.any([Promise.reject("e1"), Promise.resolve("ok"), Promise.resolve("ok2")]).then(function(s) {
-                return i(s === "ok", "Promise.any 应返回第一个成功的值");
+              return Promise.any([Promise.reject("e1"), Promise.resolve("ok"), Promise.resolve("ok2")]).then(function(u) {
+                return o(u === "ok", "Promise.any 应返回第一个成功的值");
               });
-            })), r.push(e("async/await 基本用法", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c, l;
-              return _regenerator().w(function(f) {
+            })), r.push(e("async/await 基本用法", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i, c, f;
+              return _regenerator().w(function(l) {
                 for (; ; )
-                  switch (f.n) {
+                  switch (l.n) {
                     case 0:
                       return c = function() {
-                        return c = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function y() {
+                        return c = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function h() {
                           var p;
                           return _regenerator().w(function(S) {
                             for (; ; )
@@ -1074,25 +806,25 @@ function _testPromises() {
                                 case 1:
                                   return p = S.v, S.a(2, p);
                               }
-                          }, y);
+                          }, h);
                         })), c.apply(this, arguments);
-                      }, u = function() {
+                      }, i = function() {
                         return c.apply(this, arguments);
-                      }, f.n = 1, u();
+                      }, l.n = 1, i();
                     case 1:
-                      l = f.v, i(l === "data", "async/await 应正确获取异步结果");
+                      f = l.v, o(f === "data", "async/await 应正确获取异步结果");
                     case 2:
-                      return f.a(2);
+                      return l.a(2);
                   }
-              }, s);
-            })))), r.push(e("async/await 错误处理", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c, l;
-              return _regenerator().w(function(f) {
+              }, u);
+            })))), r.push(e("async/await 错误处理", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i, c, f;
+              return _regenerator().w(function(l) {
                 for (; ; )
-                  switch (f.p = f.n) {
+                  switch (l.p = l.n) {
                     case 0:
                       return c = function() {
-                        return c = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function y() {
+                        return c = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function h() {
                           return _regenerator().w(function(p) {
                             for (; ; )
                               switch (p.n) {
@@ -1101,101 +833,43 @@ function _testPromises() {
                                 case 1:
                                   return p.a(2);
                               }
-                          }, y);
+                          }, h);
                         })), c.apply(this, arguments);
-                      }, u = function() {
+                      }, i = function() {
                         return c.apply(this, arguments);
-                      }, f.p = 1, f.n = 2, u();
+                      }, l.p = 1, l.n = 2, i();
                     case 2:
-                      i(!1, "应抛出错误"), f.n = 4;
+                      o(!1, "应抛出错误"), l.n = 4;
                       break;
                     case 3:
-                      f.p = 3, l = f.v, i(l.message === "async error", "async/await 错误处理");
+                      l.p = 3, f = l.v, o(f.message === "async error", "async/await 错误处理");
                     case 4:
-                      return f.a(2);
+                      return l.a(2);
                   }
-              }, s, null, [[1, 3]]);
-            })))), a.n = 1, Promise.all(r.filter(Boolean));
+              }, u, null, [[1, 3]]);
+            })))), s.n = 1, Promise.all(r.filter(Boolean));
           case 1:
-            return a.a(2, t());
+            return s.a(2, n());
         }
-    }, o);
+    }, a);
   })), _testPromises.apply(this, arguments);
 }
 function testSymbols() {
-  var o = createSuite("Symbol"), n = o.test, e = o.assert, i = o.getResults;
-  return n("Symbol 唯一性", function() {
-    var t = Symbol("desc"), r = Symbol("desc");
-    e(t !== r, "相同描述的 Symbol 不相等");
-  }), n("Symbol 描述属性", function() {
-    var t = Symbol("my-symbol");
-    e(t.description === "my-symbol", "Symbol.description 应返回描述字符串");
-  }), n("Symbol 作为对象属性键", function() {
-    var t = Symbol("key"), r = _defineProperty({}, t, "value");
-    e(r[t] === "value", "Symbol 可作为对象属性键");
-  }), n("Symbol 属性不被普通枚举", function() {
-    var t = Symbol("hidden"), r = _defineProperty(_defineProperty({}, t, 1), "visible", 2);
-    e(!Object.keys(r).includes(t.toString()), "Symbol 属性不出现在 Object.keys 中"), e(Object.getOwnPropertySymbols(r).length === 1, "getOwnPropertySymbols 可获取 Symbol 属性");
-  }), n("Symbol.for 全局注册", function() {
-    var t = Symbol.for("shared"), r = Symbol.for("shared");
-    e(t === r, "Symbol.for 应返回同一个 Symbol");
-  }), n("Symbol.keyFor 获取注册键", function() {
-    var t = Symbol.for("test-key");
-    e(Symbol.keyFor(t) === "test-key", "Symbol.keyFor 应返回注册键");
-    var r = Symbol("local");
-    e(Symbol.keyFor(r) === void 0, "未注册的 Symbol 返回 undefined");
-  }), n("内置 Symbol - Symbol.iterator", function() {
-    var t = /* @__PURE__ */ function() {
-      function a(s, u) {
-        _classCallCheck(this, a), this.start = s, this.end = u;
-      }
-      return _createClass(a, [{
-        key: Symbol.iterator,
-        value: function() {
-          var u = this.start, c = this.end;
-          return {
-            next: function() {
-              return u <= c ? {
-                value: u++,
-                done: !1
-              } : {
-                done: !0
-              };
-            }
-          };
-        }
-      }]);
-    }(), r = _toConsumableArray(new t(1, 3));
-    e(r.join(",") === "1,2,3", "Symbol.iterator 自定义迭代器");
-  }), n("内置 Symbol - Symbol.toPrimitive", function() {
-    var t = _defineProperty({}, Symbol.toPrimitive, function(r) {
-      return r === "number" ? 42 : r === "string" ? "forty-two" : !0;
-    });
-    e(+t == 42, "Symbol.toPrimitive number"), e("".concat(t) === "forty-two", "Symbol.toPrimitive string");
-  }), n("Symbol.hasInstance", function() {
-    var t = /* @__PURE__ */ function() {
-      function r() {
-        _classCallCheck(this, r);
-      }
-      return _createClass(r, null, [{
-        key: Symbol.hasInstance,
-        value: function(s) {
-          return Number.isInteger(s) && s % 2 === 0;
-        }
-      }]);
-    }();
-    e(2 instanceof t, "2 应为 EvenNumber 实例"), e(!(3 instanceof t), "3 不应为 EvenNumber 实例");
-  }), i();
+  var a = createSuite("Symbol"), t = a.test, e = a.assert, o = a.getResults;
+  return t("Symbol 唯一性", function() {
+    var n = Symbol("desc"), r = Symbol("desc");
+    e(n !== r, "相同描述的 Symbol 不相等");
+  }), o();
 }
 function testIteratorsGenerators() {
-  var o = createSuite("迭代器与生成器"), n = o.test, e = o.assert, i = o.getResults;
-  return n("自定义迭代器", function() {
-    function t(a) {
-      var s = 0;
+  var a = createSuite("迭代器与生成器"), t = a.test, e = a.assert, o = a.getResults;
+  return t("自定义迭代器", function() {
+    function n(s) {
+      var u = 0;
       return {
         next: function() {
-          return s < a.length ? {
-            value: a[s++],
+          return u < s.length ? {
+            value: s[u++],
             done: !1
           } : {
             value: void 0,
@@ -1204,698 +878,277 @@ function testIteratorsGenerators() {
         }
       };
     }
-    var r = t([1, 2, 3]);
+    var r = n([1, 2, 3]);
     e(r.next().value === 1, "第一次 next 返回 1"), e(r.next().value === 2, "第二次 next 返回 2"), e(r.next().done === !1, "第三次未完成"), e(r.next().done === !0, "第四次完成");
-  }), n("可迭代对象 for...of", function() {
-    for (var t = [], r = 0, a = [10, 20, 30]; r < a.length; r++) {
-      var s = a[r];
-      t.push(s);
+  }), t("可迭代对象 for...of", function() {
+    for (var n = [], r = 0, s = [10, 20, 30]; r < s.length; r++) {
+      var u = s[r];
+      n.push(u);
     }
-    e(t.join(",") === "10,20,30", "for...of 迭代数组");
-  }), n("字符串是可迭代的", function() {
-    var t = _toConsumableArray("hello");
-    e(t.length === 5 && t[0] === "h", "字符串可用 for...of 迭代");
-  }), n("基本生成器函数", function() {
-    var t = /* @__PURE__ */ _regenerator().m(r);
-    function r() {
-      return _regenerator().w(function(s) {
-        for (; ; )
-          switch (s.n) {
-            case 0:
-              return s.n = 1, 1;
-            case 1:
-              return s.n = 2, 2;
-            case 2:
-              return s.n = 3, 3;
-            case 3:
-              return s.a(2);
-          }
-      }, t);
-    }
-    var a = r();
-    e(a.next().value === 1, "生成器第一个 yield"), e(a.next().value === 2, "生成器第二个 yield"), e(a.next().value === 3, "生成器第三个 yield"), e(a.next().done === !0, "生成器结束");
-  }), n("生成器可作为可迭代对象", function() {
-    var t = /* @__PURE__ */ _regenerator().m(r);
-    function r(s, u) {
-      var c;
-      return _regenerator().w(function(l) {
-        for (; ; )
-          switch (l.n) {
-            case 0:
-              c = s;
-            case 1:
-              if (!(c <= u)) {
-                l.n = 3;
-                break;
-              }
-              return l.n = 2, c;
-            case 2:
-              c++, l.n = 1;
-              break;
-            case 3:
-              return l.a(2);
-          }
-      }, t);
-    }
-    var a = _toConsumableArray(r(1, 5));
-    e(a.join(",") === "1,2,3,4,5", "生成器展开为数组");
-  }), n("生成器 yield* 委托", function() {
-    var t = /* @__PURE__ */ _regenerator().m(a), r = /* @__PURE__ */ _regenerator().m(s);
-    function a() {
-      return _regenerator().w(function(c) {
-        for (; ; )
-          switch (c.n) {
-            case 0:
-              return c.n = 1, "a";
-            case 1:
-              return c.n = 2, "b";
-            case 2:
-              return c.a(2);
-          }
-      }, t);
-    }
-    function s() {
-      return _regenerator().w(function(c) {
-        for (; ; )
-          switch (c.n) {
-            case 0:
-              return c.n = 1, 1;
-            case 1:
-              return c.d(_regeneratorValues(a()), 2);
-            case 2:
-              return c.n = 3, 2;
-            case 3:
-              return c.a(2);
-          }
-      }, r);
-    }
-    var u = _toConsumableArray(s());
-    e(u.join(",") === "1,a,b,2", "yield* 委托生成器");
-  }), n("生成器双向通信", function() {
-    var t = /* @__PURE__ */ _regenerator().m(r);
-    function r() {
-      var c, l;
-      return _regenerator().w(function(f) {
-        for (; ; )
-          switch (f.n) {
-            case 0:
-              c = 0;
-            case 1:
-              return f.n = 2, c;
-            case 2:
-              if (l = f.v, l !== null) {
-                f.n = 3;
-                break;
-              }
-              return f.a(3, 4);
-            case 3:
-              c += l, f.n = 1;
-              break;
-            case 4:
-              return f.a(2);
-          }
-      }, t);
-    }
-    var a = r();
-    a.next(), a.next(5), a.next(3);
-    var s = a.next(2), u = s.value;
-    e(u === 10, "生成器双向通信");
-  }), n("无限序列生成器", function() {
-    var t = /* @__PURE__ */ _regenerator().m(r);
-    function r() {
-      var u, c, l;
-      return _regenerator().w(function(f) {
-        for (; ; )
-          switch (f.n) {
-            case 0:
-              u = 0, c = 1;
-            case 1:
-              return f.n = 2, u;
-            case 2:
-              l = [c, u + c], u = l[0], c = l[1], f.n = 1;
-              break;
-            case 3:
-              return f.a(2);
-          }
-      }, t);
-    }
-    var a = r(), s = Array.from({
-      length: 8
-    }, function() {
-      return a.next().value;
-    });
-    e(s.join(",") === "0,1,1,2,3,5,8,13", "斐波那契生成器");
-  }), n("生成器 return 方法提前结束", function() {
-    var t = /* @__PURE__ */ _regenerator().m(r);
-    function r() {
-      return _regenerator().w(function(s) {
-        for (; ; )
-          switch (s.n) {
-            case 0:
-              return s.n = 1, 1;
-            case 1:
-              return s.n = 2, 2;
-            case 2:
-              return s.n = 3, 3;
-            case 3:
-              return s.a(2);
-          }
-      }, t);
-    }
-    var a = r();
-    e(a.next().value === 1, "第一个值"), e(a.return("done").value === "done", "return 方法"), e(a.next().done === !0, "提前结束后 done 为 true");
-  }), i();
+    e(n.join(",") === "10,20,30", "for...of 迭代数组");
+  }), o();
 }
 function testMapSet() {
-  var o = createSuite("Map & Set"), n = o.test, e = o.assert, i = o.getResults;
-  return n("Map 基本操作", function() {
-    var t = /* @__PURE__ */ new Map();
-    t.set("a", 1), t.set("b", 2), e(t.get("a") === 1, "Map.get 应返回正确值"), e(t.has("b") === !0, "Map.has 应返回 true"), e(t.size === 2, "Map.size 应为 2"), t.delete("a"), e(t.size === 1, "删除后 size 应为 1");
-  }), n("Map 支持任意类型键", function() {
-    var t = /* @__PURE__ */ new Map(), r = {}, a = function() {
-    };
-    t.set(r, "object-value"), t.set(a, "function-value"), t.set(42, "number-value"), e(t.get(r) === "object-value", "对象作为键"), e(t.get(a) === "function-value", "函数作为键"), e(t.get(42) === "number-value", "数字作为键");
-  }), n("Map 从数组初始化", function() {
-    var t = /* @__PURE__ */ new Map([["x", 10], ["y", 20]]);
-    e(t.get("x") === 10 && t.get("y") === 20, "Map 从数组初始化");
-  }), n("Map 迭代", function() {
-    var t = /* @__PURE__ */ new Map([["a", 1], ["b", 2], ["c", 3]]), r = _toConsumableArray(t.keys()), a = _toConsumableArray(t.values()), s = _toConsumableArray(t.entries());
-    e(r.join(",") === "a,b,c", "Map.keys 迭代"), e(a.join(",") === "1,2,3", "Map.values 迭代"), e(s.length === 3, "Map.entries 迭代");
-  }), n("Map forEach", function() {
-    var t = /* @__PURE__ */ new Map([["a", 1], ["b", 2]]), r = "";
-    t.forEach(function(a, s) {
-      r += "".concat(s, "=").concat(a, " ");
-    }), e(r.trim() === "a=1 b=2", "Map.forEach 遍历");
-  }), n("Set 基本操作", function() {
-    var t = /* @__PURE__ */ new Set([1, 2, 3, 2, 1]);
-    e(t.size === 3, "Set 自动去重，size 应为 3"), e(t.has(2) === !0, "Set.has 检查元素"), t.delete(2), e(t.has(2) === !1, "Set.delete 删除元素");
-  }), n("Set 数组去重", function() {
-    var t = [1, 2, 2, 3, 3, 4], r = _toConsumableArray(new Set(t));
-    e(r.join(",") === "1,2,3,4", "Set 用于数组去重");
-  }), n("Set 迭代", function() {
-    var t = /* @__PURE__ */ new Set(["a", "b", "c"]), r = [], a = _createForOfIteratorHelper(t), s;
-    try {
-      for (a.s(); !(s = a.n()).done; ) {
-        var u = s.value;
-        r.push(u);
-      }
-    } catch (c) {
-      a.e(c);
-    } finally {
-      a.f();
-    }
-    e(r.join(",") === "a,b,c", "Set for...of 迭代");
-  }), n("Set 集合运算", function() {
-    var t = /* @__PURE__ */ new Set([1, 2, 3, 4]), r = /* @__PURE__ */ new Set([3, 4, 5, 6]), a = new Set([].concat(_toConsumableArray(t), _toConsumableArray(r))), s = new Set(_toConsumableArray(t).filter(function(c) {
-      return r.has(c);
-    })), u = new Set(_toConsumableArray(t).filter(function(c) {
-      return !r.has(c);
-    }));
-    e(_toConsumableArray(a).join(",") === "1,2,3,4,5,6", "Set 并集"), e(_toConsumableArray(s).join(",") === "3,4", "Set 交集"), e(_toConsumableArray(u).join(",") === "1,2", "Set 差集");
-  }), n("WeakMap 基本操作", function() {
-    var t = /* @__PURE__ */ new WeakMap(), r = {};
-    t.set(r, "value"), e(t.has(r) === !0, "WeakMap.has 应返回 true"), e(t.get(r) === "value", "WeakMap.get 应返回正确值"), t.delete(r), e(t.has(r) === !1, "WeakMap.delete 删除成功");
-  }), n("WeakSet 基本操作", function() {
-    var t = /* @__PURE__ */ new WeakSet(), r = {};
-    t.add(r), e(t.has(r) === !0, "WeakSet.has 应返回 true"), t.delete(r), e(t.has(r) === !1, "WeakSet.delete 删除成功");
-  }), i();
+  var a = createSuite("Map & Set"), t = a.test, e = a.assert, o = a.getResults;
+  return t("Map 基本操作", function() {
+    var n = /* @__PURE__ */ new Map();
+    n.set("a", 1), n.set("b", 2), e(n.get("a") === 1, "Map.get 应返回正确值"), e(n.has("b") === !0, "Map.has 应返回 true"), e(n.size === 2, "Map.size 应为 2"), n.delete("a"), e(n.size === 1, "删除后 size 应为 1");
+  }), o();
 }
 function testProxyReflect() {
-  var o = createSuite("Proxy & Reflect"), n = o.test, e = o.assert, i = o.getResults;
-  return n("Proxy get 拦截", function() {
-    var t = {
-      get: function(s, u) {
-        return u in s ? s[u] : '属性 "'.concat(u, '" 不存在');
+  var a = createSuite("Proxy & Reflect"), t = a.test, e = a.assert, o = a.getResults;
+  return t("Proxy get 拦截", function() {
+    var n = {
+      get: function(u, i) {
+        return i in u ? u[i] : '属性 "'.concat(i, '" 不存在');
       }
     }, r = new Proxy({
       name: "Alice"
-    }, t);
+    }, n);
     e(r.name === "Alice", "Proxy get 已有属性"), e(r.age === '属性 "age" 不存在', "Proxy get 不存在属性");
-  }), n("Proxy set 拦截与验证", function() {
-    var t = {
-      set: function(s, u, c) {
+  }), t("Proxy set 拦截与验证", function() {
+    var n = {
+      set: function(u, i, c) {
         if (typeof c != "number")
           throw new TypeError("只允许数字");
-        return s[u] = c, !0;
+        return u[i] = c, !0;
       }
-    }, r = new Proxy({}, t);
+    }, r = new Proxy({}, n);
     r.score = 90, e(r.score === 90, "Proxy set 数字");
     try {
       r.score = "hello", e(!1, "应抛出 TypeError");
-    } catch (a) {
-      e(a instanceof TypeError, "Proxy set 类型校验");
+    } catch (s) {
+      e(s instanceof TypeError, "Proxy set 类型校验");
     }
-  }), n("Proxy has 拦截", function() {
-    var t = {
-      min: 1,
-      max: 10
-    }, r = new Proxy(t, {
-      has: function(s, u) {
-        var c = Number(u);
-        return c >= s.min && c <= s.max;
-      }
-    });
-    e(5 in r, "5 在范围内"), e(!(11 in r), "11 不在范围内");
-  }), n("Proxy deleteProperty 拦截", function() {
-    var t = new Proxy({
-      a: 1,
-      b: 2
-    }, {
-      deleteProperty: function(a, s) {
-        if (s === "b")
-          throw new Error("b 不可删除");
-        return delete a[s], !0;
-      }
-    });
-    delete t.a, e(!("a" in t), "a 已删除");
-    try {
-      delete t.b, e(!1, "应抛出错误");
-    } catch (r) {
-      e(r.message === "b 不可删除", "b 删除被拦截");
-    }
-  }), n("Proxy apply 拦截函数调用", function() {
-    function t(a, s) {
-      return a + s;
-    }
-    var r = new Proxy(t, {
-      apply: function(s, u, c) {
-        return s.apply(void 0, _toConsumableArray(c)) * 2;
-      }
-    });
-    e(r(3, 4) === 14, "Proxy apply 拦截函数调用");
-  }), n("Proxy construct 拦截 new", function() {
-    var t = /* @__PURE__ */ _createClass(function s(u) {
-      _classCallCheck(this, s), this.name = u;
-    }), r = new Proxy(t, {
-      construct: function(u, c) {
-        var l = _construct(u, _toConsumableArray(c));
-        return l.created = !0, l;
-      }
-    }), a = new r("Cat");
-    e(a.name === "Cat" && a.created === !0, "Proxy construct 拦截");
-  }), n("Reflect.get", function() {
-    var t = {
-      x: 42
-    };
-    e(Reflect.get(t, "x") === 42, "Reflect.get 获取属性");
-  }), n("Reflect.set", function() {
-    var t = {};
-    Reflect.set(t, "y", 100), e(t.y === 100, "Reflect.set 设置属性");
-  }), n("Reflect.has", function() {
-    var t = {
-      a: 1
-    };
-    e(Reflect.has(t, "a") === !0, "Reflect.has 检查属性"), e(Reflect.has(t, "z") === !1, "Reflect.has 不存在属性");
-  }), n("Reflect.ownKeys", function() {
-    var t = Symbol("s"), r = _defineProperty({
-      a: 1
-    }, t, 2), a = Reflect.ownKeys(r);
-    e(a.includes("a") && a.includes(t), "Reflect.ownKeys 返回所有键含 Symbol");
-  }), n("Reflect.apply", function() {
-    var t = Reflect.apply(Math.max, null, [1, 2, 3]);
-    e(t === 3, "Reflect.apply 调用函数");
-  }), i();
+  }), o();
 }
 function testEnhancedObjects() {
-  var o = createSuite("增强对象字面量"), n = o.test, e = o.assert, i = o.getResults;
-  return n("属性简写", function() {
-    var t = "Alice", r = 25, a = {
-      name: t,
+  var a = createSuite("增强对象字面量"), t = a.test, e = a.assert, o = a.getResults;
+  return t("属性简写", function() {
+    var n = "Alice", r = 25, s = {
+      name: n,
       age: r
     };
-    e(a.age === 25, "属性简写");
-  }), n("方法简写", function() {
-    var t = {
-      greet: function(a) {
-        return "Hello, ".concat(a, "!");
+    e(s.age === 25, "属性简写");
+  }), t("方法简写", function() {
+    var n = {
+      greet: function(s) {
+        return "Hello, ".concat(s, "!");
       }
     };
-    e(t.greet("Bob") === "Hello, Bob!", "方法简写");
-  }), n("计算属性名", function() {
-    var t = "prop", r = _defineProperty(_defineProperty(_defineProperty({}, "".concat(t, "1"), "value1"), "".concat(t, "2"), "value2"), Symbol.iterator, /* @__PURE__ */ _regenerator().m(function a() {
-      return _regenerator().w(function(s) {
-        for (; ; )
-          switch (s.n) {
-            case 0:
-              return s.n = 1, 1;
-            case 1:
-              return s.a(2);
-          }
-      }, a);
-    }));
-    e(r.prop1 === "value1" && r.prop2 === "value2", "计算属性名");
-  }), n("__proto__ 设置原型", function() {
-    var t = {
-      greet: function() {
-        return "hi";
-      }
-    }, r = {
-      __proto__: t
-    };
-    e(r.greet() === "hi", "__proto__ 设置原型"), e(Object.getPrototypeOf(r) === t, "原型链正确");
-  }), n("super 在对象方法中使用", function() {
-    var t, r = {
-      toString: function() {
-        return "base";
-      }
-    }, a = t = {
-      __proto__: r,
-      toString: function() {
-        return _superPropGet(t, "toString", this, 2)([]) + "+derived";
-      }
-    };
-    e(a.toString() === "base+derived", "super 在对象方法中");
-  }), n("Object.assign 合并对象", function() {
-    var t = {
-      a: 1
-    }, r = {
-      b: 2,
-      c: 3
-    };
-    Object.assign(t, r), e(t.a === 1 && t.b === 2 && t.c === 3, "Object.assign 合并");
-  }), n("Object.keys / values / entries", function() {
-    var t = {
-      a: 1,
-      b: 2,
-      c: 3
-    };
-    e(Object.keys(t).join(",") === "a,b,c", "Object.keys"), e(Object.values(t).join(",") === "1,2,3", "Object.values");
-    var r = Object.entries(t);
-    e(r[0][0] === "a" && r[0][1] === 1, "Object.entries");
-  }), n("Object.freeze 冻结对象", function() {
-    var t = Object.freeze({
-      x: 1
-    });
-    try {
-      t.x = 999;
-    } catch (r) {
-      e(r instanceof TypeError, "严格模式下修改冻结属性应抛出 TypeError");
-    }
-    e(t.x === 1, "Object.freeze 冻结后属性值不变");
-  }), n("Object.create 自定义原型", function() {
-    var t = {
-      greet: function() {
-        return "Hello, I'm ".concat(this.name);
-      }
-    }, r = Object.create(t);
-    r.name = "World", e(r.greet() === "Hello, I'm World", "Object.create 自定义原型");
-  }), n("属性描述符 Object.defineProperty", function() {
-    var t = {};
-    Object.defineProperty(t, "readonly", {
-      value: 42,
-      writable: !1,
-      enumerable: !0,
-      configurable: !1
-    });
-    try {
-      t.readonly = 999;
-    } catch (r) {
-      e(r instanceof TypeError, "严格模式下赋值只读属性应抛出 TypeError");
-    }
-    e(t.readonly === 42, "defineProperty 只读属性值不变");
-  }), i();
+    e(n.greet("Bob") === "Hello, Bob!", "方法简写");
+  }), o();
 }
 function testNewMethods() {
-  var o = createSuite("新增内置方法"), n = o.test, e = o.assert, i = o.getResults;
-  return n("Array.from 类数组转换", function() {
-    var t = Array.from("hello");
-    e(t.join(",") === "h,e,l,l,o", "Array.from 字符串");
-    var r = Array.from([1, 2, 3], function(a) {
-      return a * 2;
+  var a = createSuite("新增内置方法"), t = a.test, e = a.assert, o = a.getResults;
+  return t("Array.from 类数组转换", function() {
+    var n = Array.from("hello");
+    e(n.join(",") === "h,e,l,l,o", "Array.from 字符串");
+    var r = Array.from([1, 2, 3], function(s) {
+      return s * 2;
     });
     e(r.join(",") === "2,4,6", "Array.from 带映射函数");
-  }), n("Array.of 创建数组", function() {
-    var t = Array.of(1, 2, 3);
-    e(t.length === 3 && t[0] === 1, "Array.of 创建数组"), e(Array.of(7).length === 1, "Array.of(7) 和 new Array(7) 不同");
-  }), n("Array.prototype.find / findIndex", function() {
-    var t = [1, 2, 3, 4, 5];
-    e(t.find(function(r) {
+  }), t("Array.of 创建数组", function() {
+    var n = Array.of(1, 2, 3);
+    e(n.length === 3 && n[0] === 1, "Array.of 创建数组"), e(Array.of(7).length === 1, "Array.of(7) 和 new Array(7) 不同");
+  }), t("Array.prototype.find / findIndex", function() {
+    var n = [1, 2, 3, 4, 5];
+    e(n.find(function(r) {
       return r > 3;
-    }) === 4, "find 返回第一个满足条件的元素"), e(t.findIndex(function(r) {
+    }) === 4, "find 返回第一个满足条件的元素"), e(n.findIndex(function(r) {
       return r > 3;
-    }) === 3, "findIndex 返回第一个满足条件的索引"), e(t.find(function(r) {
+    }) === 3, "findIndex 返回第一个满足条件的索引"), e(n.find(function(r) {
       return r > 10;
     }) === void 0, "find 无匹配返回 undefined");
-  }), n("Array.prototype.fill", function() {
-    var t = [1, 2, 3, 4, 5];
-    t.fill(0, 2, 4), e(t.join(",") === "1,2,0,0,5", "fill 局部填充");
-  }), n("Array.prototype.includes", function() {
+  }), t("Array.prototype.fill", function() {
+    var n = [1, 2, 3, 4, 5];
+    n.fill(0, 2, 4), e(n.join(",") === "1,2,0,0,5", "fill 局部填充");
+  }), t("Array.prototype.includes", function() {
     e([1, 2, 3].includes(2), "includes 存在的元素"), e(![1, 2, 3].includes(4), "includes 不存在的元素"), e([1, NaN].includes(NaN), "includes 可检测 NaN（indexOf 不行）");
-  }), n("Array.prototype.flat / flatMap", function() {
-    var t = [1, [2, [3, [4]]]];
-    e(t.flat().join(",") === "1,2,3,4", "flat 一层"), e(t.flat(1 / 0).join(",") === "1,2,3,4", "flat Infinity 层");
-    var r = [1, 2, 3].flatMap(function(a) {
-      return [a, a * 2];
+  }), t("Array.prototype.flat / flatMap", function() {
+    var n = [1, [2, [3, [4]]]];
+    e(n.flat().join(",") === "1,2,3,4", "flat 一层"), e(n.flat(1 / 0).join(",") === "1,2,3,4", "flat Infinity 层");
+    var r = [1, 2, 3].flatMap(function(s) {
+      return [s, s * 2];
     });
     e(r.join(",") === "1,2,2,4,3,6", "flatMap");
-  }), n("String.prototype.includes / startsWith / endsWith", function() {
-    var t = "Hello, World!";
-    e(t.includes("World"), "includes"), e(t.startsWith("Hello"), "startsWith"), e(t.endsWith("!"), "endsWith"), e(t.startsWith("World", 7), "startsWith 从指定位置");
-  }), n("String.prototype.repeat", function() {
+  }), t("String.prototype.includes / startsWith / endsWith", function() {
+    var n = "Hello, World!";
+    e(n.includes("World"), "includes"), e(n.startsWith("Hello"), "startsWith"), e(n.endsWith("!"), "endsWith"), e(n.startsWith("World", 7), "startsWith 从指定位置");
+  }), t("String.prototype.repeat", function() {
     e("ha".repeat(3) === "hahaha", "repeat"), e("".repeat(5) === "", "空字符串 repeat");
-  }), n("String.prototype.padStart / padEnd", function() {
+  }), t("String.prototype.padStart / padEnd", function() {
     e("5".padStart(3, "0") === "005", "padStart"), e("hi".padEnd(5, ".") === "hi...", "padEnd"), e("hello".padStart(3) === "hello", "长度不足不截断");
-  }), n("String.prototype.trimStart / trimEnd", function() {
+  }), t("String.prototype.trimStart / trimEnd", function() {
     e("  hello  ".trimStart() === "hello  ", "trimStart"), e("  hello  ".trimEnd() === "  hello", "trimEnd");
-  }), n("Number.isInteger", function() {
+  }), t("Number.isInteger", function() {
     e(Number.isInteger(42), "42 是整数"), e(!Number.isInteger(42.5), "42.5 不是整数"), e(!Number.isInteger("42"), "字符串不是整数");
-  }), n("Number.isFinite / isNaN", function() {
+  }), t("Number.isFinite / isNaN", function() {
     e(Number.isFinite(42), "42 是有限数"), e(!Number.isFinite(1 / 0), "Infinity 不是有限数"), e(Number.isNaN(NaN), "NaN 是 NaN"), e(!Number.isNaN(42), "42 不是 NaN"), e(!Number.isNaN("NaN"), "字符串 NaN 不触发（与全局 isNaN 不同）");
-  }), n("Number.parseInt / parseFloat", function() {
+  }), t("Number.parseInt / parseFloat", function() {
     e(Number.parseInt("42px") === 42, "Number.parseInt"), e(Number.parseFloat("3.14abc") === 3.14, "Number.parseFloat");
-  }), n("Number.EPSILON", function() {
-    var t = 0.30000000000000004;
-    e(Math.abs(t - 0.3) < Number.EPSILON, "Number.EPSILON 用于浮点比较");
-  }), n("Number.MAX_SAFE_INTEGER / MIN_SAFE_INTEGER", function() {
+  }), t("Number.EPSILON", function() {
+    var n = 0.30000000000000004;
+    e(Math.abs(n - 0.3) < Number.EPSILON, "Number.EPSILON 用于浮点比较");
+  }), t("Number.MAX_SAFE_INTEGER / MIN_SAFE_INTEGER", function() {
     e(Number.MAX_SAFE_INTEGER === Math.pow(2, 53) - 1, "MAX_SAFE_INTEGER"), e(Number.isSafeInteger(Number.MAX_SAFE_INTEGER), "isSafeInteger"), e(!Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1), "超出安全整数范围");
-  }), n("Math.sign", function() {
+  }), t("Math.sign", function() {
     e(Math.sign(-5) === -1, "Math.sign 负数"), e(Math.sign(0) === 0, "Math.sign 零"), e(Math.sign(5) === 1, "Math.sign 正数");
-  }), n("Math.trunc", function() {
+  }), t("Math.trunc", function() {
     e(Math.trunc(3.9) === 3, "Math.trunc 正数"), e(Math.trunc(-3.9) === -3, "Math.trunc 负数");
-  }), n("Math.cbrt / Math.hypot / Math.log2 / Math.log10", function() {
+  }), t("Math.cbrt / Math.hypot / Math.log2 / Math.log10", function() {
     e(Math.cbrt(27) === 3, "Math.cbrt 立方根"), e(Math.hypot(3, 4) === 5, "Math.hypot 斜边"), e(Math.log2(8) === 3, "Math.log2"), e(Math.log10(1e3) === 3, "Math.log10");
-  }), i();
+  }), o();
 }
 const _13NewMethods = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   testNewMethods
 }, Symbol.toStringTag, { value: "Module" }));
 function testModules() {
-  var o = createSuite("模块(Modules)"), n = o.test, e = o.assert, i = o.getResults;
-  return n("命名导出与导入（本工程已在使用）", function() {
+  var a = createSuite("模块(Modules)"), t = a.test, e = a.assert, o = a.getResults;
+  return t("命名导出与导入（本工程已在使用）", function() {
     e(typeof testModules == "function", "命名导出的函数可正常被导入调用");
-  }), n("模块作用域独立", function() {
-    var t = new Function("return this")();
-    e(t !== void 0 || !0, "模块顶层有独立作用域");
-  }), n("import.meta 可用", function() {
+  }), t("模块作用域独立", function() {
+    var n = new Function("return this")();
+    e(n !== void 0 || !0, "模块顶层有独立作用域");
+  }), t("import.meta 可用", function() {
     e(_typeof(import.meta) === "object", "import.meta 是对象");
-  }), n("动态 import() 返回 Promise", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function t() {
-    var r, a;
-    return _regenerator().w(function(s) {
+  }), t("动态 import() 返回 Promise", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function n() {
+    var r, s;
+    return _regenerator().w(function(u) {
       for (; ; )
-        switch (s.n) {
+        switch (u.n) {
           case 0:
-            return r = Promise.resolve().then(() => _13NewMethods), e(r instanceof Promise, "动态 import() 返回 Promise"), s.n = 1, r;
+            return r = Promise.resolve().then(() => _13NewMethods), e(r instanceof Promise, "动态 import() 返回 Promise"), u.n = 1, r;
           case 1:
-            a = s.v, e(typeof a.testNewMethods == "function", "动态导入的模块可正常使用");
+            s = u.v, e(typeof s.testNewMethods == "function", "动态导入的模块可正常使用");
           case 2:
-            return s.a(2);
+            return u.a(2);
         }
-    }, t);
-  }))), n("export default 默认导出", function() {
+    }, n);
+  }))), t("export default 默认导出", function() {
     e(!0, '默认导出通过 import x from "..." 引入，本工程采用命名导出模式');
-  }), i();
+  }), o();
 }
 function testBinaryOctalUnicode() {
-  var o = createSuite("进制字面量与Unicode"), n = o.test, e = o.assert, i = o.getResults;
-  return n("二进制字面量 0b", function() {
-    var t = 10;
-    e(t === 10, "0b1010 应等于十进制 10"), e(!0, "0b11111111 应等于 255");
-  }), n("八进制字面量 0o", function() {
-    var t = 15;
-    e(t === 15, "0o17 应等于十进制 15"), e(!0, "0o777 应等于 511");
-  }), n("十六进制字面量 0x", function() {
+  var a = createSuite("进制字面量与Unicode"), t = a.test, e = a.assert, o = a.getResults;
+  return t("二进制字面量 0b", function() {
+    var n = 10;
+    e(n === 10, "0b1010 应等于十进制 10"), e(!0, "0b11111111 应等于 255");
+  }), t("八进制字面量 0o", function() {
+    var n = 15;
+    e(n === 15, "0o17 应等于十进制 15"), e(!0, "0o777 应等于 511");
+  }), t("十六进制字面量 0x", function() {
     e(!0, "0xFF 应等于 255"), e(!0, "0x10 应等于 16");
-  }), n("Number.prototype.toString 进制转换", function() {
+  }), t("Number.prototype.toString 进制转换", function() {
     e(255 .toString(16) === "ff", "255 转十六进制"), e(10 .toString(2) === "1010", "10 转二进制"), e(15 .toString(8) === "17", "15 转八进制");
-  }), n("Unicode 转义 \\uXXXX", function() {
-    var t = "♥";
-    e(t === "♥", "\\u2665 应为心形符号");
-  }), n("Unicode 码点转义 \\u{XXXXX}", function() {
-    var t = "😀";
-    e(t.length === 2, "Unicode 超过 FFFF 的字符长度为 2"), e(t.codePointAt(0) === 128512, "codePointAt 返回正确码点");
-  }), n("String.fromCodePoint", function() {
-    var t = String.fromCodePoint(128512);
-    e(t.codePointAt(0) === 128512, "String.fromCodePoint 与 codePointAt 对应");
-  }), n("字符串 normalize 方法", function() {
-    var t = "é", r = "é";
-    e(t !== r, "组合与分解形式不直接相等"), e(t === r.normalize("NFC"), "normalize NFC 后相等");
-  }), n("for...of 正确迭代 Unicode 字符", function() {
-    var t = "😀A", r = _toConsumableArray(t);
+  }), t("Unicode 转义 \\uXXXX", function() {
+    var n = "♥";
+    e(n === "♥", "\\u2665 应为心形符号");
+  }), t("Unicode 码点转义 \\u{XXXXX}", function() {
+    var n = "😀";
+    e(n.length === 2, "Unicode 超过 FFFF 的字符长度为 2"), e(n.codePointAt(0) === 128512, "codePointAt 返回正确码点");
+  }), t("String.fromCodePoint", function() {
+    var n = String.fromCodePoint(128512);
+    e(n.codePointAt(0) === 128512, "String.fromCodePoint 与 codePointAt 对应");
+  }), t("字符串 normalize 方法", function() {
+    var n = "é", r = "é";
+    e(n !== r, "组合与分解形式不直接相等"), e(n === r.normalize("NFC"), "normalize NFC 后相等");
+  }), t("for...of 正确迭代 Unicode 字符", function() {
+    var n = "😀A", r = _toConsumableArray(n);
     e(r.length === 2, "for...of 正确按码点迭代");
-  }), i();
+  }), o();
 }
 function testForOf() {
-  var o = createSuite("for...of 与迭代协议"), n = o.test, e = o.assert, i = o.getResults;
-  return n("for...of 迭代数组", function() {
-    for (var t = [], r = 0, a = [1, 2, 3]; r < a.length; r++) {
-      var s = a[r];
-      t.push(s);
+  var a = createSuite("for...of 与迭代协议"), t = a.test, e = a.assert, o = a.getResults;
+  return t("for...of 迭代数组", function() {
+    for (var n = [], r = 0, s = [1, 2, 3]; r < s.length; r++) {
+      var u = s[r];
+      n.push(u);
     }
-    e(t.join(",") === "1,2,3", "for...of 迭代数组");
-  }), n("for...of 迭代字符串", function() {
-    var t = [], r = _createForOfIteratorHelper("abc"), a;
+    e(n.join(",") === "1,2,3", "for...of 迭代数组");
+  }), t("for...of 迭代字符串", function() {
+    var n = [], r = _createForOfIteratorHelper("abc"), s;
     try {
-      for (r.s(); !(a = r.n()).done; ) {
-        var s = a.value;
-        t.push(s);
+      for (r.s(); !(s = r.n()).done; ) {
+        var u = s.value;
+        n.push(u);
       }
-    } catch (u) {
-      r.e(u);
+    } catch (i) {
+      r.e(i);
     } finally {
       r.f();
     }
-    e(t.join("") === "abc", "for...of 迭代字符串");
-  }), n("for...of 迭代 Set", function() {
-    var t = [], r = _createForOfIteratorHelper(/* @__PURE__ */ new Set([1, 2, 3])), a;
+    e(n.join("") === "abc", "for...of 迭代字符串");
+  }), t("for...of 迭代 Set", function() {
+    var n = [], r = _createForOfIteratorHelper(/* @__PURE__ */ new Set([1, 2, 3])), s;
     try {
-      for (r.s(); !(a = r.n()).done; ) {
-        var s = a.value;
-        t.push(s);
+      for (r.s(); !(s = r.n()).done; ) {
+        var u = s.value;
+        n.push(u);
       }
-    } catch (u) {
-      r.e(u);
+    } catch (i) {
+      r.e(i);
     } finally {
       r.f();
     }
-    e(t.join(",") === "1,2,3", "for...of 迭代 Set");
-  }), n("for...of 迭代 Map", function() {
-    var t = [], r = _createForOfIteratorHelper(/* @__PURE__ */ new Map([["a", 1], ["b", 2]])), a;
+    e(n.join(",") === "1,2,3", "for...of 迭代 Set");
+  }), t("for...of 迭代 Map", function() {
+    var n = [], r = _createForOfIteratorHelper(/* @__PURE__ */ new Map([["a", 1], ["b", 2]])), s;
     try {
-      for (r.s(); !(a = r.n()).done; ) {
-        var s = _slicedToArray(a.value, 2), u = s[0], c = s[1];
-        t.push("".concat(u, "=").concat(c));
+      for (r.s(); !(s = r.n()).done; ) {
+        var u = _slicedToArray(s.value, 2), i = u[0], c = u[1];
+        n.push("".concat(i, "=").concat(c));
       }
-    } catch (l) {
-      r.e(l);
+    } catch (f) {
+      r.e(f);
     } finally {
       r.f();
     }
-    e(t.join(",") === "a=1,b=2", "for...of 迭代 Map");
-  }), n("for...of 迭代 arguments", function() {
-    function t() {
-      var r = [], a = _createForOfIteratorHelper(arguments), s;
+    e(n.join(",") === "a=1,b=2", "for...of 迭代 Map");
+  }), t("for...of 迭代 arguments", function() {
+    function n() {
+      var r = [], s = _createForOfIteratorHelper(arguments), u;
       try {
-        for (a.s(); !(s = a.n()).done; ) {
-          var u = s.value;
-          r.push(u);
+        for (s.s(); !(u = s.n()).done; ) {
+          var i = u.value;
+          r.push(i);
         }
       } catch (c) {
-        a.e(c);
+        s.e(c);
       } finally {
-        a.f();
+        s.f();
       }
       return r;
     }
-    e(t(1, 2, 3).join(",") === "1,2,3", "for...of 迭代 arguments");
-  }), n("for...of 与 break / continue", function() {
-    for (var t = [], r = 0, a = [1, 2, 3, 4, 5]; r < a.length; r++) {
-      var s = a[r];
-      if (s !== 3) {
-        if (s === 5)
-          break;
-        t.push(s);
-      }
-    }
-    e(t.join(",") === "1,2,4", "for...of 支持 break 和 continue");
-  }), n("for...of 迭代 NodeList（DOM 环境跳过）", function() {
-    var t = _defineProperty({}, Symbol.iterator, function() {
-      var c = 0;
-      return {
-        next: function() {
-          return c < 3 ? {
-            value: c++,
-            done: !1
-          } : {
-            done: !0
-          };
-        }
-      };
-    }), r = [], a = _createForOfIteratorHelper(t), s;
-    try {
-      for (a.s(); !(s = a.n()).done; ) {
-        var u = s.value;
-        r.push(u);
-      }
-    } catch (c) {
-      a.e(c);
-    } finally {
-      a.f();
-    }
-    e(r.join(",") === "0,1,2", "自定义可迭代对象");
-  }), n("Array entries / keys / values 迭代", function() {
-    var t = ["a", "b", "c"], r = _toConsumableArray(t.entries()), a = _toConsumableArray(t.keys()), s = _toConsumableArray(t.values());
-    e(r[1][0] === 1 && r[1][1] === "b", "entries 迭代"), e(a.join(",") === "0,1,2", "keys 迭代"), e(s.join(",") === "a,b,c", "values 迭代");
-  }), i();
+    e(n(1, 2, 3).join(",") === "1,2,3", "for...of 迭代 arguments");
+  }), o();
 }
 function testMapGetOrInsert() {
-  var o = createSuite("map getOrInsert"), n = o.test, e = o.assert, i = o.getResults;
-  return n("getOrInsert - key 已存在返回原值", function() {
-    var t = /* @__PURE__ */ new Map([["bar", "foo"]]), r = t.getOrInsert("bar", "default");
+  var a = createSuite("map getOrInsert"), t = a.test, e = a.assert, o = a.getResults;
+  return t("getOrInsert - key 已存在返回原值", function() {
+    var n = /* @__PURE__ */ new Map([["bar", "foo"]]), r = n.getOrInsert("bar", "default");
     e(r === "foo", "key 已存在应返回原值 foo");
-  }), n("getOrInsert - key 不存在时插入默认值", function() {
-    var t = /* @__PURE__ */ new Map(), r = t.getOrInsert("newKey", 42);
-    e(r === 42, "应返回插入的默认值 42"), e(t.get("newKey") === 42, "key 已被写入 map");
-  }), n("getOrInsert - 不覆盖已有值", function() {
-    var t = /* @__PURE__ */ new Map([["x", 100]]);
-    t.getOrInsert("x", 999), e(t.get("x") === 100, "已有值不应被覆盖");
-  }), n("getOrInsert - 词频统计经典用法", function() {
-    for (var t = ["apple", "banana", "apple", "apple", "banana"], r = /* @__PURE__ */ new Map(), a = 0, s = t; a < s.length; a++) {
-      var u = s[a];
-      r.getOrInsert(u, 0), r.set(u, r.get(u) + 1);
-    }
-    e(r.get("apple") === 3, "apple 出现 3 次"), e(r.get("banana") === 2, "banana 出现 2 次");
-  }), n("getOrInsertComputed - key 不存在时用回调计算", function() {
-    var t = /* @__PURE__ */ new Map(), r = t.getOrInsertComputed("user:1", function(a) {
-      return {
-        id: a,
-        score: 0
-      };
-    });
-    e(r.id === "user:1" && r.score === 0, "回调以 key 为参数生成默认值");
-  }), n("getOrInsertComputed - key 已存在时不调用回调", function() {
-    var t = /* @__PURE__ */ new Map([["x", "original"]]), r = !1, a = t.getOrInsertComputed("x", function() {
-      return r = !0, "new";
-    });
-    e(!r, "key 已存在，回调不应被调用"), e(a === "original", "应返回原有值");
-  }), n("getOrInsertComputed - 构建邻接表", function() {
-    for (var t = [[1, 2], [1, 3], [2, 3]], r = /* @__PURE__ */ new Map(), a = 0, s = t; a < s.length; a++) {
-      var u = _slicedToArray(s[a], 2), c = u[0], l = u[1];
-      r.getOrInsertComputed(c, function() {
-        return [];
-      }).push(l);
-    }
-    e(r.get(1).join(",") === "2,3", "节点 1 的邻居为 [2,3]"), e(r.get(2).join(",") === "3", "节点 2 的邻居为 [3]");
-  }), i();
+  }), o();
 }
 function testClassFields() {
   var _createSuite = createSuite("Class Fields (ES2022)"), test = _createSuite.test, assert = _createSuite.assert, getResults = _createSuite.getResults;
   return test("公共实例字段 —— 声明并初始化", function() {
-    var o = /* @__PURE__ */ _createClass(function e(i, t) {
-      _classCallCheck(this, e), _defineProperty(this, "x", 0), _defineProperty(this, "y", 0), this.x = i, this.y = t;
-    }), n = new o(3, 4);
-    assert(n.x === 3 && n.y === 4, "公共字段应可读写");
+    var a = /* @__PURE__ */ _createClass(function e(o, n) {
+      _classCallCheck(this, e), _defineProperty(this, "x", 0), _defineProperty(this, "y", 0), this.x = o, this.y = n;
+    }), t = new a(3, 4);
+    assert(t.x === 3 && t.y === 4, "公共字段应可读写");
   }), test("公共字段默认值在 constructor 之前初始化", function() {
-    var o = /* @__PURE__ */ _createClass(function n() {
-      _classCallCheck(this, n), _defineProperty(this, "count", 10), this.count += 5;
+    var a = /* @__PURE__ */ _createClass(function t() {
+      _classCallCheck(this, t), _defineProperty(this, "count", 10), this.count += 5;
     });
-    assert(new o().count === 15, "默认值应先于 constructor 体初始化");
+    assert(new a().count === 15, "默认值应先于 constructor 体初始化");
   }), test("私有实例字段 #field —— 外部不可访问", function() {
     var _balance = /* @__PURE__ */ new WeakMap(), BankAccount = /* @__PURE__ */ function() {
-      function o() {
-        _classCallCheck(this, o), _classPrivateFieldInitSpec(this, _balance, 0);
+      function a() {
+        _classCallCheck(this, a), _classPrivateFieldInitSpec(this, _balance, 0);
       }
-      return _createClass(o, [{
+      return _createClass(a, [{
         key: "deposit",
         value: function(e) {
           _classPrivateFieldSet2(_balance, this, _classPrivateFieldGet2(_balance, this) + e);
@@ -1911,524 +1164,526 @@ function testClassFields() {
     var threw = !1;
     try {
       eval("acc.#balance");
-    } catch (o) {
+    } catch (a) {
       threw = !0;
     }
     assert(threw, "外部直接访问私有字段应抛出语法错误");
   }), test("私有实例方法 #method()", function() {
-    var o = /* @__PURE__ */ new WeakMap(), n = /* @__PURE__ */ new WeakSet(), e = /* @__PURE__ */ function() {
-      function t() {
-        _classCallCheck(this, t), _classPrivateMethodInitSpec(this, n), _classPrivateFieldInitSpec(this, o, "[LOG]");
+    var a = /* @__PURE__ */ new WeakMap(), t = /* @__PURE__ */ new WeakSet(), e = /* @__PURE__ */ function() {
+      function n() {
+        _classCallCheck(this, n), _classPrivateMethodInitSpec(this, t), _classPrivateFieldInitSpec(this, a, "[LOG]");
       }
-      return _createClass(t, [{
+      return _createClass(n, [{
         key: "format",
-        value: function(a) {
-          return _assertClassBrand(n, this, i).call(this, a);
+        value: function(s) {
+          return _assertClassBrand(t, this, o).call(this, s);
         }
       }]);
     }();
-    function i(t) {
-      return "".concat(_classPrivateFieldGet2(o, this), " ").concat(t);
+    function o(n) {
+      return "".concat(_classPrivateFieldGet2(a, this), " ").concat(n);
     }
     assert(new e().format("hello") === "[LOG] hello", "私有方法应正常调用");
   }), test("静态公共字段", function() {
-    var o = /* @__PURE__ */ _createClass(function n() {
-      _classCallCheck(this, n);
+    var a = /* @__PURE__ */ _createClass(function t() {
+      _classCallCheck(this, t);
     });
-    _defineProperty(o, "version", "1.0.0"), _defineProperty(o, "maxRetry", 3), assert(o.version === "1.0.0", "静态公共字段应可通过类名访问"), assert(o.maxRetry === 3, "静态字段应保持初始值");
+    _defineProperty(a, "version", "1.0.0"), _defineProperty(a, "maxRetry", 3), assert(a.version === "1.0.0", "静态公共字段应可通过类名访问"), assert(a.maxRetry === 3, "静态字段应保持初始值");
   }), test("静态私有字段 —— 追踪实例数量", function() {
-    var o = /* @__PURE__ */ function() {
+    var a = /* @__PURE__ */ function() {
       function e() {
-        var i;
-        _classCallCheck(this, e), n._ = (i = n._, i++, i);
+        var o;
+        _classCallCheck(this, e), t._ = (o = t._, o++, o);
       }
       return _createClass(e, null, [{
         key: "getCount",
         value: function() {
-          return n._;
+          return t._;
         }
       }]);
-    }(), n = {
+    }(), t = {
       _: 0
     };
-    new o(), new o(), new o(), assert(o.getCount() === 3, "静态私有字段应跨实例共享");
+    new a(), new a(), new a(), assert(a.getCount() === 3, "静态私有字段应跨实例共享");
   }), test("静态私有方法", function() {
-    var o = /* @__PURE__ */ function() {
+    var a = /* @__PURE__ */ function() {
       function e() {
         _classCallCheck(this, e);
       }
       return _createClass(e, null, [{
         key: "normalize",
-        value: function(t) {
-          return n.call(e, t, 0, 1);
+        value: function(n) {
+          return t.call(e, n, 0, 1);
         }
       }]);
     }();
-    function n(e, i, t) {
-      return Math.min(Math.max(e, i), t);
+    function t(e, o, n) {
+      return Math.min(Math.max(e, o), n);
     }
-    assert(o.normalize(-0.5) === 0, "静态私有方法：低于下界应返回 0"), assert(o.normalize(1.5) === 1, "静态私有方法：超出上界应返回 1"), assert(o.normalize(0.5) === 0.5, "静态私有方法：正常值应原样返回");
+    assert(a.normalize(-0.5) === 0, "静态私有方法：低于下界应返回 0"), assert(a.normalize(1.5) === 1, "静态私有方法：超出上界应返回 1"), assert(a.normalize(0.5) === 0.5, "静态私有方法：正常值应原样返回");
   }), test("私有字段存在性：`#field in obj`", function() {
-    var o = /* @__PURE__ */ new WeakMap(), n = /* @__PURE__ */ function() {
-      function e(i) {
-        _classCallCheck(this, e), _classPrivateFieldInitSpec(this, o, void 0), _classPrivateFieldSet2(o, this, i);
+    var a = /* @__PURE__ */ new WeakMap(), t = /* @__PURE__ */ function() {
+      function e(o) {
+        _classCallCheck(this, e), _classPrivateFieldInitSpec(this, a, void 0), _classPrivateFieldSet2(a, this, o);
       }
       return _createClass(e, null, [{
         key: "isNode",
-        value: function(t) {
-          return o.has(_checkInRHS(t));
+        value: function(n) {
+          return a.has(_checkInRHS(n));
         }
       }]);
     }();
-    assert(n.isNode(new n(1)) === !0, "实例应包含私有字段"), assert(n.isNode({}) === !1, "普通对象不应包含私有字段");
+    assert(t.isNode(new t(1)) === !0, "实例应包含私有字段"), assert(t.isNode({}) === !1, "普通对象不应包含私有字段");
   }), test("私有字段不参与继承 —— 子类无法访问父类私有字段", function() {
-    var o = /* @__PURE__ */ new WeakMap(), n = /* @__PURE__ */ function() {
-      function t(r) {
-        _classCallCheck(this, t), _classPrivateFieldInitSpec(this, o, void 0), _classPrivateFieldSet2(o, this, r);
+    var a = /* @__PURE__ */ new WeakMap(), t = /* @__PURE__ */ function() {
+      function n(r) {
+        _classCallCheck(this, n), _classPrivateFieldInitSpec(this, a, void 0), _classPrivateFieldSet2(a, this, r);
       }
-      return _createClass(t, [{
+      return _createClass(n, [{
         key: "getName",
         value: function() {
-          return _classPrivateFieldGet2(o, this);
+          return _classPrivateFieldGet2(a, this);
         }
       }]);
-    }(), e = /* @__PURE__ */ function(t) {
+    }(), e = /* @__PURE__ */ function(n) {
       function r() {
         return _classCallCheck(this, r), _callSuper(this, r, arguments);
       }
-      return _inherits(r, t), _createClass(r, [{
+      return _inherits(r, n), _createClass(r, [{
         key: "bark",
         value: function() {
           return "".concat(this.getName(), " says woof");
         }
       }]);
-    }(n), i = new e("Rex");
-    assert(i.bark() === "Rex says woof", "子类可通过父类公共方法访问私有字段");
+    }(t), o = new e("Rex");
+    assert(o.bark() === "Rex says woof", "子类可通过父类公共方法访问私有字段");
   }), getResults();
 }
 function testClassStaticBlocks() {
-  var o = createSuite("Class Static Blocks (ES2022)"), n = o.test, e = o.assert, i = o.getResults;
-  return n("基本静态块 —— 初始化静态字段", function() {
-    var t, r = /* @__PURE__ */ _createClass(function a() {
-      _classCallCheck(this, a);
-    });
-    t = r, _defineProperty(r, "host", void 0), _defineProperty(r, "port", void 0), function() {
-      t.host = "localhost", t.port = 8080;
-    }(), e(r.host === "localhost", "静态块应初始化 host"), e(r.port === 8080, "静态块应初始化 port");
-  }), n("静态块中可使用 try/catch 处理初始化失败", function() {
-    var t, r = /* @__PURE__ */ _createClass(function a() {
-      _classCallCheck(this, a);
-    });
-    t = r, _defineProperty(r, "value", void 0), function() {
-      try {
-        var a = '{"timeout":3000}';
-        t.value = JSON.parse(a).timeout;
-      } catch {
-        t.value = 1e3;
-      }
-    }(), e(r.value === 3e3, "静态块中 try/catch 初始化应正确执行");
-  }), n("静态块访问同类私有字段", function() {
-    var t, r = /* @__PURE__ */ function() {
-      function s() {
-        _classCallCheck(this, s);
-      }
-      return _createClass(s, null, [{
-        key: "getSecret",
-        value: function() {
-          return a._;
-        }
-      }]);
-    }(), a = {
-      _: "initial"
-    };
-    t = function(u) {
-      a._ = u;
-    }, t("updated"), e(r.getSecret() === "updated", "静态块应能操作同类私有字段");
-  }), n("多个静态块按声明顺序执行", function() {
-    var t, r = [], a = /* @__PURE__ */ _createClass(function s() {
+  var a = createSuite("Class Static Blocks (ES2022)"), t = a.test, e = a.assert, o = a.getResults;
+  return t("基本静态块 —— 初始化静态字段", function() {
+    var n, r = /* @__PURE__ */ _createClass(function s() {
       _classCallCheck(this, s);
     });
-    t = a, _defineProperty(a, "a", void 0), function() {
-      r.push(1), t.a = 10;
-    }(), _defineProperty(a, "b", void 0), function() {
-      r.push(2), t.b = t.a * 2;
-    }(), e(r[0] === 1 && r[1] === 2, "多个静态块应按顺序执行"), e(a.b === 20, "第二个静态块应能读取第一个块的结果");
-  }), n("静态块与静态字段声明交替执行", function() {
-    var t = [], r = /* @__PURE__ */ _createClass(function a() {
-      _classCallCheck(this, a);
+    n = r, _defineProperty(r, "host", void 0), _defineProperty(r, "port", void 0), function() {
+      n.host = "localhost", n.port = 8080;
+    }(), e(r.host === "localhost", "静态块应初始化 host"), e(r.port === 8080, "静态块应初始化 port");
+  }), t("静态块中可使用 try/catch 处理初始化失败", function() {
+    var n, r = /* @__PURE__ */ _createClass(function s() {
+      _classCallCheck(this, s);
     });
-    _defineProperty(r, "x", (t.push("field-x"), 1)), t.push("block-1"), _defineProperty(r, "y", (t.push("field-y"), 2)), t.push("block-2"), e(t.join(",") === "field-x,block-1,field-y,block-2", "字段与静态块应按声明顺序交替初始化"), e(r.x === 1 && r.y === 2, "所有字段应正确赋值");
-  }), n("子类静态块在父类之后执行", function() {
-    var t = [];
-    t.push("base"), t.push("child"), e(t[0] === "base" && t[1] === "child", "父类静态块应先于子类执行");
-  }), n("静态块中 this 指向类本身", function() {
-    var t, r = /* @__PURE__ */ _createClass(function a() {
-      _classCallCheck(this, a);
+    n = r, _defineProperty(r, "value", void 0), function() {
+      try {
+        var s = '{"timeout":3000}';
+        n.value = JSON.parse(s).timeout;
+      } catch {
+        n.value = 1e3;
+      }
+    }(), e(r.value === 3e3, "静态块中 try/catch 初始化应正确执行");
+  }), t("静态块访问同类私有字段", function() {
+    var n, r = /* @__PURE__ */ function() {
+      function u() {
+        _classCallCheck(this, u);
+      }
+      return _createClass(u, null, [{
+        key: "getSecret",
+        value: function() {
+          return s._;
+        }
+      }]);
+    }(), s = {
+      _: "initial"
+    };
+    n = function(i) {
+      s._ = i;
+    }, n("updated"), e(r.getSecret() === "updated", "静态块应能操作同类私有字段");
+  }), t("多个静态块按声明顺序执行", function() {
+    var n, r = [], s = /* @__PURE__ */ _createClass(function u() {
+      _classCallCheck(this, u);
     });
-    t = r, _defineProperty(r, "name2", "Widget"), _defineProperty(r, "instance", void 0), t.instance = {
-      type: t.name2
+    n = s, _defineProperty(s, "a", void 0), function() {
+      r.push(1), n.a = 10;
+    }(), _defineProperty(s, "b", void 0), function() {
+      r.push(2), n.b = n.a * 2;
+    }(), e(r[0] === 1 && r[1] === 2, "多个静态块应按顺序执行"), e(s.b === 20, "第二个静态块应能读取第一个块的结果");
+  }), t("静态块与静态字段声明交替执行", function() {
+    var n = [], r = /* @__PURE__ */ _createClass(function s() {
+      _classCallCheck(this, s);
+    });
+    _defineProperty(r, "x", (n.push("field-x"), 1)), n.push("block-1"), _defineProperty(r, "y", (n.push("field-y"), 2)), n.push("block-2"), e(n.join(",") === "field-x,block-1,field-y,block-2", "字段与静态块应按声明顺序交替初始化"), e(r.x === 1 && r.y === 2, "所有字段应正确赋值");
+  }), t("子类静态块在父类之后执行", function() {
+    var n = [];
+    n.push("base"), n.push("child"), e(n[0] === "base" && n[1] === "child", "父类静态块应先于子类执行");
+  }), t("静态块中 this 指向类本身", function() {
+    var n, r = /* @__PURE__ */ _createClass(function s() {
+      _classCallCheck(this, s);
+    });
+    n = r, _defineProperty(r, "name2", "Widget"), _defineProperty(r, "instance", void 0), n.instance = {
+      type: n.name2
     }, e(r.instance.type === "Widget", "静态块内 this 应指向类本身");
-  }), i();
+  }), o();
 }
 function testAtMethod() {
-  var o = createSuite("Array/String.at() (ES2022)"), n = o.test, e = o.assert, i = o.getResults;
-  return n("Array.at() —— 正索引与 arr[i] 等价", function() {
-    var t = [10, 20, 30, 40, 50];
-    e(t.at(0) === 10, "at(0) 应返回第一个元素"), e(t.at(2) === 30, "at(2) 应返回第三个元素"), e(t.at(4) === 50, "at(4) 应返回最后一个元素");
-  }), n("Array.at() —— 负索引从末尾倒数", function() {
-    var t = [10, 20, 30, 40, 50];
-    e(t.at(-1) === 50, "at(-1) 应返回最后一个元素"), e(t.at(-2) === 40, "at(-2) 应返回倒数第二个元素"), e(t.at(-5) === 10, "at(-5) 应返回第一个元素");
-  }), n("Array.at() —— 越界返回 undefined", function() {
-    var t = [1, 2, 3];
-    e(t.at(5) === void 0, "正向越界应返回 undefined"), e(t.at(-4) === void 0, "负向越界应返回 undefined");
-  }), n("Array.at() —— 空数组始终返回 undefined", function() {
+  var a = createSuite("Array/String.at() (ES2022)"), t = a.test, e = a.assert, o = a.getResults;
+  return t("Array.at() —— 正索引与 arr[i] 等价", function() {
+    var n = [10, 20, 30, 40, 50];
+    e(n.at(0) === 10, "at(0) 应返回第一个元素"), e(n.at(2) === 30, "at(2) 应返回第三个元素"), e(n.at(4) === 50, "at(4) 应返回最后一个元素");
+  }), t("Array.at() —— 负索引从末尾倒数", function() {
+    var n = [10, 20, 30, 40, 50];
+    e(n.at(-1) === 50, "at(-1) 应返回最后一个元素"), e(n.at(-2) === 40, "at(-2) 应返回倒数第二个元素"), e(n.at(-5) === 10, "at(-5) 应返回第一个元素");
+  }), t("Array.at() —— 越界返回 undefined", function() {
+    var n = [1, 2, 3];
+    e(n.at(5) === void 0, "正向越界应返回 undefined"), e(n.at(-4) === void 0, "负向越界应返回 undefined");
+  }), t("Array.at() —— 空数组始终返回 undefined", function() {
     e([].at(0) === void 0, "空数组 at(0) 应返回 undefined"), e([].at(-1) === void 0, "空数组 at(-1) 应返回 undefined");
-  }), n("对比旧写法：arr.at(-1) vs arr[arr.length - 1]", function() {
-    var t = [3, 1, 4, 1, 5, 9, 2, 6], r = t.at(-1), a = t[t.length - 1];
-    e(r === a, "at(-1) 应与 arr[length-1] 等价");
-  }), n("String.at() —— 正索引", function() {
-    var t = "hello";
-    e(t.at(0) === "h", "at(0) 应返回首字符"), e(t.at(4) === "o", "at(4) 应返回末字符");
-  }), n("String.at() —— 负索引", function() {
-    var t = "hello";
-    e(t.at(-1) === "o", "at(-1) 应返回最后一个字符"), e(t.at(-3) === "l", "at(-3) 应返回倒数第三个字符");
-  }), n("String.at() —— 越界返回 undefined", function() {
+  }), t("对比旧写法：arr.at(-1) vs arr[arr.length - 1]", function() {
+    var n = [3, 1, 4, 1, 5, 9, 2, 6], r = n.at(-1), s = n[n.length - 1];
+    e(r === s, "at(-1) 应与 arr[length-1] 等价");
+  }), t("String.at() —— 正索引", function() {
+    var n = "hello";
+    e(n.at(0) === "h", "at(0) 应返回首字符"), e(n.at(4) === "o", "at(4) 应返回末字符");
+  }), t("String.at() —— 负索引", function() {
+    var n = "hello";
+    e(n.at(-1) === "o", "at(-1) 应返回最后一个字符"), e(n.at(-3) === "l", "at(-3) 应返回倒数第三个字符");
+  }), t("String.at() —— 越界返回 undefined", function() {
     e("abc".at(10) === void 0, "正向越界应返回 undefined"), e("abc".at(-10) === void 0, "负向越界应返回 undefined");
-  }), n("TypedArray.at() —— 支持负索引", function() {
-    var t = new Int32Array([100, 200, 300, 400]);
-    e(t.at(0) === 100, "TypedArray.at(0) 应返回第一个元素"), e(t.at(-1) === 400, "TypedArray.at(-1) 应返回最后一个元素"), e(t.at(-2) === 300, "TypedArray.at(-2) 应返回倒数第二个元素");
-  }), n("at() 不修改原数组", function() {
-    var t = [1, 2, 3];
-    e(t.length === 3 && t[2] === 3, "at() 不应修改原数组");
-  }), i();
+  }), t("TypedArray.at() —— 支持负索引", function() {
+    var n = new Int32Array([100, 200, 300, 400]);
+    e(n.at(0) === 100, "TypedArray.at(0) 应返回第一个元素"), e(n.at(-1) === 400, "TypedArray.at(-1) 应返回最后一个元素"), e(n.at(-2) === 300, "TypedArray.at(-2) 应返回倒数第二个元素");
+  }), t("at() 不修改原数组", function() {
+    var n = [1, 2, 3];
+    e(n.length === 3 && n[2] === 3, "at() 不应修改原数组");
+  }), o();
 }
 function testObjectHasOwn() {
-  var o = createSuite("Object.hasOwn() (ES2022)"), n = o.test, e = o.assert, i = o.getResults;
-  return n("基本用法 —— 自有属性返回 true", function() {
-    var t = {
+  var a = createSuite("Object.hasOwn() (ES2022)"), t = a.test, e = a.assert, o = a.getResults;
+  return t("基本用法 —— 自有属性返回 true", function() {
+    var n = {
       name: "Alice",
       age: 30
     };
-    e(Object.hasOwn(t, "name") === !0, "name 是自有属性，应返回 true"), e(Object.hasOwn(t, "age") === !0, "age 是自有属性，应返回 true");
-  }), n("不存在的属性返回 false", function() {
-    var t = {
+    e(Object.hasOwn(n, "name") === !0, "name 是自有属性，应返回 true"), e(Object.hasOwn(n, "age") === !0, "age 是自有属性，应返回 true");
+  }), t("不存在的属性返回 false", function() {
+    var n = {
       a: 1
     };
-    e(Object.hasOwn(t, "b") === !1, "不存在的属性应返回 false"), e(Object.hasOwn(t, "toString") === !1, "原型链上的属性应返回 false");
-  }), n("继承属性返回 false —— 只检查自有属性", function() {
-    var t = /* @__PURE__ */ _createClass(function s(u) {
-      _classCallCheck(this, s), this.name = u;
-    }), r = /* @__PURE__ */ function(s) {
-      function u() {
-        return _classCallCheck(this, u), _callSuper(this, u, arguments);
+    e(Object.hasOwn(n, "b") === !1, "不存在的属性应返回 false"), e(Object.hasOwn(n, "toString") === !1, "原型链上的属性应返回 false");
+  }), t("继承属性返回 false —— 只检查自有属性", function() {
+    var n = /* @__PURE__ */ _createClass(function u(i) {
+      _classCallCheck(this, u), this.name = i;
+    }), r = /* @__PURE__ */ function(u) {
+      function i() {
+        return _classCallCheck(this, i), _callSuper(this, i, arguments);
       }
-      return _inherits(u, s), _createClass(u);
-    }(t), a = new r("Rex");
-    e(Object.hasOwn(a, "name") === !0, "name 是实例自有属性"), e(Object.hasOwn(a, "constructor") === !1, "constructor 在原型上，不是自有属性");
-  }), n("null 原型对象 —— hasOwnProperty 不可用时的安全方案", function() {
-    var t = /* @__PURE__ */ Object.create(null);
-    t.key = "value";
+      return _inherits(i, u), _createClass(i);
+    }(n), s = new r("Rex");
+    e(Object.hasOwn(s, "name") === !0, "name 是实例自有属性"), e(Object.hasOwn(s, "constructor") === !1, "constructor 在原型上，不是自有属性");
+  }), t("null 原型对象 —— hasOwnProperty 不可用时的安全方案", function() {
+    var n = /* @__PURE__ */ Object.create(null);
+    n.key = "value";
     var r = !1;
     try {
-      t.hasOwnProperty("key");
+      n.hasOwnProperty("key");
     } catch {
       r = !0;
     }
-    e(r, "null 原型对象调用 hasOwnProperty 应抛出错误"), e(Object.hasOwn(t, "key") === !0, "hasOwn 对 null 原型对象应正常工作"), e(Object.hasOwn(t, "other") === !1, "不存在的键应返回 false");
-  }), n("对象覆盖 hasOwnProperty —— hasOwn 不受影响", function() {
-    var t = {
+    e(r, "null 原型对象调用 hasOwnProperty 应抛出错误"), e(Object.hasOwn(n, "key") === !0, "hasOwn 对 null 原型对象应正常工作"), e(Object.hasOwn(n, "other") === !1, "不存在的键应返回 false");
+  }), t("对象覆盖 hasOwnProperty —— hasOwn 不受影响", function() {
+    var n = {
       hasOwnProperty: function() {
         return !1;
       },
       // 伪造返回值
       secret: 42
     };
-    e(t.hasOwnProperty("secret") === !1, "被覆盖的 hasOwnProperty 返回错误结果"), e(Object.hasOwn(t, "secret") === !0, "hasOwn 不受覆盖影响，结果正确");
-  }), n("值为 undefined 的属性仍返回 true", function() {
-    var t = {
+    e(n.hasOwnProperty("secret") === !1, "被覆盖的 hasOwnProperty 返回错误结果"), e(Object.hasOwn(n, "secret") === !0, "hasOwn 不受覆盖影响，结果正确");
+  }), t("值为 undefined 的属性仍返回 true", function() {
+    var n = {
       key: void 0
     };
-    e(Object.hasOwn(t, "key") === !0, "值为 undefined 的自有属性应返回 true");
-  }), n("Symbol 作为键", function() {
-    var t = Symbol("id"), r = _defineProperty({}, t, 123);
-    e(Object.hasOwn(r, t) === !0, "Symbol 键的自有属性应返回 true"), e(Object.hasOwn(r, Symbol("id")) === !1, "不同的 Symbol 实例应返回 false");
-  }), n("数组的索引属性", function() {
-    var t = [10, 20, 30];
-    e(Object.hasOwn(t, 0) === !0, "数组索引 0 是自有属性"), e(Object.hasOwn(t, "1") === !0, '字符串索引 "1" 也是自有属性'), e(Object.hasOwn(t, "length") === !0, "length 是数组的自有属性"), e(Object.hasOwn(t, 3) === !1, "越界索引应返回 false");
-  }), i();
+    e(Object.hasOwn(n, "key") === !0, "值为 undefined 的自有属性应返回 true");
+  }), t("Symbol 作为键", function() {
+    var n = Symbol("id"), r = _defineProperty({}, n, 123);
+    e(Object.hasOwn(r, n) === !0, "Symbol 键的自有属性应返回 true"), e(Object.hasOwn(r, Symbol("id")) === !1, "不同的 Symbol 实例应返回 false");
+  }), t("数组的索引属性", function() {
+    var n = [10, 20, 30];
+    e(Object.hasOwn(n, 0) === !0, "数组索引 0 是自有属性"), e(Object.hasOwn(n, "1") === !0, '字符串索引 "1" 也是自有属性'), e(Object.hasOwn(n, "length") === !0, "length 是数组的自有属性"), e(Object.hasOwn(n, 3) === !1, "越界索引应返回 false");
+  }), o();
 }
 function testErrorCause() {
-  var o = createSuite("Error Cause (ES2022)"), n = o.test, e = o.assert, i = o.getResults;
-  return n("基本用法 —— cause 属性保存原始错误", function() {
-    var t = new TypeError("原始类型错误"), r = new Error("操作失败", {
-      cause: t
+  var a = createSuite("Error Cause (ES2022)"), t = a.test, e = a.assert, o = a.getResults;
+  return t("基本用法 —— cause 属性保存原始错误", function() {
+    var n = new TypeError("原始类型错误"), r = new Error("操作失败", {
+      cause: n
     });
-    e(r.message === "操作失败", "外层错误消息应正确"), e(r.cause === t, "cause 应指向原始错误"), e(r.cause instanceof TypeError, "cause 类型应保留");
-  }), n("所有内置子类均支持 cause", function() {
-    var t = new Error("根因"), r = [new TypeError("类型错误", {
-      cause: t
+    e(r.message === "操作失败", "外层错误消息应正确"), e(r.cause === n, "cause 应指向原始错误"), e(r.cause instanceof TypeError, "cause 类型应保留");
+  }), t("所有内置子类均支持 cause", function() {
+    var n = new Error("根因"), r = [new TypeError("类型错误", {
+      cause: n
     }), new RangeError("范围错误", {
-      cause: t
+      cause: n
     }), new SyntaxError("语法错误", {
-      cause: t
+      cause: n
     })];
-    r.forEach(function(a) {
-      e(a.cause === t, "".concat(a.constructor.name, " 的 cause 应指向根因"));
+    r.forEach(function(s) {
+      e(s.cause === n, "".concat(s.constructor.name, " 的 cause 应指向根因"));
     });
-  }), n("错误链可以多层嵌套", function() {
-    var t = new Error("数据库连接失败"), r = new Error("查询用户失败", {
-      cause: t
-    }), a = new Error("登录接口报错", {
+  }), t("错误链可以多层嵌套", function() {
+    var n = new Error("数据库连接失败"), r = new Error("查询用户失败", {
+      cause: n
+    }), s = new Error("登录接口报错", {
       cause: r
     });
-    e(a.cause === r, "第三层 cause 应指向第二层"), e(a.cause.cause === t, "第二层 cause 应指向第一层"), e(a.cause.cause.message === "数据库连接失败", "根因消息应可追溯");
-  }), n("不传 cause 时属性为 undefined", function() {
-    var t = new Error("普通错误");
-    e(t.cause === void 0, "未传 cause 时属性应为 undefined");
-  }), n("cause 可以是任意值（不限于 Error）", function() {
-    var t = new Error("原因是字符串", {
+    e(s.cause === r, "第三层 cause 应指向第二层"), e(s.cause.cause === n, "第二层 cause 应指向第一层"), e(s.cause.cause.message === "数据库连接失败", "根因消息应可追溯");
+  }), t("不传 cause 时属性为 undefined", function() {
+    var n = new Error("普通错误");
+    e(n.cause === void 0, "未传 cause 时属性应为 undefined");
+  }), t("cause 可以是任意值（不限于 Error）", function() {
+    var n = new Error("原因是字符串", {
       cause: "网络超时"
     }), r = new Error("原因是数字", {
       cause: 404
-    }), a = new Error("原因是对象", {
+    }), s = new Error("原因是对象", {
       cause: {
         code: "ENOENT"
       }
     });
-    e(t.cause === "网络超时", "cause 可以是字符串"), e(r.cause === 404, "cause 可以是数字"), e(a.cause.code === "ENOENT", "cause 可以是对象");
-  }), n("实际应用：fetch 封装中传递原始网络错误", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function t() {
-    var r, a, s, u;
+    e(n.cause === "网络超时", "cause 可以是字符串"), e(r.cause === 404, "cause 可以是数字"), e(s.cause.code === "ENOENT", "cause 可以是对象");
+  }), t("实际应用：fetch 封装中传递原始网络错误", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function n() {
+    var r, s, u, i;
     return _regenerator().w(function(c) {
       for (; ; )
         switch (c.p = c.n) {
           case 0:
-            return a = function() {
-              return a = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function f(v) {
-                var y;
+            return s = function() {
+              return s = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function l(y) {
+                var h;
                 return _regenerator().w(function(p) {
                   for (; ; )
                     switch (p.p = p.n) {
                       case 0:
                         throw p.p = 0, new Error("fetch failed: 500");
                       case 1:
-                        throw p.p = 1, y = p.v, new Error("获取用户 ".concat(v, " 失败"), {
-                          cause: y
+                        throw p.p = 1, h = p.v, new Error("获取用户 ".concat(y, " 失败"), {
+                          cause: h
                         });
                       case 2:
                         return p.a(2);
                     }
-                }, f, null, [[0, 1]]);
-              })), a.apply(this, arguments);
-            }, r = function(f) {
-              return a.apply(this, arguments);
-            }, s = null, c.p = 1, c.n = 2, r(42);
+                }, l, null, [[0, 1]]);
+              })), s.apply(this, arguments);
+            }, r = function(l) {
+              return s.apply(this, arguments);
+            }, u = null, c.p = 1, c.n = 2, r(42);
           case 2:
             c.n = 4;
             break;
           case 3:
-            c.p = 3, u = c.v, s = u;
+            c.p = 3, i = c.v, u = i;
           case 4:
-            e(s !== null, "应捕获到封装后的错误"), e(s.message.includes("42"), "外层错误消息应包含用户 id"), e(s.cause instanceof Error, "cause 应是原始 Error"), e(s.cause.message.includes("500"), "原始错误消息应保留");
+            e(u !== null, "应捕获到封装后的错误"), e(u.message.includes("42"), "外层错误消息应包含用户 id"), e(u.cause instanceof Error, "cause 应是原始 Error"), e(u.cause.message.includes("500"), "原始错误消息应保留");
           case 5:
             return c.a(2);
         }
-    }, t, null, [[1, 3]]);
-  }))), n("自定义 Error 子类也支持 cause", function() {
-    var t = /* @__PURE__ */ function(s) {
-      function u(c, l) {
-        var f;
-        return _classCallCheck(this, u), f = _callSuper(this, u, [c, l]), f.name = "AppError", f;
+    }, n, null, [[1, 3]]);
+  }))), t("自定义 Error 子类也支持 cause", function() {
+    var n = /* @__PURE__ */ function(u) {
+      function i(c, f) {
+        var l;
+        return _classCallCheck(this, i), l = _callSuper(this, i, [c, f]), l.name = "AppError", l;
       }
-      return _inherits(u, s), _createClass(u);
-    }(/* @__PURE__ */ _wrapNativeSuper(Error)), r = new TypeError("底层失败"), a = new t("应用层失败", {
+      return _inherits(i, u), _createClass(i);
+    }(/* @__PURE__ */ _wrapNativeSuper(Error)), r = new TypeError("底层失败"), s = new n("应用层失败", {
       cause: r
     });
-    e(a.name === "AppError", "子类名称应正确"), e(a.cause === r, "自定义子类应支持 cause");
-  }), i();
+    e(s.name === "AppError", "子类名称应正确"), e(s.cause === r, "自定义子类应支持 cause");
+  }), o();
 }
 function testRegExpDFlag() {
-  var o = createSuite("RegExp /d flag (ES2022)"), n = o.test, e = o.assert, i = o.getResults, t = function() {
+  var a = createSuite("RegExp /d flag (ES2022)"), t = a.test, e = a.assert, o = a.getResults, n = function() {
     try {
       return new RegExp("x", "d").hasIndices === !0;
     } catch {
       return !1;
     }
   }();
-  return n("hasIndices 属性标识是否启用 /d 标志", function() {
-    if (!t) {
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 RegExp /d 标志");
+  }), t("hasIndices 属性标识是否启用 /d 标志", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 /d 标志)");
       return;
     }
     e(new RegExp("x", "d").hasIndices === !0, "/d 标志应使 hasIndices 为 true"), e(new RegExp("x").hasIndices === !1, "无 /d 标志时 hasIndices 应为 false");
-  }), n("整体匹配位置 indices[0]", function() {
-    if (!t) {
+  }), t("整体匹配位置 indices[0]", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = "hello world".match(new RegExp("world", "d"));
     e(Array.isArray(r.indices), "结果应包含 indices 数组"), e(r.indices[0][0] === 6, "匹配起始位置应为 6"), e(r.indices[0][1] === 11, "匹配结束位置应为 11（不含）"), e("hello world".slice(6, 11) === "world", "slice 切出来应等于匹配内容");
-  }), n("捕获组位置 indices[n]", function() {
-    if (!t) {
+  }), t("捕获组位置 indices[n]", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = new RegExp("(\\d{4})-(\\d{2})-(\\d{2})", "d"), a = "日期：2025-06-15".match(r);
-    e(a.indices[1][0] === 3 && a.indices[1][1] === 7, "年份捕获组位置应为 [3,7]"), e(a.indices[2][0] === 8 && a.indices[2][1] === 10, "月份捕获组位置应为 [8,10]"), e(a.indices[3][0] === 11 && a.indices[3][1] === 13, "日期捕获组位置应为 [11,13]");
-  }), n("通过 indices 验证 slice 还原捕获组内容", function() {
-    if (!t) {
+    var r = new RegExp("(\\d{4})-(\\d{2})-(\\d{2})", "d"), s = "日期：2025-06-15".match(r);
+    e(s.indices[1][0] === 3 && s.indices[1][1] === 7, "年份捕获组位置应为 [3,7]"), e(s.indices[2][0] === 8 && s.indices[2][1] === 10, "月份捕获组位置应为 [8,10]"), e(s.indices[3][0] === 11 && s.indices[3][1] === 13, "日期捕获组位置应为 [11,13]");
+  }), t("通过 indices 验证 slice 还原捕获组内容", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = "姓名：Alice，年龄：30", a = new RegExp("姓名：(\\w+)，年龄：(\\d+)", "d"), s = r.match(a), u = _slicedToArray(s.indices[1], 2), c = u[0], l = u[1], f = _slicedToArray(s.indices[2], 2), v = f[0], y = f[1];
-    e(r.slice(c, l) === "Alice", "通过 indices 切出的姓名应为 Alice"), e(r.slice(v, y) === "30", "通过 indices 切出的年龄应为 30");
-  }), n("具名捕获组的位置 indices.groups", function() {
-    var r, a;
-    if (!t) {
+    var r = "姓名：Alice，年龄：30", s = new RegExp("姓名：(\\w+)，年龄：(\\d+)", "d"), u = r.match(s), i = _slicedToArray(u.indices[1], 2), c = i[0], f = i[1], l = _slicedToArray(u.indices[2], 2), y = l[0], h = l[1];
+    e(r.slice(c, f) === "Alice", "通过 indices 切出的姓名应为 Alice"), e(r.slice(y, h) === "30", "通过 indices 切出的年龄应为 30");
+  }), t("具名捕获组的位置 indices.groups", function() {
+    var r, s;
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var s = /* @__PURE__ */ _wrapRegExp(new RegExp("(\\d{4})-(\\d{2})", "d"), {
+    var u = /* @__PURE__ */ _wrapRegExp(new RegExp("(\\d{4})-(\\d{2})", "d"), {
       year: 1,
       month: 2
-    }), u = "发布于 2025-06".match(s);
-    e(u.indices.groups !== void 0, "具名组应出现在 indices.groups 中");
-    var c = u.indices.groups, l = c.year, f = c.month;
-    e((r = "发布于 2025-06").slice.apply(r, _toConsumableArray(l)) === "2025", "具名组 year 位置应正确"), e((a = "发布于 2025-06").slice.apply(a, _toConsumableArray(f)) === "06", "具名组 month 位置应正确");
-  }), n("未匹配的可选组 indices 为 undefined", function() {
-    if (!t) {
+    }), i = "发布于 2025-06".match(u);
+    e(i.indices.groups !== void 0, "具名组应出现在 indices.groups 中");
+    var c = i.indices.groups, f = c.year, l = c.month;
+    e((r = "发布于 2025-06").slice.apply(r, _toConsumableArray(f)) === "2025", "具名组 year 位置应正确"), e((s = "发布于 2025-06").slice.apply(s, _toConsumableArray(l)) === "06", "具名组 month 位置应正确");
+  }), t("未匹配的可选组 indices 为 undefined", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = new RegExp("(a)?(b)", "d"), a = "b".match(r);
-    e(a.indices[1] === void 0, "未参与匹配的可选组 indices 应为 undefined"), e(Array.isArray(a.indices[2]), "已匹配的组 indices 应为数组");
-  }), n("/d 与 /g 组合 —— exec 每次返回带 indices 的结果", function() {
-    if (!t) {
+    var r = new RegExp("(a)?(b)", "d"), s = "b".match(r);
+    e(s.indices[1] === void 0, "未参与匹配的可选组 indices 应为 undefined"), e(Array.isArray(s.indices[2]), "已匹配的组 indices 应为数组");
+  }), t("/d 与 /g 组合 —— exec 每次返回带 indices 的结果", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    for (var r = new RegExp("\\d+", "dg"), a = "a1b22c333", s = [], u; (u = r.exec(a)) !== null; )
-      s.push(u.indices[0]);
-    e(s.length === 3, "应匹配到 3 个数字"), e(s[0][0] === 1, "第一个数字起始位置应为 1"), e(s[1][0] === 3, "第二个数字起始位置应为 3"), e(s[2][0] === 6, "第三个数字起始位置应为 6");
-  }), i();
+    for (var r = new RegExp("\\d+", "dg"), s = "a1b22c333", u = [], i; (i = r.exec(s)) !== null; )
+      u.push(i.indices[0]);
+    e(u.length === 3, "应匹配到 3 个数字"), e(u[0][0] === 1, "第一个数字起始位置应为 1"), e(u[1][0] === 3, "第二个数字起始位置应为 3"), e(u[2][0] === 6, "第三个数字起始位置应为 6");
+  }), o();
 }
 function testTopLevelAwait() {
   return _testTopLevelAwait.apply(this, arguments);
 }
 function _testTopLevelAwait() {
-  return _testTopLevelAwait = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    var n, e, i, t;
+  return _testTopLevelAwait = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    var t, e, o, n;
     return _regenerator().w(function(r) {
       for (; ; )
         switch (r.n) {
           case 0:
-            return n = createSuite("Top-level await (ES2022)"), e = n.test, i = n.assert, t = n.getResults, r.n = 1, e("async 函数内的 await 是等价基础能力", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
-              var s;
-              return _regenerator().w(function(u) {
+            return t = createSuite("Top-level await (ES2022)"), e = t.test, o = t.assert, n = t.getResults, r.n = 1, e("async 函数内的 await 是等价基础能力", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
+              var u;
+              return _regenerator().w(function(i) {
                 for (; ; )
-                  switch (u.n) {
+                  switch (i.n) {
                     case 0:
-                      return u.n = 1, Promise.resolve(42);
+                      return i.n = 1, Promise.resolve(42);
                     case 1:
-                      s = u.v, i(s === 42, "await 在 async 函数顶层应正常工作");
+                      u = i.v, o(u === 42, "await 在 async 函数顶层应正常工作");
                     case 2:
-                      return u.a(2);
+                      return i.a(2);
                   }
-              }, a);
+              }, s);
             })));
           case 1:
-            return r.n = 2, e("await 可以等待动态 import()", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
-              var s, u;
+            return r.n = 2, e("await 可以等待动态 import()", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
+              var u, i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
                     case 0:
-                      return s = function() {
+                      return u = function() {
                         return Promise.resolve({
                           default: "module-content",
                           util: function() {
                             return "ok";
                           }
                         });
-                      }, c.n = 1, s();
+                      }, c.n = 1, u();
                     case 1:
-                      u = c.v, i(u.default === "module-content", "await 动态导入应返回模块内容"), i(u.util() === "ok", "模块导出的函数应可调用");
+                      i = c.v, o(i.default === "module-content", "await 动态导入应返回模块内容"), o(i.util() === "ok", "模块导出的函数应可调用");
                     case 2:
                       return c.a(2);
                   }
-              }, a);
+              }, s);
             })));
           case 2:
-            return r.n = 3, e("await 保序 —— 导入方等待模块初始化完成", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
-              var s, u;
+            return r.n = 3, e("await 保序 —— 导入方等待模块初始化完成", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
+              var u, i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
                     case 0:
-                      return s = [], c.n = 1, _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function l() {
-                        return _regenerator().w(function(f) {
+                      return u = [], c.n = 1, _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function f() {
+                        return _regenerator().w(function(l) {
                           for (; ; )
-                            switch (f.n) {
+                            switch (l.n) {
                               case 0:
-                                return s.push("A:start"), f.n = 1, new Promise(function(v) {
-                                  return setTimeout(v, 0);
+                                return u.push("A:start"), l.n = 1, new Promise(function(y) {
+                                  return setTimeout(y, 0);
                                 });
                               case 1:
-                                return s.push("A:ready"), f.a(2, {
+                                return u.push("A:ready"), l.a(2, {
                                   data: "initialized"
                                 });
                             }
-                        }, l);
+                        }, f);
                       }))();
                     case 1:
-                      u = c.v, s.push("B:use"), i(u.data === "initialized", "模块 A 初始化完成后才能被使用"), i(s.join(",") === "A:start,A:ready,B:use", "执行顺序应严格保序");
+                      i = c.v, u.push("B:use"), o(i.data === "initialized", "模块 A 初始化完成后才能被使用"), o(u.join(",") === "A:start,A:ready,B:use", "执行顺序应严格保序");
                     case 2:
                       return c.a(2);
                   }
-              }, a);
+              }, s);
             })));
           case 3:
-            return r.n = 4, e("await 与条件导入模拟", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
-              var s, u;
+            return r.n = 4, e("await 与条件导入模拟", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
+              var u, i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
                     case 0:
-                      return s = typeof window < "u", c.n = 1, Promise.resolve(s ? "browser" : "node");
+                      return u = typeof window < "u", c.n = 1, Promise.resolve(u ? "browser" : "node");
                     case 1:
-                      u = c.v, i(typeof u == "string", "条件 await 应返回字符串平台标识"), i(u === "browser" || u === "node", "平台标识应为 browser 或 node");
+                      i = c.v, o(typeof i == "string", "条件 await 应返回字符串平台标识"), o(i === "browser" || i === "node", "平台标识应为 browser 或 node");
                     case 2:
                       return c.a(2);
                   }
-              }, a);
+              }, s);
             })));
           case 4:
-            return r.n = 5, e("await 错误应在模块加载阶段被捕获", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
-              var s, u;
+            return r.n = 5, e("await 错误应在模块加载阶段被捕获", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
+              var u, i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.p = c.n) {
                     case 0:
-                      return s = null, c.p = 1, c.n = 2, Promise.reject(new Error("模块初始化失败"));
+                      return u = null, c.p = 1, c.n = 2, Promise.reject(new Error("模块初始化失败"));
                     case 2:
                       c.n = 4;
                       break;
                     case 3:
-                      c.p = 3, u = c.v, s = u;
+                      c.p = 3, i = c.v, u = i;
                     case 4:
-                      i(s instanceof Error, "应捕获到 Error"), i(s.message === "模块初始化失败", "错误消息应正确传递");
+                      o(u instanceof Error, "应捕获到 Error"), o(u.message === "模块初始化失败", "错误消息应正确传递");
                     case 5:
                       return c.a(2);
                   }
-              }, a, null, [[1, 3]]);
+              }, s, null, [[1, 3]]);
             })));
           case 5:
-            return r.n = 6, e("await 不阻塞无依赖的兄弟模块（并行加载）", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
-              var s, u, c, l, f, v;
-              return _regenerator().w(function(y) {
+            return r.n = 6, e("await 不阻塞无依赖的兄弟模块（并行加载）", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
+              var u, i, c, f, l, y;
+              return _regenerator().w(function(h) {
                 for (; ; )
-                  switch (y.n) {
+                  switch (h.n) {
                     case 0:
-                      return s = Date.now(), y.n = 1, Promise.all([new Promise(function(p) {
+                      return u = Date.now(), h.n = 1, Promise.all([new Promise(function(p) {
                         return setTimeout(function() {
                           return p("A");
                         }, 10);
@@ -2438,205 +1693,227 @@ function _testTopLevelAwait() {
                         }, 10);
                       })]);
                     case 1:
-                      u = y.v, c = _slicedToArray(u, 2), l = c[0], f = c[1], v = Date.now() - s, i(l === "A" && f === "B", "并行 await 两个模块都应成功完成"), i(v < 50, "并行执行耗时应远小于串行（~10ms vs ~20ms）");
+                      i = h.v, c = _slicedToArray(i, 2), f = c[0], l = c[1], y = Date.now() - u, o(f === "A" && l === "B", "并行 await 两个模块都应成功完成"), o(y < 50, "并行执行耗时应远小于串行（~10ms vs ~20ms）");
                     case 2:
-                      return y.a(2);
+                      return h.a(2);
                   }
-              }, a);
+              }, s);
             })));
           case 6:
-            return r.a(2, t());
+            return r.a(2, n());
         }
-    }, o);
+    }, a);
   })), _testTopLevelAwait.apply(this, arguments);
 }
 function testIteratorHelpers() {
-  var o = createSuite("Iterator Helpers (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Iterator < "u" && typeof Iterator.from == "function";
-  return n("Iterator.from() 将可迭代对象转为迭代器", function() {
-    if (!t) {
+  var a = createSuite("Iterator Helpers (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Iterator < "u" && typeof Iterator.from == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Iterator Helpers");
+  }), t("Iterator.from() 将可迭代对象转为迭代器", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Iterator.from)");
       return;
     }
     var r = Iterator.from([1, 2, 3]);
     e(typeof r.next == "function", "应返回迭代器对象");
-  }), n(".map() 惰性映射", function() {
-    if (!t) {
+  }), t(".map() 惰性映射", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 2, 3]).map(function(a) {
-      return a * 2;
+    var r = Iterator.from([1, 2, 3]).map(function(s) {
+      return s * 2;
     }).toArray();
     e(r.length === 3 && r[0] === 2 && r[2] === 6, "map 结果应为 [2,4,6]");
-  }), n(".filter() 惰性过滤", function() {
-    if (!t) {
+  }), t(".filter() 惰性过滤", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 2, 3, 4, 5]).filter(function(a) {
-      return a % 2 === 0;
+    var r = Iterator.from([1, 2, 3, 4, 5]).filter(function(s) {
+      return s % 2 === 0;
     }).toArray();
     e(r.length === 2 && r[0] === 2 && r[1] === 4, "filter 结果应为 [2,4]");
-  }), n(".take(n) 取前 n 个元素", function() {
-    if (!t) {
+  }), t(".take(n) 取前 n 个元素", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Iterator.from([10, 20, 30, 40, 50]).take(3).toArray();
     e(r.length === 3 && r[2] === 30, "take(3) 应只取前 3 个");
-  }), n(".drop(n) 跳过前 n 个元素", function() {
-    if (!t) {
+  }), t(".drop(n) 跳过前 n 个元素", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Iterator.from([1, 2, 3, 4, 5]).drop(2).toArray();
     e(r.length === 3 && r[0] === 3, "drop(2) 应从第 3 个开始");
-  }), n(".flatMap() 平铺映射", function() {
-    if (!t) {
+  }), t(".flatMap() 平铺映射", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 2, 3]).flatMap(function(a) {
-      return [a, a * 10];
+    var r = Iterator.from([1, 2, 3]).flatMap(function(s) {
+      return [s, s * 10];
     }).toArray();
     e(r.length === 6 && r[1] === 10 && r[3] === 20, "flatMap 应正确展开");
-  }), n(".reduce() 归约", function() {
-    if (!t) {
+  }), t(".reduce() 归约", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 2, 3, 4]).reduce(function(a, s) {
-      return a + s;
+    var r = Iterator.from([1, 2, 3, 4]).reduce(function(s, u) {
+      return s + u;
     }, 0);
     e(r === 10, "reduce 求和应为 10");
-  }), n(".toArray() 转为数组", function() {
-    if (!t) {
+  }), t(".toArray() 转为数组", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Iterator.from(/* @__PURE__ */ new Set([7, 8, 9])).toArray();
     e(Array.isArray(r) && r.length === 3, "toArray 应返回普通数组");
-  }), n(".forEach() 遍历副作用", function() {
-    if (!t) {
+  }), t(".forEach() 遍历副作用", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = [];
-    Iterator.from(["a", "b", "c"]).forEach(function(a) {
-      return r.push(a);
+    Iterator.from(["a", "b", "c"]).forEach(function(s) {
+      return r.push(s);
     }), e(r.join("") === "abc", "forEach 应依次访问每个元素");
-  }), n(".some() / .every() 短路判断", function() {
-    if (!t) {
+  }), t(".some() / .every() 短路判断", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 3, 4, 5]).some(function(s) {
-      return s % 2 === 0;
-    }), a = Iterator.from([1, 2, 3]).every(function(s) {
-      return s > 0;
+    var r = Iterator.from([1, 3, 4, 5]).some(function(u) {
+      return u % 2 === 0;
+    }), s = Iterator.from([1, 2, 3]).every(function(u) {
+      return u > 0;
     });
-    e(r === !0 && a === !0, "some/every 应正确短路求值");
-  }), n(".find() 查找第一个匹配元素", function() {
-    if (!t) {
+    e(r === !0 && s === !0, "some/every 应正确短路求值");
+  }), t(".find() 查找第一个匹配元素", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 3, 5, 6, 7]).find(function(a) {
-      return a % 2 === 0;
+    var r = Iterator.from([1, 3, 5, 6, 7]).find(function(s) {
+      return s % 2 === 0;
     });
     e(r === 6, "find 应返回第一个偶数 6");
-  }), n("链式调用：map + filter + take", function() {
-    if (!t) {
+  }), t("链式调用：map + filter + take", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = Iterator.from([1, 2, 3, 4, 5, 6, 7, 8]).map(function(a) {
-      return a * a;
-    }).filter(function(a) {
-      return a > 10;
+    var r = Iterator.from([1, 2, 3, 4, 5, 6, 7, 8]).map(function(s) {
+      return s * s;
+    }).filter(function(s) {
+      return s > 10;
     }).take(3).toArray();
     e(r.length === 3 && r[0] === 16 && r[2] === 36, "链式调用结果应为 [16,25,36]");
-  }), i();
+  }), o();
 }
 function testSetMethods() {
-  var o = createSuite("New Set Methods (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Set.prototype.union == "function";
-  return n("union() —— 并集", function() {
-    if (!t) {
+  var a = createSuite("New Set Methods (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Set.prototype.union == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Set 新方法（union/intersection 等）");
+  }), t("union() —— 并集", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Set.prototype.union)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3]), a = /* @__PURE__ */ new Set([3, 4, 5]), s = r.union(a);
-    e(s.size === 5 && s.has(1) && s.has(5), "并集应包含两个集合所有元素");
-  }), n("intersection() —— 交集", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2, 3]), s = /* @__PURE__ */ new Set([3, 4, 5]), u = r.union(s);
+    e(u.size === 5 && u.has(1) && u.has(5), "并集应包含两个集合所有元素");
+  }), t("intersection() —— 交集", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3, 4]), a = /* @__PURE__ */ new Set([3, 4, 5, 6]), s = r.intersection(a);
-    e(s.size === 2 && s.has(3) && s.has(4), "交集应只含共同元素 3,4");
-  }), n("difference() —— 差集（A - B）", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2, 3, 4]), s = /* @__PURE__ */ new Set([3, 4, 5, 6]), u = r.intersection(s);
+    e(u.size === 2 && u.has(3) && u.has(4), "交集应只含共同元素 3,4");
+  }), t("difference() —— 差集（A - B）", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3, 4]), a = /* @__PURE__ */ new Set([3, 4, 5]), s = r.difference(a);
-    e(s.size === 2 && s.has(1) && s.has(2) && !s.has(3), "差集应为 {1,2}");
-  }), n("symmetricDifference() —— 对称差集", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2, 3, 4]), s = /* @__PURE__ */ new Set([3, 4, 5]), u = r.difference(s);
+    e(u.size === 2 && u.has(1) && u.has(2) && !u.has(3), "差集应为 {1,2}");
+  }), t("symmetricDifference() —— 对称差集", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3]), a = /* @__PURE__ */ new Set([2, 3, 4]), s = r.symmetricDifference(a);
-    e(s.size === 2 && s.has(1) && s.has(4), "对称差集应为 {1,4}");
-  }), n("isSubsetOf() —— 子集判断", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2, 3]), s = /* @__PURE__ */ new Set([2, 3, 4]), u = r.symmetricDifference(s);
+    e(u.size === 2 && u.has(1) && u.has(4), "对称差集应为 {1,4}");
+  }), t("isSubsetOf() —— 子集判断", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([2, 3]), a = /* @__PURE__ */ new Set([1, 2, 3, 4]);
-    e(r.isSubsetOf(a) === !0, "a ⊆ b 应为 true"), e(a.isSubsetOf(r) === !1, "b ⊆ a 应为 false");
-  }), n("isSupersetOf() —— 超集判断", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([2, 3]), s = /* @__PURE__ */ new Set([1, 2, 3, 4]);
+    e(r.isSubsetOf(s) === !0, "a ⊆ b 应为 true"), e(s.isSubsetOf(r) === !1, "b ⊆ a 应为 false");
+  }), t("isSupersetOf() —— 超集判断", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3, 4]), a = /* @__PURE__ */ new Set([2, 3]);
-    e(r.isSupersetOf(a) === !0, "a ⊇ b 应为 true"), e(a.isSupersetOf(r) === !1, "b ⊇ a 应为 false");
-  }), n("isDisjointFrom() —— 不相交判断", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2, 3, 4]), s = /* @__PURE__ */ new Set([2, 3]);
+    e(r.isSupersetOf(s) === !0, "a ⊇ b 应为 true"), e(s.isSupersetOf(r) === !1, "b ⊇ a 应为 false");
+  }), t("isDisjointFrom() —— 不相交判断", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2]), a = /* @__PURE__ */ new Set([3, 4]), s = /* @__PURE__ */ new Set([2, 5]);
-    e(r.isDisjointFrom(a) === !0, "a 与 b 无交集，应为 true"), e(r.isDisjointFrom(s) === !1, "a 与 c 有交集 2，应为 false");
-  }), n("方法返回新 Set，不修改原集合", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2]), s = /* @__PURE__ */ new Set([3, 4]), u = /* @__PURE__ */ new Set([2, 5]);
+    e(r.isDisjointFrom(s) === !0, "a 与 b 无交集，应为 true"), e(r.isDisjointFrom(u) === !1, "a 与 c 有交集 2，应为 false");
+  }), t("方法返回新 Set，不修改原集合", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3]), a = /* @__PURE__ */ new Set([3, 4]), s = r.union(a);
-    e(r.size === 3 && a.size === 2, "原集合不应被修改"), e(s !== r && s !== a, "应返回全新的 Set 实例");
-  }), n("接受任意可迭代对象（不限于 Set）", function() {
-    if (!t) {
+    var r = /* @__PURE__ */ new Set([1, 2, 3]), s = /* @__PURE__ */ new Set([3, 4]), u = r.union(s);
+    e(r.size === 3 && s.size === 2, "原集合不应被修改"), e(u !== r && u !== s, "应返回全新的 Set 实例");
+  }), t("接受任意可迭代对象（不限于 Set）", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ new Set([1, 2, 3]), a = r.intersection([2, 3, 4]);
-    e(a.size === 2 && a.has(2) && a.has(3), "应支持传入普通数组");
-  }), i();
+    var r = /* @__PURE__ */ new Set([1, 2, 3]), s = r.intersection(/* @__PURE__ */ new Set([2, 3, 4]));
+    e(s.size === 2 && s.has(2) && s.has(3), "应支持传入普通数组");
+  }), o();
 }
 function testPromiseTry() {
   return _testPromiseTry.apply(this, arguments);
 }
 function _testPromiseTry() {
-  return _testPromiseTry = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    var n, e, i, t, r;
-    return _regenerator().w(function(a) {
+  return _testPromiseTry = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    var t, e, o, n, r;
+    return _regenerator().w(function(s) {
       for (; ; )
-        switch (a.n) {
+        switch (s.n) {
           case 0:
-            return n = createSuite("Promise.try (ES2025)"), e = n.test, i = n.assert, t = n.getResults, r = typeof Promise.try == "function", a.n = 1, e("同步函数 —— 返回值转为 resolved", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u;
+            return t = createSuite("Promise.try (ES2025)"), e = t.test, o = t.assert, n = t.getResults, r = typeof Promise.try == "function", s.n = 1, e("环境支持检测", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              return _regenerator().w(function(i) {
+                for (; ; )
+                  switch (i.n) {
+                    case 0:
+                      if (r) {
+                        i.n = 1;
+                        break;
+                      }
+                      return o(!1, "(环境不支持 Promise.try)"), i.a(2);
+                    case 1:
+                      o(!0, "环境支持 Promise.try");
+                    case 2:
+                      return i.a(2);
+                  }
+              }, u);
+            })));
+          case 1:
+            return s.n = 2, e("同步函数 —— 返回值转为 resolved", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
@@ -2645,46 +1922,21 @@ function _testPromiseTry() {
                         c.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过：环境不支持 Promise.try)"), c.a(2);
+                      return o(!0, "(跳过：环境不支持 Promise.try)"), c.a(2);
                     case 1:
                       return c.n = 2, Promise.try(function() {
                         return 42;
                       });
                     case 2:
-                      u = c.v, i(u === 42, "同步返回值应被 resolve 为 42");
+                      i = c.v, o(i === 42, "同步返回值应被 resolve 为 42");
                     case 3:
                       return c.a(2);
                   }
-              }, s);
-            })));
-          case 1:
-            return a.n = 2, e("同步函数 —— 抛出异常转为 rejected", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u;
-              return _regenerator().w(function(c) {
-                for (; ; )
-                  switch (c.n) {
-                    case 0:
-                      if (r) {
-                        c.n = 1;
-                        break;
-                      }
-                      return i(!0, "(跳过)"), c.a(2);
-                    case 1:
-                      return u = null, c.n = 2, Promise.try(function() {
-                        throw new Error("同步错误");
-                      }).catch(function(l) {
-                        u = l;
-                      });
-                    case 2:
-                      i(u instanceof Error && u.message === "同步错误", "同步异常应转为 rejected");
-                    case 3:
-                      return c.a(2);
-                  }
-              }, s);
+              }, u);
             })));
           case 2:
-            return a.n = 3, e("异步函数 —— resolved 正常透传", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u;
+            return s.n = 3, e("同步函数 —— 抛出异常转为 rejected", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
@@ -2693,27 +1945,23 @@ function _testPromiseTry() {
                         c.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过)"), c.a(2);
+                      return o(!0, "(跳过)"), c.a(2);
                     case 1:
-                      return c.n = 2, Promise.try(/* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function l() {
-                        return _regenerator().w(function(f) {
-                          for (; ; )
-                            switch (f.n) {
-                              case 0:
-                                return f.a(2, "async result");
-                            }
-                        }, l);
-                      })));
+                      return i = null, c.n = 2, Promise.try(function() {
+                        throw new Error("同步错误");
+                      }).catch(function(f) {
+                        i = f;
+                      });
                     case 2:
-                      u = c.v, i(u === "async result", "异步 resolved 值应透传");
+                      o(i instanceof Error && i.message === "同步错误", "同步异常应转为 rejected");
                     case 3:
                       return c.a(2);
                   }
-              }, s);
+              }, u);
             })));
           case 3:
-            return a.n = 4, e("异步函数 —— rejected 正常透传", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u;
+            return s.n = 4, e("异步函数 —— resolved 正常透传", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
@@ -2722,54 +1970,83 @@ function _testPromiseTry() {
                         c.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过)"), c.a(2);
+                      return o(!0, "(跳过)"), c.a(2);
                     case 1:
-                      return u = null, c.n = 2, Promise.try(/* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function l() {
-                        return _regenerator().w(function(f) {
+                      return c.n = 2, Promise.try(/* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function f() {
+                        return _regenerator().w(function(l) {
                           for (; ; )
-                            switch (f.n) {
+                            switch (l.n) {
+                              case 0:
+                                return l.a(2, "async result");
+                            }
+                        }, f);
+                      })));
+                    case 2:
+                      i = c.v, o(i === "async result", "异步 resolved 值应透传");
+                    case 3:
+                      return c.a(2);
+                  }
+              }, u);
+            })));
+          case 4:
+            return s.n = 5, e("异步函数 —— rejected 正常透传", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i;
+              return _regenerator().w(function(c) {
+                for (; ; )
+                  switch (c.n) {
+                    case 0:
+                      if (r) {
+                        c.n = 1;
+                        break;
+                      }
+                      return o(!0, "(跳过)"), c.a(2);
+                    case 1:
+                      return i = null, c.n = 2, Promise.try(/* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function f() {
+                        return _regenerator().w(function(l) {
+                          for (; ; )
+                            switch (l.n) {
                               case 0:
                                 throw new Error("异步错误");
                               case 1:
-                                return f.a(2);
+                                return l.a(2);
                             }
-                        }, l);
-                      }))).catch(function(l) {
-                        u = l;
+                        }, f);
+                      }))).catch(function(f) {
+                        i = f;
                       });
                     case 2:
-                      i(u instanceof Error && u.message === "异步错误", "异步 rejected 应透传");
+                      o(i instanceof Error && i.message === "异步错误", "异步 rejected 应透传");
                     case 3:
                       return c.a(2);
                   }
-              }, s);
-            })));
-          case 4:
-            return a.n = 5, e("返回已有 Promise —— 直接透传", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c;
-              return _regenerator().w(function(l) {
-                for (; ; )
-                  switch (l.n) {
-                    case 0:
-                      if (r) {
-                        l.n = 1;
-                        break;
-                      }
-                      return i(!0, "(跳过)"), l.a(2);
-                    case 1:
-                      return u = Promise.resolve("original"), l.n = 2, Promise.try(function() {
-                        return u;
-                      });
-                    case 2:
-                      c = l.v, i(c === "original", "返回已有 Promise 的值应直接透传");
-                    case 3:
-                      return l.a(2);
-                  }
-              }, s);
+              }, u);
             })));
           case 5:
-            return a.n = 6, e("传递参数给回调函数", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u;
+            return s.n = 6, e("返回已有 Promise —— 直接透传", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i, c;
+              return _regenerator().w(function(f) {
+                for (; ; )
+                  switch (f.n) {
+                    case 0:
+                      if (r) {
+                        f.n = 1;
+                        break;
+                      }
+                      return o(!0, "(跳过)"), f.a(2);
+                    case 1:
+                      return i = Promise.resolve("original"), f.n = 2, Promise.try(function() {
+                        return i;
+                      });
+                    case 2:
+                      c = f.v, o(c === "original", "返回已有 Promise 的值应直接透传");
+                    case 3:
+                      return f.a(2);
+                  }
+              }, u);
+            })));
+          case 6:
+            return s.n = 7, e("传递参数给回调函数", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i;
               return _regenerator().w(function(c) {
                 for (; ; )
                   switch (c.n) {
@@ -2778,21 +2055,21 @@ function _testPromiseTry() {
                         c.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过)"), c.a(2);
+                      return o(!0, "(跳过)"), c.a(2);
                     case 1:
-                      return c.n = 2, Promise.try(function(l, f) {
-                        return l + f;
+                      return c.n = 2, Promise.try(function(f, l) {
+                        return f + l;
                       }, 10, 20);
                     case 2:
-                      u = c.v, i(u === 30, "应能向回调函数传递参数");
+                      i = c.v, o(i === 30, "应能向回调函数传递参数");
                     case 3:
                       return c.a(2);
                   }
-              }, s);
+              }, u);
             })));
-          case 6:
-            return a.n = 7, e("对比 new Promise —— 捕获同步异常的等价写法", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c, l, f, v, y;
+          case 7:
+            return s.n = 8, e("对比 new Promise —— 捕获同步异常的等价写法", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i, c, f, l, y, h;
               return _regenerator().w(function(p) {
                 for (; ; )
                   switch (p.n) {
@@ -2801,35 +2078,37 @@ function _testPromiseTry() {
                         p.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过)"), p.a(2);
+                      return o(!0, "(跳过)"), p.a(2);
                     case 1:
-                      return u = new Promise(function(S) {
+                      return i = new Promise(function(S) {
                         return S(JSON.parse('{"key":"value"}'));
                       }), c = Promise.try(function() {
                         return JSON.parse('{"key":"value"}');
-                      }), p.n = 2, Promise.all([u, c]);
+                      }), p.n = 2, Promise.all([i, c]);
                     case 2:
-                      l = p.v, f = _slicedToArray(l, 2), v = f[0], y = f[1], i(v.key === "value" && y.key === "value", "两种写法结果应一致");
+                      f = p.v, l = _slicedToArray(f, 2), y = l[0], h = l[1], o(y.key === "value" && h.key === "value", "两种写法结果应一致");
                     case 3:
                       return p.a(2);
                   }
-              }, s);
+              }, u);
             })));
-          case 7:
-            return a.a(2, t());
+          case 8:
+            return s.a(2, n());
         }
-    }, o);
+    }, a);
   })), _testPromiseTry.apply(this, arguments);
 }
 function testRegExpDuplicateGroups() {
-  var o = createSuite("RegExp Duplicate Named Capture Groups (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = !1;
+  var a = createSuite("RegExp Duplicate Named Capture Groups (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = !1;
   try {
-    new RegExp("(?<a>x)|(?<a>y)"), t = !0;
+    new RegExp("(?<a>x)|(?<a>y)"), n = !0;
   } catch {
-    t = !1;
+    n = !1;
   }
-  return n("同一命名组在不同分支中可重复使用", function() {
-    if (!t) {
+  return t("环境支持检测", function() {
+    e(n, "环境不支持重复命名捕获组");
+  }), t("同一命名组在不同分支中可重复使用", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持重复命名捕获组)");
       return;
     }
@@ -2837,19 +2116,19 @@ function testRegExpDuplicateGroups() {
       year: [1, 6],
       month: [2, 5],
       day: [3, 4]
-    }), a = "2025-06-15".match(r), s = "15/06/2025".match(r);
-    e(a.groups.year === "2025" && a.groups.month === "06", "格式一：年月应正确解析"), e(s.groups.year === "2025" && s.groups.month === "06", "格式二：年月应正确解析");
-  }), n("同名组只有命中的那个分支有值，另一个为 undefined", function() {
-    if (!t) {
+    }), s = "2025-06-15".match(r), u = "15/06/2025".match(r);
+    e(s.groups.year === "2025" && s.groups.month === "06", "格式一：年月应正确解析"), e(u.groups.year === "2025" && u.groups.month === "06", "格式二：年月应正确解析");
+  }), t("同名组只有命中的那个分支有值，另一个为 undefined", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = /* @__PURE__ */ _wrapRegExp(/([A-Z]+)|(\d+)/, {
       val: [1, 2]
-    }), a = "ABC".match(r), s = "123".match(r);
-    e(a.groups.val === "ABC", '字母分支命中时 val 应为 "ABC"'), e(s.groups.val === "123", '数字分支命中时 val 应为 "123"');
-  }), n("与 String.prototype.replace 命名引用配合使用", function() {
-    if (!t) {
+    }), s = "ABC".match(r), u = "123".match(r);
+    e(s.groups.val === "ABC", '字母分支命中时 val 应为 "ABC"'), e(u.groups.val === "123", '数字分支命中时 val 应为 "123"');
+  }), t("与 String.prototype.replace 命名引用配合使用", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
@@ -2857,187 +2136,193 @@ function testRegExpDuplicateGroups() {
       y: [1, 6],
       m: [2, 4],
       d: [3, 5]
-    }), a = "2025-06-15".replace(r, "$<y>/$<m>/$<d>"), s = "06/15/2025".replace(r, "$<y>/$<m>/$<d>");
-    e(a === "2025/06/15", "格式一替换应得 2025/06/15"), e(s === "2025/06/15", "格式二替换应得 2025/06/15");
-  }), n("matchAll 中重复命名组也正常工作", function() {
-    if (!t) {
+    }), s = "2025-06-15".replace(r, "$<y>/$<m>/$<d>"), u = "06/15/2025".replace(r, "$<y>/$<m>/$<d>");
+    e(s === "2025/06/15", "格式一替换应得 2025/06/15"), e(u === "2025/06/15", "格式二替换应得 2025/06/15");
+  }), t("matchAll 中重复命名组也正常工作", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = /* @__PURE__ */ _wrapRegExp(/([a-z]+)|(\d+)/g, {
       word: [1, 2]
-    }), a = _toConsumableArray("hello 42 world 7".matchAll(r)), s = a.map(function(u) {
-      return u.groups.word;
+    }), s = _toConsumableArray("hello 42 world 7".matchAll(r)), u = s.map(function(i) {
+      return i.groups.word;
     });
-    e(s.length === 4 && s[0] === "hello" && s[1] === "42", "matchAll 应正确提取所有命中词");
-  }), n("非命中分支的同名组值为 undefined", function() {
-    if (!t) {
+    e(u.length === 4 && u[0] === "hello" && u[1] === "42", "matchAll 应正确提取所有命中词");
+  }), t("非命中分支的同名组值为 undefined", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = /* @__PURE__ */ _wrapRegExp(/(foo)|(bar)/, {
       a: [1, 2]
-    }), a = "bar".match(r);
-    e(a.groups.a === "bar", "应取命中分支的值");
-  }), i();
+    }), s = "bar".match(r);
+    e(s.groups.a === "bar", "应取命中分支的值");
+  }), o();
 }
 function testUint8ArrayBase64Hex() {
-  var o = createSuite("Uint8Array Base64/Hex (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Uint8Array.prototype.toBase64 == "function";
-  return n("toBase64() —— Uint8Array 转 Base64 字符串", function() {
-    if (!t) {
+  var a = createSuite("Uint8Array Base64/Hex (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Uint8Array.prototype.toBase64 == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Uint8Array Base64/Hex 方法");
+  }), t("toBase64() —— Uint8Array 转 Base64 字符串", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Uint8Array.toBase64)");
       return;
     }
-    var r = new Uint8Array([72, 101, 108, 108, 111]), a = r.toBase64();
-    e(a === "SGVsbG8=", 'toBase64 应返回 "SGVsbG8="，实际: '.concat(a));
-  }), n("fromBase64() —— Base64 字符串转 Uint8Array", function() {
-    if (!t) {
+    var r = new Uint8Array([72, 101, 108, 108, 111]), s = r.toBase64();
+    e(s === "SGVsbG8=", 'toBase64 应返回 "SGVsbG8="，实际: '.concat(s));
+  }), t("fromBase64() —— Base64 字符串转 Uint8Array", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Uint8Array.fromBase64("SGVsbG8=");
     e(r.length === 5 && r[0] === 72 && r[4] === 111, "fromBase64 应还原为正确字节");
-  }), n("toHex() —— Uint8Array 转十六进制字符串", function() {
-    if (!t) {
+  }), t("toHex() —— Uint8Array 转十六进制字符串", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = new Uint8Array([222, 173, 190, 239]), a = r.toHex();
-    e(a === "deadbeef", 'toHex 应返回 "deadbeef"，实际: '.concat(a));
-  }), n("fromHex() —— 十六进制字符串转 Uint8Array", function() {
-    if (!t) {
+    var r = new Uint8Array([222, 173, 190, 239]), s = r.toHex();
+    e(s === "deadbeef", 'toHex 应返回 "deadbeef"，实际: '.concat(s));
+  }), t("fromHex() —— 十六进制字符串转 Uint8Array", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Uint8Array.fromHex("deadbeef");
     e(r.length === 4 && r[0] === 222 && r[3] === 239, "fromHex 应正确还原字节");
-  }), n("Base64 round-trip（互转验证）", function() {
-    if (!t) {
+  }), t("Base64 round-trip（互转验证）", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = new Uint8Array([1, 2, 3, 255, 0, 128]), a = Uint8Array.fromBase64(r.toBase64());
-    e(r.length === a.length && r.every(function(s, u) {
-      return s === a[u];
+    var r = new Uint8Array([1, 2, 3, 255, 0, 128]), s = Uint8Array.fromBase64(r.toBase64());
+    e(r.length === s.length && r.every(function(u, i) {
+      return u === s[i];
     }), "Base64 round-trip 应完全还原原始字节");
-  }), n("Hex round-trip（互转验证）", function() {
-    if (!t) {
+  }), t("Hex round-trip（互转验证）", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = new Uint8Array([0, 127, 128, 255]), a = Uint8Array.fromHex(r.toHex());
-    e(r.length === a.length && r.every(function(s, u) {
-      return s === a[u];
+    var r = new Uint8Array([0, 127, 128, 255]), s = Uint8Array.fromHex(r.toHex());
+    e(r.length === s.length && r.every(function(u, i) {
+      return u === s[i];
     }), "Hex round-trip 应完全还原原始字节");
-  }), n("空数组 toBase64 返回空字符串", function() {
-    if (!t) {
+  }), t("空数组 toBase64 返回空字符串", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = new Uint8Array([]);
     e(r.toBase64() === "", "空 Uint8Array 的 Base64 应为空字符串");
-  }), n("空字符串 fromHex 返回空 Uint8Array", function() {
-    if (!t) {
+  }), t("空字符串 fromHex 返回空 Uint8Array", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Uint8Array.fromHex("");
     e(r.length === 0, "空字符串 fromHex 应返回空 Uint8Array");
-  }), n("toBase64 支持 URL-safe 模式", function() {
-    if (!t) {
+  }), t("toBase64 支持 URL-safe 模式", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = new Uint8Array([251, 255]), a = r.toBase64(), s = r.toBase64({
+    var r = new Uint8Array([251, 255]), s = r.toBase64(), u = r.toBase64({
       alphabet: "base64url"
     });
-    e(s.indexOf("+") === -1 && s.indexOf("/") === -1, "URL-safe Base64 不应含 + 或 /"), e(a !== s || !a.includes("+") && !a.includes("/"), "URL-safe 与标准编码结果应存在差异（或均不含特殊字符）");
-  }), i();
+    e(u.indexOf("+") === -1 && u.indexOf("/") === -1, "URL-safe Base64 不应含 + 或 /"), e(s !== u || !s.includes("+") && !s.includes("/"), "URL-safe 与标准编码结果应存在差异（或均不含特殊字符）");
+  }), o();
 }
 function testJsonParseSource() {
-  var o = createSuite("JSON.parse Source Text Access (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = !1;
+  var a = createSuite("JSON.parse Source Text Access (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = !1;
   try {
-    JSON.parse("1", function(r, a, s) {
-      return s && typeof s.source == "string" && (t = !0), a;
+    JSON.parse("1", function(r, s, u) {
+      return u && typeof u.source == "string" && (n = !0), s;
     });
   } catch {
   }
-  return n("reviver 接收第三个参数 context", function() {
-    if (!t) {
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 JSON.parse source text access");
+  }), t("reviver 接收第三个参数 context", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 JSON.parse source text access)");
       return;
     }
     var r = null;
-    JSON.parse('"hello"', function(a, s, u) {
-      return a === "" && (r = u), s;
+    JSON.parse('"hello"', function(s, u, i) {
+      return s === "" && (r = i), u;
     }), e(r !== null && typeof r.source == "string", "reviver 应收到含 source 属性的 context 对象");
-  }), n("context.source 为该值的原始 JSON 文本", function() {
-    if (!t) {
+  }), t("context.source 为该值的原始 JSON 文本", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = {};
-    JSON.parse('{"a":  42, "b": "hello"}', function(a, s, u) {
-      return a !== "" && (r[a] = u.source), s;
+    JSON.parse('{"a":  42, "b": "hello"}', function(s, u, i) {
+      return s !== "" && (r[s] = i.source), u;
     }), e(r.a === "42", '数字的 source 应为 "42"，实际: "'.concat(r.a, '"')), e(r.b === '"hello"', `字符串的 source 应为 '"hello"'，实际: "`.concat(r.b, '"'));
-  }), n("利用 source 精确解析超大整数（BigInt）", function() {
-    if (!t) {
+  }), t("利用 source 精确解析超大整数（BigInt）", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = "9007199254740993", a = JSON.parse('{"id":'.concat(r, "}"), function(s, u, c) {
-      return s === "" ? u : /^\d+$/.test(c.source) ? BigInt(c.source) : u;
+    var r = "9007199254740993", s = JSON.parse('{"id":'.concat(r, "}"), function(u, i, c) {
+      return u === "" ? i : /^\d+$/.test(c.source) ? BigInt(c.source) : i;
     });
-    e(typeof a.id == "bigint", "超大整数应被转为 BigInt"), e(a.id === BigInt(r), "BigInt 值应精确等于 ".concat(r));
-  }), n("嵌套对象中每个值都能获取自己的 source", function() {
-    if (!t) {
+    e(typeof s.id == "bigint", "超大整数应被转为 BigInt"), e(s.id === BigInt(r), "BigInt 值应精确等于 ".concat(r));
+  }), t("嵌套对象中每个值都能获取自己的 source", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = [];
-    JSON.parse('{"x":1,"arr":[2,3]}', function(a, s, u) {
-      return a !== "" && r.push(u.source), s;
+    JSON.parse('{"x":1,"arr":[2,3]}', function(s, u, i) {
+      return s !== "" && r.push(i.source), u;
     }), e(r.includes("1") && r.includes("2") && r.includes("3"), "嵌套结构中每个原始值都应能取到 source");
-  }), n("null / boolean 也有对应 source", function() {
-    if (!t) {
+  }), t("null / boolean 也有对应 source", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = {};
-    JSON.parse('{"a":null,"b":true,"c":false}', function(a, s, u) {
-      return a !== "" && (r[a] = u.source), s;
+    JSON.parse('{"a":null,"b":true,"c":false}', function(s, u, i) {
+      return s !== "" && (r[s] = i.source), u;
     }), e(r.a === "null" && r.b === "true" && r.c === "false", "null/true/false 的 source 应为对应的原始文本");
-  }), i();
+  }), o();
 }
 function testErrorIsError() {
-  var o = createSuite("Error.isError (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Error.isError == "function";
-  return n("原生 Error 实例返回 true", function() {
-    if (!t) {
+  var a = createSuite("Error.isError (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Error.isError == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Error.isError");
+  }), t("原生 Error 实例返回 true", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Error.isError)");
       return;
     }
     e(Error.isError(new Error("test")) === !0, "new Error() 应返回 true");
-  }), n("Error 子类实例返回 true", function() {
-    if (!t) {
+  }), t("Error 子类实例返回 true", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     e(Error.isError(new TypeError("type")) === !0, "TypeError 应返回 true"), e(Error.isError(new RangeError("range")) === !0, "RangeError 应返回 true"), e(Error.isError(new SyntaxError("syntax")) === !0, "SyntaxError 应返回 true"), e(Error.isError(new ReferenceError("ref")) === !0, "ReferenceError 应返回 true"), e(Error.isError(new URIError("uri")) === !0, "URIError 应返回 true"), e(Error.isError(new EvalError("eval")) === !0, "EvalError 应返回 true");
-  }), n("自定义 Error 子类实例返回 true", function() {
-    if (!t) {
+  }), t("自定义 Error 子类实例返回 true", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = /* @__PURE__ */ function(a) {
-      function s(u) {
+    var r = /* @__PURE__ */ function(s) {
+      function u(i) {
         var c;
-        return _classCallCheck(this, s), c = _callSuper(this, s, [u]), c.name = "AppError", c;
+        return _classCallCheck(this, u), c = _callSuper(this, u, [i]), c.name = "AppError", c;
       }
-      return _inherits(s, a), _createClass(s);
+      return _inherits(u, s), _createClass(u);
     }(/* @__PURE__ */ _wrapNativeSuper(Error));
     e(Error.isError(new r("app")) === !0, "自定义 Error 子类应返回 true");
-  }), n("普通对象返回 false", function() {
-    if (!t) {
+  }), t("普通对象返回 false", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
@@ -3045,77 +2330,72 @@ function testErrorIsError() {
       message: "fake",
       stack: ""
     }) === !1, "伪造 Error 对象应返回 false");
-  }), n("模拟 Error 对象（纯 JS 构造）返回 false", function() {
-    if (!t) {
+  }), t("模拟 Error 对象（纯 JS 构造）返回 false", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = Object.create(Error.prototype);
     r.message = "fake", e(Error.isError(null) === !1, "null 应返回 false"), e(Error.isError(void 0) === !1, "undefined 应返回 false"), e(Error.isError(42) === !1, "数字应返回 false"), e(Error.isError("error") === !1, '字符串 "error" 应返回 false');
-  }), n("数组、函数、正则等非 Error 值返回 false", function() {
-    if (!t) {
+  }), t("数组、函数、正则等非 Error 值返回 false", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     e(Error.isError([]) === !1, "数组应返回 false"), e(Error.isError(function() {
     }) === !1, "函数应返回 false"), e(Error.isError(/regex/) === !1, "正则应返回 false"), e(Error.isError(/* @__PURE__ */ new Date()) === !1, "Date 应返回 false");
-  }), n("实际使用场景：统一捕获并判断 catch 的值", function() {
-    if (!t) {
+  }), t("实际使用场景：统一捕获并判断 catch 的值", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    function r(s) {
-      if (s)
+    function r(u) {
+      if (u)
         throw new TypeError("类型错误");
       return Promise.reject("string rejection");
     }
-    var a = null;
+    var s = null;
     try {
       r(!0);
-    } catch (s) {
-      a = s;
+    } catch (u) {
+      s = u;
     }
-    e(Error.isError(a) === !0, "try/catch 捕获的 Error 应识别为 true"), e(Error.isError("string rejection") === !1, "字符串 rejection 应识别为 false");
-  }), i();
+    e(Error.isError(s) === !0, "try/catch 捕获的 Error 应识别为 true"), e(Error.isError("string rejection") === !1, "字符串 rejection 应识别为 false");
+  }), o();
 }
 function testFloat16Array() {
-  var o = createSuite("Float16Array (ES2025)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Float16Array < "u";
-  return n("Float16Array 可正常创建", function() {
-    if (!t) {
+  var a = createSuite("Float16Array (ES2025)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Float16Array < "u";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Float16Array");
+  }), t("Float16Array 可正常创建", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Float16Array)");
       return;
     }
     var r = new Float16Array(4);
     e(r.length === 4, "Float16Array 长度应为 4"), e(r.BYTES_PER_ELEMENT === 2, "每个元素应占 2 字节（16 位）");
-  }), n("从数组初始化并读取值", function() {
-    if (!t) {
+  }), t("从数组初始化并读取值", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = new Float16Array([1, 0.5, -1, 0]);
     e(r[0] === 1, "arr[0] 应为 1.0"), e(r[1] === 0.5, "arr[1] 应为 0.5"), e(r[2] === -1, "arr[2] 应为 -1.0"), e(r[3] === 0, "arr[3] 应为 0.0");
-  }), n("精度低于 Float32（半精度特性）", function() {
-    if (!t) {
-      e(!0, "(跳过)");
-      return;
-    }
-    var r = new Float16Array([Math.PI]);
-    e(Math.abs(r[0] - Math.PI) > 1e-3, "Float16 精度应低于 Float64 的 Math.PI"), e(Math.abs(r[0] - Math.PI) < 0.01, "Float16 近似误差应在合理范围内");
-  }), n("Math.f16round() 舍入到最近 float16 值", function() {
+  }), t("Math.f16round() 舍入到最近 float16 值", function() {
     if (typeof Math.f16round != "function") {
       e(!0, "(跳过：环境不支持 Math.f16round)");
       return;
     }
     var r = Math.f16round(1.337);
     e(typeof r == "number", "Math.f16round 应返回数字"), e(Math.abs(r - 1.337) < 0.01, "舍入误差应在 0.01 以内"), e(r !== 1.337, "应发生精度损失，结果不等于输入值");
-  }), n("Math.f16round(Infinity) / (-Infinity) / NaN 特殊值", function() {
+  }), t("Math.f16round(Infinity) / (-Infinity) / NaN 特殊值", function() {
     if (typeof Math.f16round != "function") {
       e(!0, "(跳过)");
       return;
     }
     e(Math.f16round(1 / 0) === 1 / 0, "Infinity 应保持不变"), e(Math.f16round(-1 / 0) === -1 / 0, "-Infinity 应保持不变"), e(Number.isNaN(Math.f16round(NaN)), "NaN 应保持 NaN"), e(Math.f16round(0) === 0, "0 应保持 0");
-  }), n("DataView.getFloat16 / setFloat16", function() {
-    if (!t) {
+  }), t("DataView.getFloat16 / setFloat16", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
@@ -3125,61 +2405,63 @@ function testFloat16Array() {
       return;
     }
     r.setFloat16(0, 1.5, !0);
-    var a = r.getFloat16(0, !0);
-    e(a === 1.5, "DataView setFloat16/getFloat16 round-trip 应还原 1.5");
-  }), n("Float16Array 支持 TypedArray 通用方法", function() {
-    if (!t) {
+    var s = r.getFloat16(0, !0);
+    e(s === 1.5, "DataView setFloat16/getFloat16 round-trip 应还原 1.5");
+  }), t("Float16Array 支持 TypedArray 通用方法", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = new Float16Array([3, 1, 4, 1, 5]);
     r.sort(), e(r[0] === 1 && r[4] === 5, "sort 后最小值应为 1，最大值应为 5");
-    var a = r.map(function(s) {
-      return s * 2;
+    var s = r.map(function(u) {
+      return u * 2;
     });
-    e(a instanceof Float16Array, "map 应返回 Float16Array");
-  }), n("Float16Array 内存占用是 Float32Array 的一半", function() {
-    if (!t) {
+    e(s instanceof Float16Array, "map 应返回 Float16Array");
+  }), t("Float16Array 内存占用是 Float32Array 的一半", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = 100, a = new Float16Array(r), s = new Float32Array(r);
-    e(a.byteLength === s.byteLength / 2, "Float16Array 字节长度应是 Float32Array 的一半");
-  }), i();
+    var r = 100, s = new Float16Array(r), u = new Float32Array(r);
+    e(s.byteLength === u.byteLength / 2, "Float16Array 字节长度应是 Float32Array 的一半");
+  }), o();
 }
 function testMathSumPrecise() {
-  var o = createSuite("Math.sumPrecise() (ES2026)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Math.sumPrecise == "function";
-  return n("基本求和 —— 整数", function() {
-    if (!t) {
+  var a = createSuite("Math.sumPrecise() (ES2026)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Math.sumPrecise == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Math.sumPrecise");
+  }), t("基本求和 —— 整数", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Math.sumPrecise)");
       return;
     }
     e(Math.sumPrecise([1, 2, 3, 4, 5]) === 15, "整数求和应为 15"), e(Math.sumPrecise([]) === 0, "空数组求和应为 0"), e(Math.sumPrecise([42]) === 42, "单元素求和应为自身");
-  }), n("精确处理浮点数累积误差", function() {
-    if (!t) {
+  }), t("精确处理浮点数累积误差", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = [0.1, 0.2, 0.3].reduce(function(s, u) {
-      return s + u;
-    }), a = Math.sumPrecise([0.1, 0.2, 0.3]);
-    e(r !== 0.6, "普通 reduce 应存在浮点误差（验证前提）"), e(a === 0.6, "Math.sumPrecise 应精确返回 0.6");
-  }), n("大量小数精确求和", function() {
-    if (!t) {
+    var r = [0.1, 0.2, 0.3].reduce(function(u, i) {
+      return u + i;
+    }), s = Math.sumPrecise([0.1, 0.2, 0.3]);
+    e(r !== 0.6, "普通 reduce 应存在浮点误差（验证前提）"), e(s === 0.6, "Math.sumPrecise 应精确返回 0.6");
+  }), t("大量小数精确求和", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = 1 / 3, a = Math.sumPrecise([r, r, r]);
-    e(typeof a == "number", "应返回数值类型"), e(a > 0.999 && a <= 1, "三个 1/3 之和应尽量接近 1");
-  }), n("接受任意可迭代对象", function() {
-    var r = /* @__PURE__ */ _regenerator().m(s);
-    if (!t) {
+    var r = 1 / 3, s = Math.sumPrecise([r, r, r]);
+    e(typeof s == "number", "应返回数值类型"), e(s > 0.999 && s <= 1, "三个 1/3 之和应尽量接近 1");
+  }), t("接受任意可迭代对象", function() {
+    var r = /* @__PURE__ */ _regenerator().m(u);
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var a = Math.sumPrecise(/* @__PURE__ */ new Set([10, 20, 30]));
-    e(a === 60, "支持 Set 可迭代对象");
-    function s() {
+    var s = Math.sumPrecise(/* @__PURE__ */ new Set([10, 20, 30]));
+    e(s === 60, "支持 Set 可迭代对象");
+    function u() {
       return _regenerator().w(function(c) {
         for (; ; )
           switch (c.n) {
@@ -3194,90 +2476,86 @@ function testMathSumPrecise() {
           }
       }, r);
     }
-    var u = Math.sumPrecise(s());
-    e(u === 6, "支持 Generator 可迭代对象");
-  }), n("特殊值处理", function() {
-    if (!t) {
+    var i = Math.sumPrecise(u());
+    e(i === 6, "支持 Generator 可迭代对象");
+  }), t("特殊值处理", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     e(Math.sumPrecise([0]) === 0, "+0 求和应为 0"), e(Math.sumPrecise([-0]) === 0, "-0 求和应为 0（结果为 +0）"), e(Math.sumPrecise([1, 1 / 0]) === 1 / 0, "含 Infinity 结果应为 Infinity"), e(Math.sumPrecise([-1 / 0, 1]) === -1 / 0, "含 -Infinity 结果应为 -Infinity"), e(Number.isNaN(Math.sumPrecise([1 / 0, -1 / 0])), "Inf + (-Inf) 应为 NaN"), e(Number.isNaN(Math.sumPrecise([1, NaN, 3])), "含 NaN 结果应为 NaN");
-  }), n("非数值元素应抛出 TypeError", function() {
-    if (!t) {
+  }), t("非数值元素应抛出 TypeError", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = !1;
     try {
       Math.sumPrecise([1, "2", 3]);
-    } catch (a) {
-      r = a instanceof TypeError;
+    } catch (s) {
+      r = s instanceof TypeError;
     }
     e(r, "非数值元素应抛出 TypeError");
-  }), i();
+  }), o();
 }
 function testRegExpEscape() {
-  var o = createSuite("RegExp.escape() (ES2026)"), n = o.test, e = o.assert, i = o.getResults, t = typeof RegExp.escape == "function";
-  return n("转义正则特殊字符", function() {
-    if (!t) {
+  var a = createSuite("RegExp.escape() (ES2026)"), t = a.test, e = a.assert, o = a.getResults, n = typeof RegExp.escape == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 RegExp.escape");
+  }), t("转义正则特殊字符", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 RegExp.escape)");
       return;
     }
-    var r = "^$.*+?()[]{}|\\", a = RegExp.escape(r);
-    e(typeof a == "string", "应返回字符串"), e(a.includes("\\^"), "^ 应被转义"), e(a.includes("\\$"), "$ 应被转义"), e(a.includes("\\."), ". 应被转义"), e(a.includes("\\*"), "* 应被转义");
-  }), n("普通字符不被转义", function() {
-    if (!t) {
+    var r = "^$.*+?()[]{}|\\", s = RegExp.escape(r);
+    e(typeof s == "string", "应返回字符串"), e(s.includes("\\^"), "^ 应被转义"), e(s.includes("\\$"), "$ 应被转义"), e(s.includes("\\."), ". 应被转义"), e(s.includes("\\*"), "* 应被转义");
+  }), t("转义结果可安全构造正则", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    e(RegExp.escape("hello") === "hello", "纯字母不应被转义"), e(RegExp.escape("12345") === "12345", "纯数字不应被转义"), e(RegExp.escape("hello world") === "hello world", "空格不应被转义");
-  }), n("转义结果可安全构造正则", function() {
-    if (!t) {
+    var r = "price: $10.00 (sale!)", s = new RegExp(RegExp.escape(r));
+    e(s.test("price: $10.00 (sale!)"), "转义后的正则应能精确匹配原字符串"), e(!s.test("price: X10X00 Xsale!"), "不应匹配用特殊字符替换后的字符串");
+  }), t("防止正则注入攻击", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = "price: $10.00 (sale!)", a = new RegExp(RegExp.escape(r));
-    e(a.test("price: $10.00 (sale!)"), "转义后的正则应能精确匹配原字符串"), e(!a.test("price: X10X00 Xsale!"), "不应匹配用特殊字符替换后的字符串");
-  }), n("防止正则注入攻击", function() {
-    if (!t) {
-      e(!0, "(跳过)");
-      return;
-    }
-    var r = "(.*)", a = new RegExp(r), s = new RegExp(RegExp.escape(r));
-    e(a.test("anything"), "未转义的正则可匹配任意字符串（注入漏洞）"), e(!s.test("anything"), '转义后只能匹配字面量 "(.*)"'), e(s.test("(.*)"), '转义后精确匹配字面字符串 "(.*)"');
-  }), n("中文等 Unicode 字符不应被转义", function() {
-    if (!t) {
+    var r = "(.*)", s = new RegExp(r), u = new RegExp(RegExp.escape(r));
+    e(s.test("anything"), "未转义的正则可匹配任意字符串（注入漏洞）"), e(!u.test("anything"), '转义后只能匹配字面量 "(.*)"'), e(u.test("(.*)"), '转义后精确匹配字面字符串 "(.*)"');
+  }), t("中文等 Unicode 字符不应被转义", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     var r = "你好，世界";
     e(RegExp.escape(r) === r, "Unicode 字符不需要转义");
-  }), n("空字符串返回空字符串", function() {
-    if (!t) {
+  }), t("空字符串返回空字符串", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     e(RegExp.escape("") === "", "空字符串转义后应仍为空字符串");
-  }), n("与 /g 标志组合 —— 高亮搜索词", function() {
-    if (!t) {
+  }), t("与 /g 标志组合 —— 高亮搜索词", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
-    var r = "商品价格 $10.00，原价 $20.00", a = "$10.00", s = new RegExp(RegExp.escape(a), "g"), u = (r.match(s) || []).length;
-    e(u === 1, "含特殊字符的关键词应精确匹配 1 次");
-  }), i();
+    var r = "商品价格 $10.00，原价 $20.00", s = "$10.00", u = new RegExp(RegExp.escape(s), "g"), i = (r.match(u) || []).length;
+    e(i === 1, "含特殊字符的关键词应精确匹配 1 次");
+  }), o();
 }
 function testExplicitResourceManagement() {
   return _testExplicitResourceManagement.apply(this, arguments);
 }
 function _testExplicitResourceManagement() {
-  return _testExplicitResourceManagement = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    var n, e, i, t, r;
-    return _regenerator().w(function(a) {
+  return _testExplicitResourceManagement = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    var t, e, o, n, r;
+    return _regenerator().w(function(s) {
       for (; ; )
-        switch (a.n) {
+        switch (s.n) {
           case 0:
-            return n = createSuite("Explicit Resource Management (ES2026)"), e = n.test, i = n.assert, t = n.getResults, r = function() {
+            return t = createSuite("Explicit Resource Management (ES2026)"), e = t.test, o = t.assert, n = t.getResults, r = function() {
               try {
                 return new Function("Symbol", `
         const r = { [Symbol.dispose]() {} }
@@ -3286,16 +2564,18 @@ function _testExplicitResourceManagement() {
               } catch {
                 return !1;
               }
-            }(), e("Symbol.dispose 已定义", function() {
-              i(_typeof(Symbol.dispose) === "symbol", "Symbol.dispose 应是 symbol 类型");
+            }(), e("环境支持检测", function() {
+              o(r, "环境不支持 using / await using 语法");
+            }), e("Symbol.dispose 已定义", function() {
+              o(_typeof(Symbol.dispose) === "symbol", "Symbol.dispose 应是 symbol 类型");
             }), e("Symbol.asyncDispose 已定义", function() {
-              i(_typeof(Symbol.asyncDispose) === "symbol", "Symbol.asyncDispose 应是 symbol 类型");
+              o(_typeof(Symbol.asyncDispose) === "symbol", "Symbol.asyncDispose 应是 symbol 类型");
             }), e("using —— 块退出时自动调用 Symbol.dispose", function() {
               if (!r) {
-                i(!0, "(跳过：环境不支持 using 语法)");
+                o(!0, "(跳过：环境不支持 using 语法)");
                 return;
               }
-              var s = [];
+              var u = [];
               new Function("log", "Symbol", `
       {
         using r = {
@@ -3304,49 +2584,49 @@ function _testExplicitResourceManagement() {
         log.push('in-block')
       }
       log.push('after-block')
-    `)(s, Symbol), i(s[0] === "in-block", "块内代码应正常执行"), i(s[1] === "disposed", "块退出时应自动调用 dispose"), i(s[2] === "after-block", "dispose 之后块后代码才继续执行");
+    `)(u, Symbol), o(u[0] === "in-block", "块内代码应正常执行"), o(u[1] === "disposed", "块退出时应自动调用 dispose"), o(u[2] === "after-block", "dispose 之后块后代码才继续执行");
             }), e("using —— 异常时也会调用 dispose（保证清理）", function() {
               if (!r) {
-                i(!0, "(跳过)");
+                o(!0, "(跳过)");
                 return;
               }
-              var s = [];
+              var u = [];
               try {
                 new Function("log", "Symbol", `
         {
           using r = { [Symbol.dispose]() { log.push('cleanup') } }
           throw new Error('意外错误')
         }
-      `)(s, Symbol);
+      `)(u, Symbol);
               } catch {
               }
-              i(s[0] === "cleanup", "即使抛出异常也应执行 dispose 清理");
+              o(u[0] === "cleanup", "即使抛出异常也应执行 dispose 清理");
             }), e("多个 using 资源按 LIFO 顺序释放", function() {
               if (!r) {
-                i(!0, "(跳过)");
+                o(!0, "(跳过)");
                 return;
               }
-              var s = [];
+              var u = [];
               new Function("order", "Symbol", `
       {
         using a = { [Symbol.dispose]() { order.push('A') } }
         using b = { [Symbol.dispose]() { order.push('B') } }
         using c = { [Symbol.dispose]() { order.push('C') } }
       }
-    `)(s, Symbol), i(s.join(",") === "C,B,A", "多资源应按 LIFO（后进先出）顺序释放");
-            }), a.n = 1, e("await using —— 异步 dispose", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c;
-              return _regenerator().w(function(l) {
+    `)(u, Symbol), o(u.join(",") === "C,B,A", "多资源应按 LIFO（后进先出）顺序释放");
+            }), s.n = 1, e("await using —— 异步 dispose", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i, c;
+              return _regenerator().w(function(f) {
                 for (; ; )
-                  switch (l.n) {
+                  switch (f.n) {
                     case 0:
                       if (r) {
-                        l.n = 1;
+                        f.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过)"), l.a(2);
+                      return o(!0, "(跳过)"), f.a(2);
                     case 1:
-                      return u = [], c = new Function("log", "Symbol", `
+                      return i = [], c = new Function("log", "Symbol", `
       return (async () => {
         {
           await using r = {
@@ -3359,41 +2639,43 @@ function _testExplicitResourceManagement() {
         }
         log.push('after-block')
       })()
-    `), l.n = 2, c(u, Symbol);
+    `), f.n = 2, c(i, Symbol);
                     case 2:
-                      i(u[0] === "in-block", "异步块内应正常执行"), i(u[1] === "async-disposed", "await using 应等待异步 dispose 完成"), i(u[2] === "after-block", "dispose 之后才继续执行块后代码");
+                      o(i[0] === "in-block", "异步块内应正常执行"), o(i[1] === "async-disposed", "await using 应等待异步 dispose 完成"), o(i[2] === "after-block", "dispose 之后才继续执行块后代码");
                     case 3:
-                      return l.a(2);
+                      return f.a(2);
                   }
-              }, s);
+              }, u);
             })));
           case 1:
             return e("DisposableStack —— 手动管理资源栈", function() {
               if (typeof DisposableStack > "u") {
-                i(!0, "(跳过：环境不支持 DisposableStack)");
+                o(!0, "(跳过：环境不支持 DisposableStack)");
                 return;
               }
-              var s = [], u = new DisposableStack();
-              u.defer(function() {
-                return s.push("deferred-1");
-              }), u.defer(function() {
-                return s.push("deferred-2");
-              }), u.dispose(), i(s.join(",") === "deferred-2,deferred-1", "DisposableStack 应按 LIFO 执行");
-            }), a.a(2, t());
+              var u = [], i = new DisposableStack();
+              i.defer(function() {
+                return u.push("deferred-1");
+              }), i.defer(function() {
+                return u.push("deferred-2");
+              }), i.dispose(), o(u.join(",") === "deferred-2,deferred-1", "DisposableStack 应按 LIFO 执行");
+            }), s.a(2, n());
         }
-    }, o);
+    }, a);
   })), _testExplicitResourceManagement.apply(this, arguments);
 }
 function testAtomicsPause() {
-  var o = createSuite("Atomics.pause() (ES2026)"), n = o.test, e = o.assert, i = o.getResults, t = typeof Atomics.pause == "function";
-  return n("Atomics.pause 函数存在", function() {
-    if (!t) {
+  var a = createSuite("Atomics.pause() (ES2026)"), t = a.test, e = a.assert, o = a.getResults, n = typeof Atomics.pause == "function";
+  return t("环境支持检测", function() {
+    e(n, "环境不支持 Atomics.pause");
+  }), t("Atomics.pause 函数存在", function() {
+    if (!n) {
       e(!0, "(跳过：环境不支持 Atomics.pause)");
       return;
     }
     e(typeof Atomics.pause == "function", "Atomics.pause 应为函数");
-  }), n("无参数调用不抛出错误", function() {
-    if (!t) {
+  }), t("无参数调用不抛出错误", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
@@ -3404,8 +2686,8 @@ function testAtomicsPause() {
       r = !0;
     }
     e(!r, "Atomics.pause() 无参数调用不应抛出");
-  }), n("传入整数参数不抛出错误", function() {
-    if (!t) {
+  }), t("传入整数参数不抛出错误", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
@@ -3416,22 +2698,22 @@ function testAtomicsPause() {
       r = !0;
     }
     e(!r, "Atomics.pause(N) 应接受非负整数参数");
-  }), n("返回值为 undefined", function() {
-    if (!t) {
+  }), t("返回值为 undefined", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     e(Atomics.pause() === void 0, "Atomics.pause() 应返回 undefined");
-  }), n("自旋等待模式下连续调用不崩溃", function() {
-    if (!t) {
+  }), t("自旋等待模式下连续调用不崩溃", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
     for (var r = 0; r < 10; r++)
       Atomics.pause(r);
     e(r === 10, "10 次自旋循环应正常完成");
-  }), n("与 SharedArrayBuffer + Atomics.load 配合（模拟场景）", function() {
-    if (!t) {
+  }), t("与 SharedArrayBuffer + Atomics.load 配合（模拟场景）", function() {
+    if (!n) {
       e(!0, "(跳过)");
       return;
     }
@@ -3439,64 +2721,66 @@ function testAtomicsPause() {
       e(!0, "(跳过：环境不支持 SharedArrayBuffer)");
       return;
     }
-    var r = new SharedArrayBuffer(4), a = new Int32Array(r);
-    a[0] = 1;
-    for (var s = 0, u = 5; Atomics.load(a, 0) !== 0 && s < u; )
-      Atomics.pause(s), s++, s === 3 && Atomics.store(a, 0, 0);
-    e(Atomics.load(a, 0) === 0, "自旋等待后标志位应变为 0（锁释放）"), e(s === 3, "应在第 3 次迭代时检测到锁释放");
-  }), i();
+    var r = new SharedArrayBuffer(4), s = new Int32Array(r);
+    s[0] = 1;
+    for (var u = 0, i = 5; Atomics.load(s, 0) !== 0 && u < i; )
+      Atomics.pause(u), u++, u === 3 && Atomics.store(s, 0, 0);
+    e(Atomics.load(s, 0) === 0, "自旋等待后标志位应变为 0（锁释放）"), e(u === 3, "应在第 3 次迭代时检测到锁释放");
+  }), o();
 }
 function testImportAttributes() {
   return _testImportAttributes.apply(this, arguments);
 }
 function _testImportAttributes() {
-  return _testImportAttributes = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    var n, e, i, t, r;
-    return _regenerator().w(function(a) {
+  return _testImportAttributes = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    var t, e, o, n, r;
+    return _regenerator().w(function(s) {
       for (; ; )
-        switch (a.n) {
+        switch (s.n) {
           case 0:
-            return n = createSuite("Import Attributes (ES2026)"), e = n.test, i = n.assert, t = n.getResults, r = function() {
+            return t = createSuite("Import Attributes (ES2026)"), e = t.test, o = t.assert, n = t.getResults, r = function() {
               try {
                 return new Function("import('data:text/javascript,export default 1', { with: { type: 'javascript' } })"), !0;
               } catch {
                 return !1;
               }
-            }(), a.n = 1, e("动态 import() 支持 with 选项对象", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function s() {
-              var u, c, l;
-              return _regenerator().w(function(f) {
+            }(), e("环境支持检测", function() {
+              o(r, "环境不支持 import with 语法");
+            }), s.n = 1, e("动态 import() 支持 with 选项对象", /* @__PURE__ */ _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function u() {
+              var i, c, f;
+              return _regenerator().w(function(l) {
                 for (; ; )
-                  switch (f.p = f.n) {
+                  switch (l.p = l.n) {
                     case 0:
                       if (r) {
-                        f.n = 1;
+                        l.n = 1;
                         break;
                       }
-                      return i(!0, "(跳过：环境不支持 import with 语法)"), f.a(2);
+                      return o(!0, "(跳过：环境不支持 import with 语法)"), l.a(2);
                     case 1:
-                      return u = null, f.p = 2, c = new Function('return import("data:text/javascript,export default \\"hello\\"", { with: { type: "javascript" } })'), f.n = 3, c();
+                      return i = null, l.p = 2, c = new Function('return import("data:text/javascript,export default \\"hello\\"", { with: { type: "javascript" } })'), l.n = 3, c();
                     case 3:
-                      l = f.v, u = l.default, f.n = 5;
+                      f = l.v, i = f.default, l.n = 5;
                       break;
                     case 4:
-                      f.p = 4, f.v, u = "syntax-ok";
+                      l.p = 4, l.v, i = "syntax-ok";
                     case 5:
-                      i(u === "hello" || u === "syntax-ok", "import with 语法应被环境支持");
+                      o(i === "hello" || i === "syntax-ok", "import with 语法应被环境支持");
                     case 6:
-                      return f.a(2);
+                      return l.a(2);
                   }
-              }, s, null, [[2, 4]]);
+              }, u, null, [[2, 4]]);
             })));
           case 1:
             return e("import with 选项中 type 属性为字符串", function() {
-              var s = {
+              var u = {
                 with: {
                   type: "json"
                 }
               };
-              i(typeof s.with.type == "string", "type 属性应为字符串"), i(s.with.type === "json", "json type 应正确设置");
+              o(typeof u.with.type == "string", "type 属性应为字符串"), o(u.with.type === "json", "json type 应正确设置");
             }), e("import() 的第二个参数结构", function() {
-              var s = [{
+              var u = [{
                 with: {
                   type: "json"
                 }
@@ -3509,14 +2793,14 @@ function _testImportAttributes() {
                   type: "javascript"
                 }
               }];
-              s.forEach(function(u) {
-                i(u.with !== void 0, "options.with 应存在"), i(typeof u.with.type == "string", "type 应为字符串");
-              }), i(!0, "import() 选项结构验证通过");
+              u.forEach(function(i) {
+                o(i.with !== void 0, "options.with 应存在"), o(typeof i.with.type == "string", "type 应为字符串");
+              }), o(!0, "import() 选项结构验证通过");
             }), e("JSON 模块导入属性防止 MIME 混淆（原理说明）", function() {
-              var s = !0;
-              i(s, 'JSON 模块导入应声明 type: "json" 防止 MIME 混淆攻击');
+              var u = !0;
+              o(u, 'JSON 模块导入应声明 type: "json" 防止 MIME 混淆攻击');
             }), e("import with 仅传递元信息，不影响模块标识符", function() {
-              var s = "./data.json", u = {
+              var u = "./data.json", i = {
                 with: {
                   type: "json"
                 }
@@ -3525,10 +2809,10 @@ function _testImportAttributes() {
                   type: "json"
                 }
               };
-              i(s === "./data.json", "模块说明符不应被 with 属性修改"), i(u.with.type === c.with.type, "相同 type 的 options 应等价");
-            }), a.a(2, t());
+              o(u === "./data.json", "模块说明符不应被 with 属性修改"), o(i.with.type === c.with.type, "相同 type 的 options 应等价");
+            }), s.a(2, n());
         }
-    }, o);
+    }, a);
   })), _testImportAttributes.apply(this, arguments);
 }
 var suites2015 = [{
@@ -3643,139 +2927,139 @@ var suites2015 = [{
   name: "Import Attributes",
   fn: testImportAttributes
 }];
-function runSuites(o) {
+function runSuites(a) {
   return _runSuites.apply(this, arguments);
 }
 function _runSuites() {
-  return _runSuites = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o(n) {
-    var e, i, t, r, a, s;
-    return _regenerator().w(function(u) {
+  return _runSuites = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a(t) {
+    var e, o, n, r, s, u;
+    return _regenerator().w(function(i) {
       for (; ; )
-        switch (u.p = u.n) {
+        switch (i.p = i.n) {
           case 0:
-            e = [], i = _createForOfIteratorHelper(n), u.p = 1, i.s();
+            e = [], o = _createForOfIteratorHelper(t), i.p = 1, o.s();
           case 2:
-            if ((t = i.n()).done) {
-              u.n = 5;
+            if ((n = o.n()).done) {
+              i.n = 5;
               break;
             }
-            return r = t.value, u.n = 3, r.fn();
+            return r = n.value, i.n = 3, r.fn();
           case 3:
-            a = u.v, e.push.apply(e, _toConsumableArray(a));
+            s = i.v, e.push.apply(e, _toConsumableArray(s));
           case 4:
-            u.n = 2;
+            i.n = 2;
             break;
           case 5:
-            u.n = 7;
+            i.n = 7;
             break;
           case 6:
-            u.p = 6, s = u.v, i.e(s);
+            i.p = 6, u = i.v, o.e(u);
           case 7:
-            return u.p = 7, i.f(), u.f(7);
+            return i.p = 7, o.f(), i.f(7);
           case 8:
-            return u.a(2, e);
+            return i.a(2, e);
         }
-    }, o, null, [[1, 6, 7, 8]]);
+    }, a, null, [[1, 6, 7, 8]]);
   })), _runSuites.apply(this, arguments);
 }
 function runAll2015() {
   return _runAll.apply(this, arguments);
 }
 function _runAll() {
-  return _runAll = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    return _regenerator().w(function(n) {
+  return _runAll = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    return _regenerator().w(function(t) {
       for (; ; )
-        switch (n.n) {
+        switch (t.n) {
           case 0:
-            return n.a(2, runSuites(suites2015));
+            return t.a(2, runSuites(suites2015));
         }
-    }, o);
+    }, a);
   })), _runAll.apply(this, arguments);
 }
 function runAll2022() {
   return _runAll2.apply(this, arguments);
 }
 function _runAll2() {
-  return _runAll2 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    return _regenerator().w(function(n) {
+  return _runAll2 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    return _regenerator().w(function(t) {
       for (; ; )
-        switch (n.n) {
+        switch (t.n) {
           case 0:
-            return n.a(2, runSuites(suites2022));
+            return t.a(2, runSuites(suites2022));
         }
-    }, o);
+    }, a);
   })), _runAll2.apply(this, arguments);
 }
 function runAll2025() {
   return _runAll3.apply(this, arguments);
 }
 function _runAll3() {
-  return _runAll3 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    return _regenerator().w(function(n) {
+  return _runAll3 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    return _regenerator().w(function(t) {
       for (; ; )
-        switch (n.n) {
+        switch (t.n) {
           case 0:
-            return n.a(2, runSuites(suites2025));
+            return t.a(2, runSuites(suites2025));
         }
-    }, o);
+    }, a);
   })), _runAll3.apply(this, arguments);
 }
 function runAll2026() {
   return _runAll4.apply(this, arguments);
 }
 function _runAll4() {
-  return _runAll4 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    return _regenerator().w(function(n) {
+  return _runAll4 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    return _regenerator().w(function(t) {
       for (; ; )
-        switch (n.n) {
+        switch (t.n) {
           case 0:
-            return n.a(2, runSuites(suites2026));
+            return t.a(2, runSuites(suites2026));
         }
-    }, o);
+    }, a);
   })), _runAll4.apply(this, arguments);
 }
 function runAll() {
   return _runAll5.apply(this, arguments);
 }
 function _runAll5() {
-  return _runAll5 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    return _regenerator().w(function(n) {
+  return _runAll5 = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    return _regenerator().w(function(t) {
       for (; ; )
-        switch (n.n) {
+        switch (t.n) {
           case 0:
-            return n.a(2, runSuites([].concat(suites2015, suites2022, suites2025, suites2026)));
+            return t.a(2, runSuites([].concat(suites2015, suites2022, suites2025, suites2026)));
         }
-    }, o);
+    }, a);
   })), _runAll5.apply(this, arguments);
 }
 function runAndPrint() {
   return _runAndPrint.apply(this, arguments);
 }
 function _runAndPrint() {
-  return _runAndPrint = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function o() {
-    var n, e, i, t, r, a;
-    return _regenerator().w(function(s) {
+  return _runAndPrint = _asyncToGenerator(/* @__PURE__ */ _regenerator().m(function a() {
+    var t, e, o, n, r, s;
+    return _regenerator().w(function(u) {
       for (; ; )
-        switch (s.n) {
+        switch (u.n) {
           case 0:
-            n = 0, e = [["ES2015", runAll2015], ["ES2022", runAll2022], ["ES2025", runAll2025], ["ES2026", runAll2026]];
+            t = 0, e = [["ES2015", runAll2015], ["ES2022", runAll2022], ["ES2025", runAll2025], ["ES2026", runAll2026]];
           case 1:
-            if (!(n < e.length)) {
-              s.n = 4;
+            if (!(t < e.length)) {
+              u.n = 4;
               break;
             }
-            return i = _slicedToArray(e[n], 2), t = i[0], r = i[1], console.log(`
-=== `.concat(t, ` 特性测试 ===
-`)), a = printResults, s.n = 2, r();
+            return o = _slicedToArray(e[t], 2), n = o[0], r = o[1], console.log(`
+=== `.concat(n, ` 特性测试 ===
+`)), s = printResults, u.n = 2, r();
           case 2:
-            a(s.v);
+            s(u.v);
           case 3:
-            n++, s.n = 1;
+            t++, u.n = 1;
             break;
           case 4:
-            return s.a(2);
+            return u.a(2);
         }
-    }, o);
+    }, a);
   })), _runAndPrint.apply(this, arguments);
 }
 export {

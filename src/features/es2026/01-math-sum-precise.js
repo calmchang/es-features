@@ -15,6 +15,10 @@ export function testMathSumPrecise() {
 
   const supported = typeof Math.sumPrecise === 'function'
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 Math.sumPrecise')
+  })
+
   test('基本求和 —— 整数', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Math.sumPrecise)'); return }
     assert(Math.sumPrecise([1, 2, 3, 4, 5]) === 15, '整数求和应为 15')

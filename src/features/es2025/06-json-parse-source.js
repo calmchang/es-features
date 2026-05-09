@@ -23,6 +23,10 @@ export function testJsonParseSource() {
     })
   } catch (e) { /* ignore */ }
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 JSON.parse source text access')
+  })
+
   test('reviver 接收第三个参数 context', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 JSON.parse source text access)'); return }
     let receivedContext = null

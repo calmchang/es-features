@@ -15,6 +15,10 @@ export function testErrorIsError() {
 
   const supported = typeof Error.isError === 'function'
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 Error.isError')
+  })
+
   test('原生 Error 实例返回 true', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Error.isError)'); return }
     assert(Error.isError(new Error('test')) === true, 'new Error() 应返回 true')

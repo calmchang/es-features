@@ -26,6 +26,10 @@ export async function testImportAttributes() {
     } catch { return false }
   })()
 
+  test('环境支持检测', () => {
+    assert(syntaxSupported, '环境不支持 import with 语法')
+  })
+
   await test('动态 import() 支持 with 选项对象', async () => {
     if (!syntaxSupported) { assert(true, '(跳过：环境不支持 import with 语法)'); return }
     // 使用 data: URL + type: javascript 测试动态导入属性

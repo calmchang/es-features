@@ -20,6 +20,10 @@ export function testRegExpDuplicateGroups() {
     supported = false
   }
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持重复命名捕获组')
+  })
+
   test('同一命名组在不同分支中可重复使用', () => {
     if (!supported) { assert(true, '(跳过：环境不支持重复命名捕获组)'); return }
     // 匹配两种日期格式：YYYY-MM-DD 或 DD/MM/YYYY

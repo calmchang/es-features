@@ -8,8 +8,8 @@
  */
 
 
-// import 'kn-es-features/polyfills' // 运行时 API 补丁（如 Promise、Symbol）由消费方引入
-import { runAll2015, runAll2022, runAll2025, runAll2026 } from 'kn-es-features'
+import 'kn-es-features/polyfills' // 运行时 API 补丁（如 Promise、Symbol）由消费方引入
+import { runAll2015, runAll2022, runAll2025, runAll2026 } from 'kn-es-features/src'
 
 /* ── 版本配置 ───────────────────────────────────────────────────── */
 const VERSIONS = [

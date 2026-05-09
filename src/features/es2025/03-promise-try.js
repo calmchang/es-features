@@ -15,6 +15,14 @@ export async function testPromiseTry() {
 
   const supported = typeof Promise.try === 'function'
 
+  await test('环境支持检测', async () => {
+    if (!supported) { 
+      assert(false, '(环境不支持 Promise.try)'); return 
+    }
+    assert(true, '环境支持 Promise.try')
+  })
+
+
   await test('同步函数 —— 返回值转为 resolved', async () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Promise.try)'); return }
     const result = await Promise.try(() => 42)

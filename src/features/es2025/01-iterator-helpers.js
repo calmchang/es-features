@@ -13,6 +13,10 @@ export function testIteratorHelpers() {
   // 检测环境是否支持
   const supported = typeof Iterator !== 'undefined' && typeof Iterator.from === 'function'
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 Iterator Helpers')
+  })
+
   test('Iterator.from() 将可迭代对象转为迭代器', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Iterator.from)'); return }
     const iter = Iterator.from([1, 2, 3])

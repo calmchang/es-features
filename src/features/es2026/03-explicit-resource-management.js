@@ -27,6 +27,10 @@ export async function testExplicitResourceManagement() {
     } catch { return false }
   })()
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 using / await using 语法')
+  })
+
   test('Symbol.dispose 已定义', () => {
     assert(typeof Symbol.dispose === 'symbol', 'Symbol.dispose 应是 symbol 类型')
   })

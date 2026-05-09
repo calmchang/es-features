@@ -16,16 +16,35 @@
 
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import babel from '@rollup/plugin-babel'
 
 export default defineConfig({
+  // 顶层 plugins —— dev server 和 build 均生效
+  plugins: [
+    babel({
+      babelHelpers: 'bundled',
+      extensions: ['.js'],
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: 'chrome >= 40',
+            useBuiltIns: false,
+            modules: false,
+          },
+        ],
+      ],
+    }),
+  ],
+
   server: {
     host:'127.0.0.1',
     port: 8080,
     allowedHosts: ['host.docker.internal'],
   },
 
-  // esbuild 0.18.x 无法解析 ES2026 `using` 语法，跳过对 .js 文件的 esbuild
-  // transform，由浏览器（Chrome）原生执行；TS/JSX 仍走 esbuild。
+  // .js 文件由 Babel 处理（见顶层 plugins），esbuild 仅保留对 TS/JSX 的转换，
+  // 避免 esbuild 与 Babel 重复处理同一文件。
   esbuild: {
     include: /\.(jsx|ts|tsx)$/,
   },
@@ -34,7 +53,9 @@ export default defineConfig({
   resolve: {
     alias: {
       'kn-es-features/polyfills': resolve(__dirname, 'dist/polyfills.iife.js'),
+      'kn-es-features/src': resolve(__dirname, 'src/index.js'),
       'kn-es-features': resolve(__dirname, 'dist/esfeatures.js'),
+
     },
   },
 

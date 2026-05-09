@@ -17,6 +17,10 @@ export function testRegExpDFlag() {
     try { return new RegExp('x', 'd').hasIndices === true } catch { return false }
   })()
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 RegExp /d 标志')
+  })
+
   test('hasIndices 属性标识是否启用 /d 标志', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 /d 标志)'); return }
     assert(new RegExp('x', 'd').hasIndices === true,  '/d 标志应使 hasIndices 为 true')

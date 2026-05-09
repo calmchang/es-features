@@ -14,6 +14,10 @@ export function testUint8ArrayBase64Hex() {
 
   const supported = typeof Uint8Array.prototype.toBase64 === 'function'
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 Uint8Array Base64/Hex 方法')
+  })
+
   test('toBase64() —— Uint8Array 转 Base64 字符串', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Uint8Array.toBase64)'); return }
     // "Hello" → ASCII [72,101,108,108,111]

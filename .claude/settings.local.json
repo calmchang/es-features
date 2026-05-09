@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm run *)",
       "Bash(npm install *)",
-      "Bash(awk -F: '{print $1}')"
+      "Bash(awk -F: '{print $1}')",
+      "Bash(node -e \"const b = require\\('@babel/core'\\); console.log\\(b.version\\)\")",
+      "Bash(node -e \"const p = require\\('@babel/preset-env/package.json'\\); console.log\\(p.version\\)\")"
     ]
   }
 }

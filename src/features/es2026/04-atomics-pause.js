@@ -16,6 +16,10 @@ export function testAtomicsPause() {
 
   const supported = typeof Atomics.pause === 'function'
 
+  test('环境支持检测', () => {
+    assert(supported, '环境不支持 Atomics.pause')
+  })
+
   test('Atomics.pause 函数存在', () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Atomics.pause)'); return }
     assert(typeof Atomics.pause === 'function', 'Atomics.pause 应为函数')
