@@ -80,7 +80,7 @@ export async function testExplicitResourceManagement() {
     assert(order.join(',') === 'C,B,A', '多资源应按 LIFO（后进先出）顺序释放')
   })
 
-  test('await using —— 异步 dispose', async () => {
+  await test('await using —— 异步 dispose', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     const log = []
     const fn = new Function('log', 'Symbol', `

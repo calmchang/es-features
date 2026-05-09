@@ -15,20 +15,20 @@ export async function testPromiseTry() {
 
   const supported = typeof Promise.try === 'function'
 
-  test('同步函数 —— 返回值转为 resolved', async () => {
+  await test('同步函数 —— 返回值转为 resolved', async () => {
     if (!supported) { assert(true, '(跳过：环境不支持 Promise.try)'); return }
     const result = await Promise.try(() => 42)
     assert(result === 42, '同步返回值应被 resolve 为 42')
   })
 
-  test('同步函数 —— 抛出异常转为 rejected', async () => {
+  await test('同步函数 —— 抛出异常转为 rejected', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     let caught = null
     await Promise.try(() => { throw new Error('同步错误') }).catch(e => { caught = e })
     assert(caught instanceof Error && caught.message === '同步错误', '同步异常应转为 rejected')
   })
 
-  test('异步函数 —— resolved 正常透传', async () => {
+  await test('异步函数 —— resolved 正常透传', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     const result = await Promise.try(async () => {
       return 'async result'
@@ -36,7 +36,7 @@ export async function testPromiseTry() {
     assert(result === 'async result', '异步 resolved 值应透传')
   })
 
-  test('异步函数 —— rejected 正常透传', async () => {
+  await test('异步函数 —— rejected 正常透传', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     let caught = null
     await Promise.try(async () => {
@@ -45,20 +45,20 @@ export async function testPromiseTry() {
     assert(caught instanceof Error && caught.message === '异步错误', '异步 rejected 应透传')
   })
 
-  test('返回已有 Promise —— 直接透传', async () => {
+  await test('返回已有 Promise —— 直接透传', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     const original = Promise.resolve('original')
     const result = await Promise.try(() => original)
     assert(result === 'original', '返回已有 Promise 的值应直接透传')
   })
 
-  test('传递参数给回调函数', async () => {
+  await test('传递参数给回调函数', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     const result = await Promise.try((a, b) => a + b, 10, 20)
     assert(result === 30, '应能向回调函数传递参数')
   })
 
-  test('对比 new Promise —— 捕获同步异常的等价写法', async () => {
+  await test('对比 new Promise —— 捕获同步异常的等价写法', async () => {
     if (!supported) { assert(true, '(跳过)'); return }
     // 旧写法：若 fn 同步抛出，需要用 try/catch 包裹才能转为 rejected
     // Promise.try 自动处理，以下两种写法等价：

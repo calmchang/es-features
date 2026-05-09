@@ -26,7 +26,7 @@
     "src"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "vite build & npm run polyfill",
     "polyfill": "vite build --config vite.polyfill.config.js",
     "validate": "vite --config vite.validate.config.js",
     "validate:build": "vite build --config vite.validate.config.js"

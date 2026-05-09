@@ -93,7 +93,7 @@ function renderCase(c) {
   return li
 }
 
-function renderSuite(suite) {
+function renderSuite(suite, index) {
   let pass = 0, fail = 0
   suite.cases.forEach(c => c.status === 'pass' ? pass++ : fail++)
   const stateKey = fail === 0 ? 'pass' : 'fail'
@@ -106,7 +106,7 @@ function renderSuite(suite) {
   header.innerHTML =
     '<div class="suite__header-left">' +
       '<span class="suite__indicator suite__indicator--' + stateKey + '"></span>' +
-      '<span class="suite__name">' + escape(suite.name) + '</span>' +
+      '<span class="suite__name">' + (index + 1) + ' - ' + escape(suite.name) + '</span>' +
     '</div>' +
     '<div class="suite__header-right">' +
       '<span class="suite__stat suite__stat--' + stateKey + '">' +
@@ -145,7 +145,7 @@ function renderPanel(panel, results) {
     return
   }
   const frag = document.createDocumentFragment()
-  groupBySuite(results).forEach(s => frag.appendChild(renderSuite(s)))
+  groupBySuite(results).forEach((s,index) => frag.appendChild(renderSuite(s,index)))
   panel.appendChild(frag)
 }
 

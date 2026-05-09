@@ -16,14 +16,14 @@ import { createSuite } from '../../utils/runner.js'
 export async function testTopLevelAwait() {
   const { test, assert, getResults } = createSuite('Top-level await (ES2022)')
 
-  test('async 函数内的 await 是等价基础能力', async () => {
+  await test('async 函数内的 await 是等价基础能力', async () => {
     // top-level await 本质上是将整个模块包装为隐式 async 函数
     // 在 async 函数顶层 await 等同于模块顶层 await
     const value = await Promise.resolve(42)
     assert(value === 42, 'await 在 async 函数顶层应正常工作')
   })
 
-  test('await 可以等待动态 import()', async () => {
+  await test('await 可以等待动态 import()', async () => {
     // 动态 import 是 top-level await 最常见的使用场景
     // 由于测试环境限制，用 Promise 模拟等价行为
     const fakeImport = () => Promise.resolve({ default: 'module-content', util: () => 'ok' })
@@ -32,7 +32,7 @@ export async function testTopLevelAwait() {
     assert(mod.util() === 'ok',             '模块导出的函数应可调用')
   })
 
-  test('await 保序 —— 导入方等待模块初始化完成', async () => {
+  await test('await 保序 —— 导入方等待模块初始化完成', async () => {
     // top-level await 会阻塞依赖该模块的其他模块
     // 模拟：模块 A 需要等待异步初始化，模块 B 导入 A 后才能使用其导出值
     const log = []
@@ -47,7 +47,7 @@ export async function testTopLevelAwait() {
     assert(log.join(',') === 'A:start,A:ready,B:use', '执行顺序应严格保序')
   })
 
-  test('await 与条件导入模拟', async () => {
+  await test('await 与条件导入模拟', async () => {
     // top-level await 常用于条件加载不同平台的模块
     const isBrowser = typeof window !== 'undefined'
     const platform = await Promise.resolve(isBrowser ? 'browser' : 'node')
@@ -55,7 +55,7 @@ export async function testTopLevelAwait() {
     assert(platform === 'browser' || platform === 'node', '平台标识应为 browser 或 node')
   })
 
-  test('await 错误应在模块加载阶段被捕获', async () => {
+  await test('await 错误应在模块加载阶段被捕获', async () => {
     // top-level await 抛出的错误会导致整个模块加载失败
     // 等价测试：async 顶层 await 的错误传播
     let caught = null
@@ -68,7 +68,7 @@ export async function testTopLevelAwait() {
     assert(caught.message === '模块初始化失败', '错误消息应正确传递')
   })
 
-  test('await 不阻塞无依赖的兄弟模块（并行加载）', async () => {
+  await test('await 不阻塞无依赖的兄弟模块（并行加载）', async () => {
     // 两个相互独立的异步模块可以并行初始化
     const t0 = Date.now()
     const [a, b] = await Promise.all([
